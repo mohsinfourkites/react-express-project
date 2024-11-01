@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/logo.webp";
+import Logo from "../../assets/leaf1.png";
 import DesktopMenu from "./DesktopMenu/DesktopMenu";
 import styles from './MultiLevelNavbar.module.scss'; // Import SCSS module
 import { Menus } from "../../utils/multi-level-meu";
@@ -12,7 +12,7 @@ const MultiLevelNavbar: React.FC = () => {
         <div className="flex-center gap-x-3 z-[999] relative"
         style={{ marginLeft: '25px' }}>
           <img src={Logo} alt="Logo" className="size-8" />
-          <h3 className="text-lg font-semibold">Framer</h3>
+          <h3 className="text-lg font-semibold">Jannat-E-Kashmir</h3>
         </div>
 
         <ul className="gap-x-1 lg:flex-center hidden">
