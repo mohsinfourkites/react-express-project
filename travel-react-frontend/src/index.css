@@ -1,0 +1,9 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* In your global CSS/SCSS file (e.g., index.css or App.scss) */
+

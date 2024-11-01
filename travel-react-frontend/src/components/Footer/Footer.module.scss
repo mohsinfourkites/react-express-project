@@ -1,0 +1,43 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  
+    .footerContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+  
+      .links {
+        a {
+          color: #fff;
+          margin: 0 10px;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+  
+      .socialIcons {
+        a {
+          color: #fff;
+          margin: 0 8px;
+          font-size: 24px;
+  
+          &:hover {
+            color: #ddd;
+          }
+        }
+      }
+    }
+  
+    .copyRight {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  

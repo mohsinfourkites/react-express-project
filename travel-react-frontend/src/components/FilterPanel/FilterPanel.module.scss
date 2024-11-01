@@ -1,0 +1,72 @@
+.filterPanelContainer {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .resetButton {
+    font-size: 0.875rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  
+    &:hover {
+      color: #374151;
+    }
+  }
+  
+  .resetIcon {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.25rem;
+  }
+  
+  .filterGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  
+    &:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    }
+  }
+  
+  .rangeWrapper {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .rangeInput {
+    width: 100%;
+  }
+  
