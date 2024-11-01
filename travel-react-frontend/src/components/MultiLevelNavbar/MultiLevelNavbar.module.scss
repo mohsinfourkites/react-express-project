@@ -1,5 +1,19 @@
 // travel-react-frontend/src/components/MultiLevelNavbar/MultiLevelNavbar.module.scss
 
+/* MultiLevelNavbar.module.scss */
+
+/* MultiLevelNavbar.module.scss */
+
+.stickyNavbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white; /* Optional for better visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional */
+  }
+  
+
+  
 .navbar {
     background-color: #18181A;
     color: white;
@@ -22,3 +36,4 @@
     }
   }
   
+

@@ -17,14 +17,14 @@ const App: React.FC = () => {
     <Provider store={store}>
       <Router>
         {/* <Navbar /> */}
-        <MultiLevelNavbar />
+        {/* <MultiLevelNavbar /> */}
 
         <Routes>
-          {/* <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
-          <Route path="/book/:id" element={<BookingPage />} /> */}
+          <Route path="/book/:id" element={<BookingPage />} />
         </Routes>
       </Router>
     </Provider>

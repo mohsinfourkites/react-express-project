@@ -1,18 +1,17 @@
 .menuItem {
-    position: relative;
+    /* No @apply group here; applied directly in JSX */
   }
   
-  .menuLink {
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.05);
-    }
+  .menuText {
+    @apply gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl;
+  }
+  
+  .flexCenter {
+    @apply flex items-center justify-center;
   }
   
   .chevronIcon {
-    transition: transform 0.2s ease;
+    @apply mt-[0.6px] duration-200;
   }
   
   .menuItem:hover .chevronIcon {
@@ -20,23 +19,50 @@
   }
   
   .subMenu {
-    position: absolute;
-    top: 100%;
-    background-color: white;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 1rem;
-    display: none;
-    z-index: 10;
+    @apply sub-menu;
   }
   
-  .iconBox {
-    background-color: rgba(255, 255, 255, 0.05);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  .grid {
+    @apply gap-7;
   }
   
-  .menuBox:hover .iconBox {
-    background-color: white;
-    color: #333;
+  .gridCols1 {
+    @apply grid-cols-1;
+  }
+  
+  .gridCols2 {
+    @apply grid-cols-2;
+  }
+  
+  .gridCols3 {
+    @apply grid-cols-3;
+  }
+  
+  .subMenuItem {
+    @apply relative cursor-pointer;
+  }
+  
+  .subMenuHeading {
+    @apply text-sm mb-4 text-gray-500;
+  }
+  
+  .subMenuContent {
+    @apply gap-x-4;
+  }
+  
+  .iconContainer {
+    @apply bg-white/5 w-fit p-2 rounded-md duration-300;
+  }
+  
+  .menuItem:hover .iconContainer {
+    @apply bg-white text-gray-900;
+  }
+  
+  .subMenuTitle {
+    @apply font-semibold;
+  }
+  
+  .subMenuDescription {
+    @apply text-sm text-gray-400;
   }
   

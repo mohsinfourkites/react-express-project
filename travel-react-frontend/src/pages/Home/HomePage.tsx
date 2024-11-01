@@ -8,7 +8,7 @@ import { PackageCard } from '../../components/PackageCard/PackageCard';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import { Gallery } from '../../components/Gallery/Gallery';
 import ImageSlider from '../../components/ImageSlider/ImageSlider';
-import DropDownHeader from '../../components/DropDown-header/DropDownHeader';
+import MultiLevelNavbar from '../../components/MultiLevelNavbar/MultiLevelNavbar';
 
 interface Package {
   title: string;
@@ -78,8 +78,11 @@ const packages: Package[] = [
 const Home: React.FC = () => {
   return (
     <>
+      {/* Apply stickyNavbar class */}
+      <MultiLevelNavbar />
+
       <Hero />
-      
+
       {/* Packages Section */}
       <section className={styles.container}>
         <div className="max-w-7xl mx-auto">
@@ -110,11 +113,6 @@ const Home: React.FC = () => {
           <ContactForm />
         </div>
       </section>
-
-      {/* Dropdown Section */}
-      
-
-      <DropDownHeader />
     </>
   );
 }
