@@ -99,12 +99,12 @@ const Home: React.FC = () => {
       <ImageSlider images={IMAGES} />
 
       {/* Gallery Section */}
-      <section className={`${styles.container} ${styles.gallerySection}`}>
+      {/* <section className={`${styles.container} ${styles.gallerySection}`}>
         <div className="max-w-7xl mx-auto">
           <h2>Travel Gallery</h2>
           <Gallery />
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section className={styles.container}>
