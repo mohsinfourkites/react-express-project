@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Navbar from './components/Navbar/Navbar';
-import HomePage from './pages/HomePage';
-import PackagesPage from './pages/PackagesPage';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
-import BookingPage from './pages/BookingPage';
+import HomePage from './pages/Home/HomePage';
+import PackagesPage from './pages/Package/Packages';
+import LoginPage from './pages/LoginSignUp/Login/Login';
+import SignupPage from './pages/LoginSignUp/SignUp/SignupPage';
+import BookingPage from './pages/Booking/BookingPage';
 
 
 const App: React.FC = () => {

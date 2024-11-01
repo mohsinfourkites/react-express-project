@@ -3,11 +3,11 @@
 import React from 'react';
 
 import styles from './HomePage.module.scss'; // Import the SCSS module
-import Hero from '../components/Hero/Hero';
-import { PackageCard } from '../components/PackageCard/PackageCard';
-import ContactForm from '../components/ContactForm/ContactForm';
-import { Gallery } from '../components/Gallery/Gallery';
-import ImageSlider from '../components/ImageSlider/ImageSlider';
+import Hero from '../../components/Hero/Hero';
+import { PackageCard } from '../../components/PackageCard/PackageCard';
+import ContactForm from '../../components/ContactForm/ContactForm';
+import { Gallery } from '../../components/Gallery/Gallery';
+import ImageSlider from '../../components/ImageSlider/ImageSlider';
 
 interface Package {
   title: string;
