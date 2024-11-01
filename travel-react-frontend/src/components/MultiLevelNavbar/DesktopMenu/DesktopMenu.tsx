@@ -1,12 +1,13 @@
-
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface SubMenu {
     name: string;
     desc: string;
     icon?: React.ComponentType;
+    redirection?: string;
 }
 
 interface Menu {
@@ -14,6 +15,7 @@ interface Menu {
     subMenu?: SubMenu[];
     subMenuHeading?: string[];
     gridCols?: number;
+    redirection?: string;
 }
 
 interface DesktopMenuProps {
@@ -52,18 +54,19 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
     return (
         <motion.li
             className="group/link"
-            onHoverStart={() => {
-                toggleHoverMenu();
-            }}
+            onHoverStart={toggleHoverMenu}
             onHoverEnd={toggleHoverMenu}
             key={menu.name}
         >
-            <span className="flex-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
+            <Link
+                to={menu.redirection || '#'}
+                className="flex-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl"
+            >
                 {menu.name}
                 {hasSubMenu && (
                     <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
                 )}
-            </span>
+            </Link>
             {hasSubMenu && (
                 <motion.div
                     className="sub-menu"
@@ -80,14 +83,14 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
                                 : "grid-cols-1"
                         }`}
                     >
-                        {hasSubMenu && menu.subMenu &&
-                            menu.subMenu.map((submenu, i) => (
-                                <div className="relative cursor-pointer" key={i}>
-                                    {(menu.gridCols ?? 1) > 1 && menu?.subMenuHeading?.[i] && (
-                                        <p className="text-sm mb-4 text-white-500">
-                                            {menu?.subMenuHeading?.[i]}
-                                        </p>
-                                    )}
+                        {menu.subMenu?.map((submenu, i) => (
+                            <div className="relative cursor-pointer" key={i}>
+                                {(menu.gridCols ?? 1) > 1 && menu?.subMenuHeading?.[i] && (
+                                    <p className="text-sm mb-4 text-white-500">
+                                        {menu?.subMenuHeading?.[i]}
+                                    </p>
+                                )}
+                                <Link to={submenu.redirection || '#'}>
                                     <div className="flex-center gap-x-4 group/menubox">
                                         <div className="bg-white/5 w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300">
                                             {submenu.icon && <submenu.icon />}
@@ -97,8 +100,9 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
                                             <p className="text-sm text-gray-400">{submenu.desc}</p>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
+                                </Link>
+                            </div>
+                        ))}
                     </div>
                 </motion.div>
             )}
@@ -107,5 +111,3 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
 };
 
 export default DesktopMenu;
-
-

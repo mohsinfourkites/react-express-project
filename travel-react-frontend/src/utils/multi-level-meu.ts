@@ -6,77 +6,79 @@ import { MenuItem } from "../types/types";
 
 export const Menus: MenuItem[] = [
   {
-    name: "Features",
-    subMenuHeading: ["Design", "Scale"],
-    subMenu: [
-      {
-        name: "Design",
-        desc: "Responsive design",
-        icon: PanelsTopLeft,
-      },
-      {
-        name: "Management",
-        desc: "Site control",
-        icon: Bolt,
-      },
-      {
-        name: "Navigation",
-        desc: "Link pages",
-        icon: PanelTop,
-      },
-      {
-        name: "CMS",
-        desc: "Management content",
-        icon: Database,
-      },
-    ],
+    name: "Home",
+    redirection: "/home",
+    // subMenuHeading: ["Design", "Scale"],
+    // subMenu: [
+    //   {
+    //     name: "Design",
+    //     desc: "Responsive design",
+    //     icon: PanelsTopLeft,
+    //   },
+    //   {
+    //     name: "Management",
+    //     desc: "Site control",
+    //     icon: Bolt,
+    //   },
+    //   {
+    //     name: "Navigation",
+    //     desc: "Link pages",
+    //     icon: PanelTop,
+    //   },
+    //   {
+    //     name: "CMS",
+    //     desc: "Management content",
+    //     icon: Database,
+    //   },
+    // ],
     gridCols: 2,
   },
   {
-    name: "Resources",
-    subMenuHeading: ["Get started", "Programs", "Recent"],
-    subMenu: [
-      {
-        name: "Marketplace",
-        desc: "Browse templates",
-        icon: ShoppingBag,
-      },
-      {
-        name: "Meetups",
-        desc: "Upcoming events",
-        icon: MapPin,
-      },
-      {
-        name: "Updates",
-        desc: "Changelog",
-        icon: BellDot,
-      },
-      {
-        name: "Academy",
-        desc: "Watch lessons",
-        icon: Play,
-      },
-      {
-        name: "Blog",
-        desc: "Posts",
-        icon: BookOpenText,
-      },
-      {
-        name: "Figma",
-        desc: "Plugin",
-        icon: Figma,
-      },
-      {
-        name: "Experts",
-        desc: "Jobs",
-        icon: BriefcaseBusiness,
-      },
-      {
-        name: "Gallery",
-        desc: "Images",
-        icon: Images,
-      },
-    ],
+    name: "Packages",
+    redirection: "/packages",
+    // subMenuHeading: ["Get started", "Programs", "Recent"],
+    // subMenu: [
+    //   {
+    //     name: "Marketplace",
+    //     desc: "Browse templates",
+    //     icon: ShoppingBag,
+    //   },
+    //   {
+    //     name: "Meetups",
+    //     desc: "Upcoming events",
+    //     icon: MapPin,
+    //   },
+    //   {
+    //     name: "Updates",
+    //     desc: "Changelog",
+    //     icon: BellDot,
+    //   },
+    //   {
+    //     name: "Academy",
+    //     desc: "Watch lessons",
+    //     icon: Play,
+    //   },
+    //   {
+    //     name: "Blog",
+    //     desc: "Posts",
+    //     icon: BookOpenText,
+    //   },
+    //   {
+    //     name: "Figma",
+    //     desc: "Plugin",
+    //     icon: Figma,
+    //   },
+    //   {
+    //     name: "Experts",
+    //     desc: "Jobs",
+    //     icon: BriefcaseBusiness,
+    //   },
+    //   {
+    //     name: "Gallery",
+    //     desc: "Images",
+    //     icon: Images,
+    //   },
+    // ],
     gridCols: 3,
   },
   {
@@ -102,7 +104,9 @@ export const Menus: MenuItem[] = [
   },
   {
     name: "Enterprise",
+    redirection: "/enterprise",
     subMenuHeading: ["Overview", "Features"],
+    
     subMenu: [
       {
         name: "Enterprise",
@@ -129,8 +133,10 @@ export const Menus: MenuItem[] = [
   },
   {
     name: "Pricing",
+    redirection: "/pricing",
   },
   {
     name: "Contact",
+    redirection: "/contact",
   },
 ];
