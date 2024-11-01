@@ -79,7 +79,7 @@ const Home: React.FC = () => {
   return (
     <>
       {/* Apply stickyNavbar class */}
-      <MultiLevelNavbar />
+      
 
       <Hero />
 

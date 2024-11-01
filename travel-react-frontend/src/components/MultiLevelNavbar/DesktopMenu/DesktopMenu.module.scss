@@ -1,68 +1,73 @@
-.menuItem {
-    /* No @apply group here; applied directly in JSX */
+// DesktopMenu.module.scss
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover-bg {
+  &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
   }
-  
-  .menuText {
-    @apply gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem; /* rounded-xl */
+}
+
+.sub-menu {
+  /* Additional styles can go here if needed */
+}
+
+.grid {
+  display: grid;
+  gap: 1.75rem; /* gap-7 */
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.relative {
+  position: relative;
+}
+
+.text-white-500 {
+  color: rgba(255, 255, 255, 0.5); /* or use a specific hex value */
+}
+
+.group-menubox {
+  &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      color: #1f2937; /* text-gray-900 */
+      transition: background-color 0.3s;
   }
-  
-  .flexCenter {
-    @apply flex items-center justify-center;
-  }
-  
-  .chevronIcon {
-    @apply mt-[0.6px] duration-200;
-  }
-  
-  .menuItem:hover .chevronIcon {
-    transform: rotate(180deg);
-  }
-  
-  .subMenu {
-    @apply sub-menu;
-  }
-  
-  .grid {
-    @apply gap-7;
-  }
-  
-  .gridCols1 {
-    @apply grid-cols-1;
-  }
-  
-  .gridCols2 {
-    @apply grid-cols-2;
-  }
-  
-  .gridCols3 {
-    @apply grid-cols-3;
-  }
-  
-  .subMenuItem {
-    @apply relative cursor-pointer;
-  }
-  
-  .subMenuHeading {
-    @apply text-sm mb-4 text-gray-500;
-  }
-  
-  .subMenuContent {
-    @apply gap-x-4;
-  }
-  
-  .iconContainer {
-    @apply bg-white/5 w-fit p-2 rounded-md duration-300;
-  }
-  
-  .menuItem:hover .iconContainer {
-    @apply bg-white text-gray-900;
-  }
-  
-  .subMenuTitle {
-    @apply font-semibold;
-  }
-  
-  .subMenuDescription {
-    @apply text-sm text-gray-400;
-  }
-  
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-sm {
+  font-size: 0.875rem; /* text-sm */
+}
+
+.text-gray-400 {
+  color: rgba(156, 163, 175); /* text-gray-400 */
+}
+
+.mt-1 {
+  margin-top: 0.25rem; /* mt-[0.6px] */
+}

@@ -16,8 +16,7 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <Router>
-        {/* <Navbar /> */}
-        {/* <MultiLevelNavbar /> */}
+        <MultiLevelNavbar />
 
         <Routes>
           <Route path="/" element={<HomePage />} />

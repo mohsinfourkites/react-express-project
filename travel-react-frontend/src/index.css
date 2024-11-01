@@ -34,6 +34,6 @@
       @apply flex items-center;
     }
     .flex-center-between {
-      @apply flex items-center justify-between p-[15px];
+      @apply flex items-center justify-between p-[10px];
     }
   }

@@ -84,7 +84,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
                             menu.subMenu.map((submenu, i) => (
                                 <div className="relative cursor-pointer" key={i}>
                                     {(menu.gridCols ?? 1) > 1 && menu?.subMenuHeading?.[i] && (
-                                        <p className="text-sm mb-4 text-gray-500">
+                                        <p className="text-sm mb-4 text-white-500">
                                             {menu?.subMenuHeading?.[i]}
                                         </p>
                                     )}
