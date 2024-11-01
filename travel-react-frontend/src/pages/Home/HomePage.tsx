@@ -8,6 +8,7 @@ import { PackageCard } from '../../components/PackageCard/PackageCard';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import { Gallery } from '../../components/Gallery/Gallery';
 import ImageSlider from '../../components/ImageSlider/ImageSlider';
+import DropDownHeader from '../../components/DropDown-header/DropDownHeader';
 
 interface Package {
   title: string;
@@ -109,6 +110,11 @@ const Home: React.FC = () => {
           <ContactForm />
         </div>
       </section>
+
+      {/* Dropdown Section */}
+      
+
+      <DropDownHeader />
     </>
   );
 }

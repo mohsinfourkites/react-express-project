@@ -1,0 +1,24 @@
+// travel-react-frontend/src/components/MultiLevelNavbar/MultiLevelNavbar.module.scss
+
+.navbar {
+    background-color: #18181A;
+    color: white;
+    
+    .flex-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .flex-center-between {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    img.size-8 {
+      width: 32px; // Adjust the size as needed
+      height: auto;
+    }
+  }
+  
