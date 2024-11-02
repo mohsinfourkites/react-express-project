@@ -5,6 +5,10 @@ import '@coreui/coreui/dist/css/coreui.min.css';
 import GalleryCard from '../../GalleryCard/GalleryCard';
 import GalleryCard1 from '../../GalleryCard/GalleryCard';
 import UserDeatilsDropDown from '../../NextUI/LoginDropDown/LoginDropDown';
+import NextUISwitch from '../../NextUI/Switch/NextUISwitch';
+import NextUITable from '../../NextUI/Table/NextUITable';
+import NextUILoadingBar from '../../NextUI/LoadingBar/NextUILoadingBar';
+import NextUITextArea from '../../NextUI/TextArea/NextUITextArea';
 
 // Import custom components
 // import Gulmarg from './Gulmarg';
@@ -52,7 +56,25 @@ const TabsComponent: React.FC = () => {
         <CTabPane visible={activeTab === 2} className={styles.tabPane}>
           {/* Components specific to the Sonmarg tab */}
           {/* <Sonmarg /> */}
+          {/* <NextUISwitch /> */}
+          <NextUITable />
         </CTabPane>
+
+        <CTabPane visible={activeTab === 3} className={styles.tabPane}>
+          {/* Components specific to the Sonmarg tab */}
+          {/* <Sonmarg /> */}
+          {/* <NextUISwitch /> */}
+          <NextUILoadingBar />
+        </CTabPane>
+
+        <CTabPane visible={activeTab === 4} className={styles.tabPane}>
+          {/* Components specific to the Sonmarg tab */}
+          {/* <Sonmarg /> */}
+          {/* <NextUISwitch /> */}
+          <NextUITextArea />
+        </CTabPane>
+
+
         {/* Repeat this structure for other tabs with their respective components */}
       </CTabContent>
     </div>

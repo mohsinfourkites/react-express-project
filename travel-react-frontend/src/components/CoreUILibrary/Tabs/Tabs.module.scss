@@ -1,5 +1,7 @@
 .container {
     // margin: 20px;
+    // background-color: #000000;
+    height: 100vh;
   }
   
   .navTabs {
@@ -9,7 +11,7 @@
   .navLink {
     font-size: 1rem;
     font-weight: bold;
-    color: #000000 !important; // Override default color with !important
+    color: #6fd4d2 !important; // Override default color with !important
     background-color: transparent !important; // Ensure transparent background for inactive tabs
   
     &:hover {
@@ -18,7 +20,7 @@
   
     // Apply custom styling for active state
     &.activeTab {
-      color: #ffffff !important; // Active tab text color
+      color: #e1d4d4 !important; // Active tab text color
       background-color: #ffffff00 !important; // Active tab background color
     }
   }

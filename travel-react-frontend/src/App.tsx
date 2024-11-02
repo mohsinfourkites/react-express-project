@@ -10,6 +10,10 @@ import SignupPage from './pages/LoginSignUp/SignUp/SignupPage';
 import BookingPage from './pages/Booking/BookingPage';
 import MultiLevelNavbar from './components/MultiLevelNavbar/MultiLevelNavbar';
 import TopPlaces from './pages/TopPlaces/TopPlaces';
+import NextUINavbar from './components/NextUI/NavBar/NextUINavbar';
+import { BentoGrid } from './components/AceternityUI/BentoGrid/Abento-grid';
+import { BentoGridDemo } from './components/AceternityUI/BentoGrid/ABentoImageGrid';
+import { BentoGridThirdDemo } from './components/AceternityUI/BentoGrid/BentoGridThirdDemo';
 
 
 
@@ -18,6 +22,7 @@ const App: React.FC = () => {
     <Provider store={store}>
       <Router>
         <MultiLevelNavbar />
+        {/* <NextUINavbar /> */}
 
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -27,6 +32,7 @@ const App: React.FC = () => {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/book/:id" element={<BookingPage />} />
           <Route path="/topplaces" element={<TopPlaces />} />
+          <Route path='/pricing' element={<BentoGridThirdDemo />} />
         </Routes>
       </Router>
     </Provider>

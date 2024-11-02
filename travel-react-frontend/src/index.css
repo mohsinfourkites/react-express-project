@@ -9,11 +9,14 @@
 
 @layer base {
     body {
-      font-family: "Inter", sans-serif;
-      background: #283048;  
+      font-family: "Lato", sans-serif;
+      /* color: antiquewhite; */
+      /* background: #283048;  
       background: -webkit-linear-gradient(to right, #859398, #283048);
       background: linear-gradient(to right, #859398, #283048);
-      
+       */
+
+       background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
 
       /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
       /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
