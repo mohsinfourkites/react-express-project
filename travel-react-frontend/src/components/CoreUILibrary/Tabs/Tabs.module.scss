@@ -1,0 +1,35 @@
+.container {
+    // margin: 20px;
+  }
+  
+  .navTabs {
+    justify-content: center;
+  }
+  
+  .navLink {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000 !important; // Override default color with !important
+    background-color: transparent !important; // Ensure transparent background for inactive tabs
+  
+    &:hover {
+    //   color: #d8c0cf !important; // Hover color
+    }
+  
+    // Apply custom styling for active state
+    &.activeTab {
+      color: #ffffff !important; // Active tab text color
+      background-color: #ffffff00 !important; // Active tab background color
+    }
+  }
+  
+  .tabContent {
+    // border: 1px solid #dee2e6;
+    // border-top: 0;
+    // padding: 15px;
+  }
+  
+  .tabPane {
+    // padding: 10px;
+  }
+  

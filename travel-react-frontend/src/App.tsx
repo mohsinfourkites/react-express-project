@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginSignUp/Login/Login';
 import SignupPage from './pages/LoginSignUp/SignUp/SignupPage';
 import BookingPage from './pages/Booking/BookingPage';
 import MultiLevelNavbar from './components/MultiLevelNavbar/MultiLevelNavbar';
+import TopPlaces from './pages/TopPlaces/TopPlaces';
 
 
 
@@ -25,6 +26,7 @@ const App: React.FC = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/book/:id" element={<BookingPage />} />
+          <Route path="/topplaces" element={<TopPlaces />} />
         </Routes>
       </Router>
     </Provider>

@@ -9,6 +9,8 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 import { Gallery } from '../../components/Gallery/Gallery';
 import ImageSlider from '../../components/ImageSlider/ImageSlider';
 import MultiLevelNavbar from '../../components/MultiLevelNavbar/MultiLevelNavbar';
+import TopPlaces from '../TopPlaces/TopPlaces';
+import GalleryCard from '../../components/GalleryCard/GalleryCard';
 
 interface Package {
   title: string;
@@ -97,6 +99,11 @@ const Home: React.FC = () => {
 
       {/* Image Slider Section */}
       <ImageSlider images={IMAGES} />
+
+      {/* Top Places Section */}
+      {/* <TopPlaces /> */}
+
+    
 
       {/* Gallery Section */}
       {/* <section className={`${styles.container} ${styles.gallerySection}`}>

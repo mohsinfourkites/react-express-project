@@ -103,8 +103,8 @@ export const Menus: MenuItem[] = [
     gridCols: 1,
   },
   {
-    name: "Enterprise",
-    redirection: "/enterprise",
+    name: "Contact",
+    redirection: "/topplaces",
     subMenuHeading: ["Overview", "Features"],
     
     subMenu: [
@@ -136,7 +136,7 @@ export const Menus: MenuItem[] = [
     redirection: "/pricing",
   },
   {
-    name: "Contact",
-    redirection: "/contact",
+    name: "Top Places To Visit",
+    redirection: "/topplaces",
   },
 ];

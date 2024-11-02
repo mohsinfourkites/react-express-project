@@ -4,6 +4,8 @@ import DesktopMenu from "./DesktopMenu/DesktopMenu";
 import styles from './MultiLevelNavbar.module.scss'; // Import SCSS module
 import { Menus } from "../../utils/multi-level-meu";
 import MobMenu from "./MobileMenu/Mobmenu";
+import { Link } from "react-router-dom";
+import UserDeatilsDropDown from "../NextUI/LoginDropDown/LoginDropDown";
 
 const MultiLevelNavbar: React.FC = () => {
   return (
@@ -22,13 +24,16 @@ const MultiLevelNavbar: React.FC = () => {
         </ul>
 
         <div className="flex-center gap-x-5">
-            <button
-            aria-label="sign-in"
-            className="bg-white/5 z-[999] relative px-3 py-1.5 shadow rounded-xl flex-center mr-6"
-            style={{ marginRight: '25px' }}
-            >
-            Sign In / Sign Up
-            </button>
+            <Link to="/login">
+              <button
+                aria-label="sign-in"
+                className="bg-white/5 z-[999] relative px-3 py-1.5 shadow rounded-xl flex-center mr-6"
+                style={{ marginRight: '25px' }}
+              >
+                Sign In / Sign Up
+                {/* <UserDeatilsDropDown /> */}
+              </button>
+            </Link>
           <div className="lg:hidden">
         <MobMenu Menus={Menus} />
           </div>
