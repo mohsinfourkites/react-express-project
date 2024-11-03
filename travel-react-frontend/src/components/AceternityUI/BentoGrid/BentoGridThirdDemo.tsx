@@ -1,6 +1,5 @@
 "use client";
-import { cn } from "../Utils/BentoGridUtil";
-import React from "react";
+import { cn } from "../../../utils/AceternityUI.util";
 import { BentoGrid, BentoGridItem } from "./Abento-grid";
 import {
   IconBoxAlignRightFilled,

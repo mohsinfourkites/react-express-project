@@ -1,4 +1,4 @@
-import { cn } from "../Utils/BentoGridUtil";
+import { cn } from "../../../utils/AceternityUI.util";
 
 export const BentoGrid = ({
   className,

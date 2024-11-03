@@ -1,5 +1,4 @@
-import { cn } from "../Utils/BentoGridUtil";
-import React from "react";
+
 import { BentoGrid, BentoGridItem } from "../BentoGrid/Abento-grid";
 import {
   IconArrowWaveRightUp,
