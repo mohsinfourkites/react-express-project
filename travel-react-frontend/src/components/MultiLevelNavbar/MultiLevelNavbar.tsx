@@ -5,7 +5,6 @@ import styles from './MultiLevelNavbar.module.scss'; // Import SCSS module
 import { Menus } from "../../utils/multi-level-meu";
 import MobMenu from "./MobileMenu/Mobmenu";
 import { Link } from "react-router-dom";
-import UserDeatilsDropDown from "../NextUI/LoginDropDown/LoginDropDown";
 
 const MultiLevelNavbar: React.FC = () => {
   return (

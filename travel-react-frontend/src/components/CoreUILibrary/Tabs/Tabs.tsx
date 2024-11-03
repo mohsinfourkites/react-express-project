@@ -17,6 +17,16 @@ import { SignupFormDemo } from '../../AceternityUI/SignUpFrom/ASignUpFrom';
 import { StickyScrollRevealDemo } from '../../AceternityUI/AStickyScrollTextImage/AStickyScrollTextImage';
 import { BackgroundGradientDemo } from '../../AceternityUI/GradientCard/AGradientCard';
 import { TimelineDemo } from '../../AceternityUI/TimeLineScroll/TimeLineScroll';
+import { BackgroundBeamsDemo } from '../../AceternityUI/BackgroundBeams/ABackgroundBeams';
+import { CardSpotlightDemo } from '../../AceternityUI/CardSpotlight/CardSpotlight';
+import { FeaturesSectionDemo } from '../../AceternityUI/FeatureCard/FeatureCard';
+import { LayoutGridDemo } from '../../AceternityUI/LayoutGrid/LayoutGrid';
+import { TextGenerateEffect } from '../../AceternityUI/TextGenerateEffect/Text-generate-effect';
+import { TextGenerateEffectDemo } from '../../AceternityUI/TextGenerateEffect/TextGenerateEffect';
+import { TracingBeamDemo } from '../../AceternityUI/TracingBeam/TracingBeam';
+import { WobbleCardDemo } from '../../AceternityUI/WobbleCard/WobbleCard';
+import ProgressSlider from '../../EldoraUI/ProgressSlider/ProgressSlider';
+import { ProgressSliderPage } from '../../EldoraUI/ProgressSlider/progress-slider';
 
 // Import custom components
 // import Gulmarg from './Gulmarg';
@@ -59,8 +69,12 @@ const TabsComponent: React.FC = () => {
           {/* Components specific to the Pahalgam tab */}
           {/* <Pahalgam /> */}
           {/* Add other components as needed */}
-          <div className={styles.LadakhContainer1st}></div>
-          <UserDeatilsDropDown />
+          <div className={styles.FullHeight}>
+          {/* <UserDeatilsDropDown /> */}
+
+          <ProgressSliderPage />
+          </div>
+          
         </CTabPane>
         <CTabPane visible={activeTab === 2} className={styles.tabPane}>
           {/* Components specific to the Sonmarg tab */}
@@ -146,9 +160,17 @@ const TabsComponent: React.FC = () => {
           {/* Components specific to the Sonmarg tab */}
           {/* <Sonmarg /> */}
           {/* <NextUISwitch /> */}
-          <div className={styles.LadakhContainer1st}></div>
+          <div className={styles.LadakhContainer1st}>
           {/* <BackgroundGradientDemo /> */}
-          <TimelineDemo />
+          {/* <TimelineDemo /> */}
+
+          {/* <BackgroundBeamsDemo  /> */}
+
+          {/* <CardSpotlightDemo /> */}
+
+          <FeaturesSectionDemo />
+          </div>
+          
         </CTabPane>
 
 
@@ -157,7 +179,8 @@ const TabsComponent: React.FC = () => {
           {/* <Sonmarg /> */}
           {/* <NextUISwitch /> */}
           <div className={styles.LadakhContainer1st}></div>
-          <LampDemo />
+          {/* <LampDemo /> */}
+          <LayoutGridDemo />
         </CTabPane>
 
 
@@ -165,8 +188,11 @@ const TabsComponent: React.FC = () => {
           {/* Components specific to the Sonmarg tab */}
           {/* <Sonmarg /> */}
           {/* <NextUISwitch /> */}
-          <div className={styles.LadakhContainer1st}></div>
-          <LampDemo />
+          <div className={styles.LadakhContainer1st}> </div>
+          {/* <LampDemo /> */}
+          {/* <TextGenerateEffectDemo /> */}
+          <WobbleCardDemo />
+         
         </CTabPane>
 
 

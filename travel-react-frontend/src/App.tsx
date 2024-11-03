@@ -14,6 +14,11 @@ import NextUINavbar from './components/NextUI/NavBar/NextUINavbar';
 import { BentoGrid } from './components/AceternityUI/BentoGrid/Abento-grid';
 import { BentoGridDemo } from './components/AceternityUI/BentoGrid/ABentoImageGrid';
 import { BentoGridThirdDemo } from './components/AceternityUI/BentoGrid/BentoGridThirdDemo';
+import { BackgroundBeamsDemo } from './components/AceternityUI/BackgroundBeams/ABackgroundBeams';
+import { CardSpotlightDemo } from './components/AceternityUI/CardSpotlight/CardSpotlight';
+import { TracingBeamDemo } from './components/AceternityUI/TracingBeam/TracingBeam';
+import ProgressSlider from './components/EldoraUI/ProgressSlider/ProgressSlider';
+import { ProgressSliderPage } from './components/EldoraUI/ProgressSlider/progress-slider';
 
 
 
@@ -32,7 +37,7 @@ const App: React.FC = () => {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/book/:id" element={<BookingPage />} />
           <Route path="/topplaces" element={<TopPlaces />} />
-          <Route path='/pricing' element={<BentoGridThirdDemo />} />
+          <Route path='/pricing' element={<ProgressSliderPage />} />
         </Routes>
       </Router>
     </Provider>

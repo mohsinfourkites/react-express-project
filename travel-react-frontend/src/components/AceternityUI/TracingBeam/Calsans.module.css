@@ -1,0 +1,17 @@
+/* Calsans.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Calsans:wght@400;700&display=swap');
+
+.className {
+  font-family: 'Calsans', sans-serif;
+}
+
+.textcolour{
+  color: aliceblue;
+}
+
+.container{
+  /* height: 1000vh; */
+  padding: 20px;
+  margin: 20px 20px 50px 20px;
+}
+
