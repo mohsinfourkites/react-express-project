@@ -89,9 +89,10 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
             onClick={() => { setActive(index); setProgress(0) }}
           >
             <span className={`text-center flex flex-col items-center ${active === index ? '' : 'opacity-50 group-hover:opacity-100 group-focus:opacity-100 transition-opacity'}`}>
-              <span className="flex items-center justify-center relative w-9 h-9 rounded-full bg-indigo-100 mb-1">
-                <img src={item.buttonIcon} alt={item.desc} onLoad={() => heightFix()} />
-              </span>
+            <span className="flex items-center justify-center relative w-9 h-9 rounded-full bg-indigo-100 mb-1"> {/* Reduced w-9 h-9 to w-7 h-7 */}
+  <img src={item.buttonIcon} alt={item.desc} className="w-5 h-5" onLoad={() => heightFix()} /> {/* Set the icon size */}
+</span>
+
               <span className="block text-sm font-medium text-slate-900 mb-1">{item.desc}</span>
               <span className="block relative w-full bg-slate-200 h-1 rounded-full" role="progressbar" aria-valuenow={active === index ? progress : 0}>
                 <span className="absolute inset-0 bg-indigo-500 rounded-[inherit]" style={{ width: active === index ? `${progress}%` : '0%' }}></span>
