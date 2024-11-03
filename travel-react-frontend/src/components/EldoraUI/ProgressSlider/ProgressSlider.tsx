@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 
-
 interface Item {
   img: string
   desc: string
@@ -39,51 +38,61 @@ export default function ProgressSlider({ items }: { items: Item[] }) {
   }
 
   const heightFix = () => {
-    if (itemsRef.current && itemsRef.current.parentElement) itemsRef.current.parentElement.style.height = `${itemsRef.current.clientHeight}px`
+    if (itemsRef.current && itemsRef.current.parentElement) {
+      itemsRef.current.parentElement.style.height = `${itemsRef.current.clientHeight}px`
+    }
   }
 
   useEffect(() => {
     heightFix()
+    setTimeout(() => heightFix(), 100) // Ensures layout has stabilized on mount
   }, [])
 
   return (
     <div className="w-full max-w-5xl mx-auto text-center">
-      {/* Item image */}
-      <div className="transition-all duration-150 delay-300 ease-in-out">
-        <div className="relative flex flex-col" ref={itemsRef}>
+      {/* Image Container */}
+      <div className="transition-all duration-150 delay-300 ease-in-out min-h-[440px] flex items-center justify-center pt-0 pb-4"> {/* Reduced padding */}
+        <div className="relative flex flex-col items-center" ref={itemsRef}> {/* Center content */}
 
           {items.map((item, index) => (
             <Transition
               key={index}
               show={active === index}
               enter="transition ease-in-out duration-500 delay-200 order-first"
-              enterFrom="opacity-0 scale-105"
-              enterTo="opacity-100 scale-100"
+              enterFrom="opacity-0 scale-105 absolute"
+              enterTo="opacity-100 scale-100 relative"
               leave="transition ease-in-out duration-300 absolute"
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
               beforeEnter={() => heightFix()}
             >
-              <img className="rounded-xl" src={item.img}  width={1024} height={576} alt={item.desc} />
+              <img 
+                className="rounded-xl mb-0"  // Removed all margins
+                src={item.img} 
+                width={1024} 
+                height={576} 
+                alt={item.desc} 
+                onLoad={() => heightFix()}  
+              />
             </Transition>
           ))}
 
         </div>
       </div>
-      {/* Buttons */}
-      <div className="max-w-xs sm:max-w-sm md:max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+      {/* Button Section */}
+      <div className="max-w-xs sm:max-w-sm md:max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 mt-2"> {/* Reduced gap and margin */}
 
         {items.map((item, index) => (
           <button
             key={index}
-            className="p-2 rounded focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 group"
+            className="p-1 rounded focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 group"
             onClick={() => { setActive(index); setProgress(0) }}
           >
             <span className={`text-center flex flex-col items-center ${active === index ? '' : 'opacity-50 group-hover:opacity-100 group-focus:opacity-100 transition-opacity'}`}>
-              <span className="flex items-center justify-center relative w-9 h-9 rounded-full bg-indigo-100 mb-2">
-                <img src={item.buttonIcon}  alt={item.desc} />
+              <span className="flex items-center justify-center relative w-9 h-9 rounded-full bg-indigo-100 mb-1">
+                <img src={item.buttonIcon} alt={item.desc} onLoad={() => heightFix()} />
               </span>
-              <span className="block text-sm font-medium text-slate-900 mb-2">{item.desc}</span>
+              <span className="block text-sm font-medium text-slate-900 mb-1">{item.desc}</span>
               <span className="block relative w-full bg-slate-200 h-1 rounded-full" role="progressbar" aria-valuenow={active === index ? progress : 0}>
                 <span className="absolute inset-0 bg-indigo-500 rounded-[inherit]" style={{ width: active === index ? `${progress}%` : '0%' }}></span>
               </span>
