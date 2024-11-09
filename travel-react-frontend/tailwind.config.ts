@@ -29,6 +29,7 @@ const config: Config = {
     extend: {
       animation: {
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite", "meteor-effect": "meteor 5s linear infinite",
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
       },
       keyframes: {
         scroll: {
@@ -44,11 +45,25 @@ const config: Config = {
             opacity: "0",
           },
         },
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
+        
       },
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
       },
     },
+    transitionTimingFunction: {
+      'out-expo': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+     },
   },
   plugins: [nextui(), addVariablesForColors],
 };

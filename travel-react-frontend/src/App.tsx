@@ -19,6 +19,7 @@ import { CardSpotlightDemo } from './components/AceternityUI/CardSpotlight/CardS
 import { TracingBeamDemo } from './components/AceternityUI/TracingBeam/TracingBeam';
 import ProgressSlider from './components/EldoraUI/ProgressSlider/ProgressSlider';
 import { ProgressSliderPage } from './components/EldoraUI/ProgressSlider/progress-slider';
+import Pricing from './pages/Pricing';
 
 
 
@@ -37,7 +38,7 @@ const App: React.FC = () => {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/book/:id" element={<BookingPage />} />
           <Route path="/topplaces" element={<TopPlaces />} />
-          <Route path='/pricing' element={<ProgressSliderPage />} />
+          <Route path='/pricing' element={< Pricing />} />
         </Routes>
       </Router>
     </Provider>

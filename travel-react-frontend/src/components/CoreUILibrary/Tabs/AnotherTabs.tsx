@@ -27,9 +27,12 @@ import { AnimatedCircularProgressBar } from "../../MagicUI/AnimatedCircularProgr
 import { AnimatedCircularProgressBarDemo } from "../../MagicUI/AnimatedCircularProgressBar/AnimatedCircularProgressBar";
 import UILayoutCard from "../../UILayoutCard/UILayoutCard";
 import ProductCardUI from "../../ProductCard/ProductCard";
+import TextRandomizer from "../../TextRandomizer/TextRandomizer";
+import ImageMouseTrailGrid from "../../ImageMouseTrailGrid/ImageMouseTrailGrid";
+import ProgressiveCarousel from "../../ProgressiveCarousel/ProgressiveCarousel";
 
 
-const TabsComponent: React.FC = () => {
+const AnotherTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
   const handleTabClick = (tabIndex: number) => {
@@ -72,20 +75,22 @@ const TabsComponent: React.FC = () => {
         {/* Gulmarg */}
         <CTabPane visible={activeTab === 0} className={styles.tabPane}>
           <div className={styles.LadakhContainer1st}></div>
-          <GalleryCard1 />
+          
+          <TextRandomizer />
         </CTabPane>
 
         {/* Pahalgam */}
         <CTabPane visible={activeTab === 1} className={styles.tabPane}>
           <div className={styles.Pahalgam}>
-            <ProgressSliderPage />
+            <ImageMouseTrailGrid />
           </div>
 
           {/* Sonmarg */}
         </CTabPane>
         <CTabPane visible={activeTab === 2} className={styles.tabPane}>
-          <div className={styles.LadakhContainer1st}></div>
-          <NextUITable />
+          <div className={styles.LadakhContainer1st}>
+          <ProgressiveCarousel />
+          </div>
         </CTabPane>
 
         {/* Srinagar */}
@@ -176,4 +181,4 @@ const TabsComponent: React.FC = () => {
   );
 };
 
-export default TabsComponent;
+export default AnotherTabs;
