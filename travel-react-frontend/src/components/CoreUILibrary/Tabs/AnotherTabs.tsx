@@ -30,6 +30,10 @@ import ProductCardUI from "../../ProductCard/ProductCard";
 import TextRandomizer from "../../TextRandomizer/TextRandomizer";
 import ImageMouseTrailGrid from "../../ImageMouseTrailGrid/ImageMouseTrailGrid";
 import ProgressiveCarousel from "../../ProgressiveCarousel/ProgressiveCarousel";
+import { BookingCard } from "../../MaterialTailWind/Card";
+import PackageCard from "../../MyCards/Git/PackageCard";
+
+
 
 
 const AnotherTabs: React.FC = () => {
@@ -95,29 +99,18 @@ const AnotherTabs: React.FC = () => {
 
         {/* Srinagar */}
         <CTabPane visible={activeTab === 3} className={styles.tabPane}>
-          <div className={styles.Srinagar}></div>
+          <div className={styles.Srinagar}>
           {/* <NextUILoadingBar /> */}
-          <div className={styles.Srinagar1}>
-          <OrbitingCirclesDemo />
-          </div>
-          <div className={styles.Srinagar2}>
-          <IconCloudDemo />
-          </div>
-          <div className={styles.Srinagar2}>
-          <AnimatedCircularProgressBarDemo/>
+          <BookingCard />
           </div>
         </CTabPane>
 
         {/* Bangus */}
         <CTabPane visible={activeTab === 4} className={styles.tabPane}>
           <div className={styles.LadakhContainer1st}></div>
-          {/* <NextUITextArea /> */}
-          <div className={styles.Srinagar2}>
-          <UILayoutCard />
-          </div>
-          <div className={styles.Srinagar2}>
-            <ProductCardUI />
-          </div>
+          
+          <PackageCard  />
+         
         </CTabPane>
 
         {/* Ladakh */}
