@@ -2,11 +2,12 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
-    max-width: 300px;
+    max-width: 350px;
     margin: 20px;
     overflow: hidden;
+    background-color: #fff;
     &:hover {
-      box-shadow: 0 8px 16px rgba(240, 237, 237, 0.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
   }
   
@@ -20,15 +21,18 @@
       border: none;
       font-size: 24px;
       cursor: pointer;
+      color: #fff;
     }
     .prevButton, .nextButton {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: none;
+      background: rgba(0, 0, 0, 0.5);
       border: none;
       font-size: 24px;
+      color: #fff;
       cursor: pointer;
+      padding: 10px;
     }
     .prevButton {
       left: 10px;
@@ -51,10 +55,12 @@
     color: white;
     .heading {
       font-weight: bold;
+      font-size: 1.5em;
     }
     .subheading {
       display: flex;
       align-items: center;
+      margin-top: 10px;
       .location-icon {
         margin-right: 8px;
       }
@@ -62,6 +68,7 @@
     .details {
       display: flex;
       flex-wrap: wrap;
+      margin-top: 10px;
       .detail {
         display: flex;
         align-items: center;
@@ -94,6 +101,7 @@
         background: none;
         border: none;
         cursor: pointer;
+        color: white;
       }
     }
   }

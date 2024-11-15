@@ -29,7 +29,6 @@ const App: React.FC = () => {
       <Router>
         <MultiLevelNavbar />
         {/* <NextUINavbar /> */}
-
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
