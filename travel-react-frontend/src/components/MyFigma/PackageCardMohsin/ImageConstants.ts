@@ -9,7 +9,7 @@ import Map from '../../../assets/icons/Figma/PackageCard/map.png';
 import RightArrow from '../../../assets/icons/Figma/PackageCard/right-arrow.png';
 import LeftArrow from '../../../assets/icons/Figma/PackageCard/left-arrow.png';
 
-// ImageConstants.ts
+
 import Slide1 from '../../../assets/images/Kashmir/kashmirjungle.jpg';
 import Slide2 from '../../../assets/images/Kashmir/meadows.jpg';
 import Slide3 from '../../../assets/images/Kashmir/shikara.jpg';

@@ -7,6 +7,14 @@
     box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.5),
       0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    // transition: transform 0.3s ease-in-out;
+  
+
+    // &:hover {
+    //   transform: scale(1.02);
+    // }
+
+    
   }
   
   .popularButton {
@@ -23,7 +31,6 @@
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
-    cursor: pointer;
   }
   
   .locationButton {
@@ -107,6 +114,12 @@
     background-size: cover;
     background-position: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: transform 0.3s ease-in-out;
+  
+
+    &:hover {
+      transform: scale(1.10);
+    }
   }
   
   .featureLabel {
@@ -148,11 +161,26 @@
     font-family: "Lato", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    border: 1px solid #ffffff;
+    border: 2px solid transparent; /* Keep transparent border */
     border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(81, 199, 235, 0.25);
+    position: relative; /* Required for positioning */
+    overflow: hidden; /* To hide any overflow during the animation */
+  
+    /* Transition for smooth hover effect */
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05); /* Slightly zoom-in effect */
+      box-shadow: 1px 1px 2px 2px rgb(208, 213, 213); /* Glowing neon shadow */
+      background: linear-gradient(
+        89.65deg,
+        #525555 -8.8%,
+        #020000 20.48%,
+        #514c4c 106.8%
+      );
+    }
   }
   
   .price {
@@ -163,22 +191,20 @@
   }
   
 
-
-
   /* PackageCardMohsin.module.scss */
 
-.slideshow {
-  width: 100%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  border-radius: 10px 10px 0px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 0px 14px 0px rgba(126, 121, 121, 1);
-}
+// .slideshow {
+//   width: 100%;
+//   height: 300px;
+//   background-size: cover;
+//   background-position: center;
+//   position: relative;
+//   border-radius: 10px 10px 0px 0px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   box-shadow: 0px 0px 14px 0px rgba(126, 121, 121, 1);
+// }
 
 .arrowRight {
   rotate: 180deg; 
@@ -218,3 +244,39 @@
   border-radius: 5px;
   font-size: 14px;
 }
+
+.slideshow {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 14px 0px rgba(126, 121, 121, 1);
+  overflow: hidden; /* Ensure images are clipped to fit the container */
+  
+  /* Animation for background fade */
+  transition: background-image 1s ease-in-out;
+}
+
+.slideshow.fade {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
