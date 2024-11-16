@@ -29,12 +29,13 @@ const PackageCardMohsin: React.FC = () => {
             backgroundImage: `url(${slideshowImages[currentSlide].src})`,
           }}
         >
+          
           <button className={styles.arrowLeft} onClick={handlePrev}>
-            &lt;
-          </button>
-          <button className={styles.arrowRight} onClick={handleNext}>
-            &gt;
-          </button>
+            <img src={OtherIcons[2].src} alt={OtherIcons[0].alt} />
+            </button>
+            <button className={styles.arrowRight} onClick={handleNext}>
+            <img src={OtherIcons[2].src} alt={OtherIcons[1].alt} />
+        </button>
           <div className={styles.slideIndicator}>
             {currentSlide + 1} / {slideshowImages.length}
           </div>

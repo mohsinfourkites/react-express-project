@@ -6,6 +6,8 @@ import Bathroom from '../../../assets/icons/Figma/PackageCard/bathroom.png';
 import Parking from '../../../assets/icons/Figma/PackageCard/architecture-and-city.png';
 import Location from '../../../assets/icons/Figma/PackageCard/location.png';
 import Map from '../../../assets/icons/Figma/PackageCard/map.png';
+import RightArrow from '../../../assets/icons/Figma/PackageCard/right-arrow.png';
+import LeftArrow from '../../../assets/icons/Figma/PackageCard/left-arrow.png';
 
 // ImageConstants.ts
 import Slide1 from '../../../assets/images/Kashmir/kashmirjungle.jpg';
@@ -23,6 +25,8 @@ export const slideshowImages = [
 export const OtherIcons =[
   { src: Location, alt: "Location" },
   { src: Map, alt: "Map" },
+  { src: LeftArrow, alt: "Left Arrow" },
+  { src: RightArrow, alt: "Right Arrow" },
 ];
 
 
@@ -45,22 +49,22 @@ export const ratings = [
     {
       src: Man,
       alt: "2 Persons",
-      label: "2 P",
+      label: "2 People",
     },
     {
       src: Bed,
-      alt: "2 Beds",
-      label: "2 Beds",
+      alt: "1 Bed",
+      label: "1 Bed",
     },
     {
       src: Bathroom,
       alt: "1 Bath",
       label: "1 Bath",
     },
-    {
-      src: Parking,
-      alt: "Parking",
-      label: "Parking",
-    },
+    // {
+    //   src: Parking,
+    //   alt: "Parking",
+    //   label: "Parking",
+    // },
   ];
   
