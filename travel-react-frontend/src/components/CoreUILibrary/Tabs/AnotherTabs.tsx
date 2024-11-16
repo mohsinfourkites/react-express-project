@@ -53,6 +53,7 @@ import AnimateBookPagesLoader from "../../UIVerse/AnimateBookPages/AnimateBookPa
 import StarRatingsAnimated from "../../UIVerse/StarRatingsAnimated/StarRatingsAnimated";
 import CardWithTextLogo from "../../UIVerse/CardWithTextLogo/CardWithTextLogo";
 import AnimatedAboutMeCard from "../../UIVerse/AnimatedAboutMeCard/AnimatedAboutMeCard";
+import PackageCardMohsin from "../../MyFigma/PackageCardMohsin/PackageCardMohsin";
 
 
 
@@ -233,8 +234,11 @@ const AnotherTabs: React.FC = () => {
 
         {/* SinthanTop */}
         <CTabPane visible={activeTab === 9} className={styles.tabPane}>
-          <div className={styles.LadakhContainer1st}></div>
-          <SignupFormDemo />
+
+
+          <div className={styles.LadakhContainer1st}>
+          <PackageCardMohsin />
+          </div>
         </CTabPane>
 
         {/*Drang*/}

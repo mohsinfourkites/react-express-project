@@ -1,0 +1,217 @@
+    .whiteFrame {
+    margin: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background: linear-gradient(0deg, #ffffff, #ffffff);
+    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.5),
+      0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  
+  .popularButton {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background: #000000;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-family: "Abyssinica SIL", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .locationButton {
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #3fbfcd 0%, #6ed3e2 52%, #5cbbaa 100%);
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 11px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .locationIcon{
+    max-width: 6%;
+    height: auto;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 28px;
+    margin-right: 10px;
+    background-image: url("https://img.icons8.com/ios/452/worldwide-location.png");
+  }
+  
+  .locationText {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+  }
+
+  .belowSlideShow{
+    padding: 20px;
+  }
+  
+  .ratings {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0;
+  }
+  
+  .ratingImage {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .ratingValue {
+    font-family: "Abyssinica SIL", sans-serif;
+    font-size: 24px;
+    color: #000000;
+  }
+  
+  .reviews {
+    font-family: "Abyssinica SIL", sans-serif;
+    font-size: 24px;
+    color: #3f81b6;
+  }
+  
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 64px;
+  }
+  
+  .featureIcon {
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  
+  .featureLabel {
+    margin-top: 5px;
+    font-family: "Abyssinica SIL", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .description {
+    font-family: "Abyssinica SIL", sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    margin: 20px 0;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px -4px 4px rgba(126, 121, 121, 0.2);
+  }
+  
+  .viewDetailsButton {
+    background: linear-gradient(
+      89.65deg,
+      #525555 -8.8%,
+      #020000 51.48%,
+      #514c4c 106.8%
+    );
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(81, 199, 235, 0.25);
+  }
+  
+  .price {
+    font-family: "Abyssinica SIL", sans-serif;
+    font-size: 36px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+
+
+
+  /* PackageCardMohsin.module.scss */
+
+.slideshow {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrowLeft,
+.arrowRight {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrowLeft {
+  left: 10px;
+}
+
+.arrowRight {
+  right: 10px;
+}
+
+.slideIndicator {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}

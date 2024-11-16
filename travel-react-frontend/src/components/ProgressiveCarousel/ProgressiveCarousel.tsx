@@ -7,10 +7,10 @@ import { Home } from 'lucide-react';
 
 import { ProgressSlider, SliderBtnGroup, SliderBtn, SliderContent, SliderWrapper } from './progress-slider';
 
-import img1 from '../../assets/images/Kashmir/pexels-amjed-wani-1355393378-26110235.jpg';
-import img2 from '../../assets/images/Kashmir/pexels-imadclicks-6780256.jpg';
-import img3 from '../../assets/images/Kashmir/pexels-photonova-2907578.jpg';
-import img4 from '../../assets/images/Kashmir/pexels-shubhendu-singh-1278012-2439787.jpg';
+import img1 from '../../assets/images/Kashmir/kashmirjungle.jpg';
+import img2 from '../../assets/images/Kashmir/meadows.jpg';
+import img3 from '../../assets/images/Kashmir/shikara.jpg';
+import img4 from '../../assets/images/Kashmir/snow.jpg';
 
     const imgPreview = {
         img1,
