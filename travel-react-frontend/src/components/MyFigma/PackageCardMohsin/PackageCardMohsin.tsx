@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./PackageCardMohsin.module.scss";
-import { packageData } from "./CardDetails1";
+import { GulmargCard } from "./ReusableCardMohsin";
+
 
 export interface SlideshowImage {
   src: string;
@@ -57,14 +58,14 @@ const PackageCardMohsin: React.FC<PackageCardProps> = ({
         >
           <button className={styles.arrowLeft} onClick={handlePrev}>
             <img
-              src={packageData.OtherIcons[0].src}
-              alt={packageData.OtherIcons[0].alt}
+              src={GulmargCard.OtherIcons[0].src}
+              alt={GulmargCard.OtherIcons[0].alt}
             />
           </button>
           <button className={styles.arrowRight} onClick={handleNext}>
             <img
-              src={packageData.OtherIcons[0].src}
-              alt={packageData.OtherIcons[0].alt}
+              src={GulmargCard.OtherIcons[0].src}
+              alt={GulmargCard.OtherIcons[0].alt}
             />
           </button>
           <div className={styles.slideIndicator}>
