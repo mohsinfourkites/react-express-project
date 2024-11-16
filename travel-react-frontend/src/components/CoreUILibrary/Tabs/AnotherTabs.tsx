@@ -54,6 +54,9 @@ import StarRatingsAnimated from "../../UIVerse/StarRatingsAnimated/StarRatingsAn
 import CardWithTextLogo from "../../UIVerse/CardWithTextLogo/CardWithTextLogo";
 import AnimatedAboutMeCard from "../../UIVerse/AnimatedAboutMeCard/AnimatedAboutMeCard";
 import PackageCardMohsin from "../../MyFigma/PackageCardMohsin/PackageCardMohsin";
+import {  packageData, packageData1 } from "../../MyFigma/PackageCardMohsin/CardDetails1";
+
+
 
 
 
@@ -237,7 +240,10 @@ const AnotherTabs: React.FC = () => {
 
 
           <div className={styles.LadakhContainer1st}>
-          <PackageCardMohsin />
+
+          <PackageCardMohsin {...packageData} />
+          <PackageCardMohsin {...packageData1} />
+
           </div>
         </CTabPane>
 

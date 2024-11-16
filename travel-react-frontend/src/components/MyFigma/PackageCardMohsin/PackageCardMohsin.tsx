@@ -1,13 +1,39 @@
 import React, { useState } from "react";
 import styles from "./PackageCardMohsin.module.scss";
-import {
-  ratings,
-  features,
-  slideshowImages,
-  OtherIcons,
-} from "./ImageConstants";
+import { packageData } from "./CardDetails1";
 
-const PackageCardMohsin: React.FC = () => {
+export interface SlideshowImage {
+  src: string;
+  alt: string;
+}
+
+export interface Feature {
+  src: string;
+  alt: string;
+  label: string;
+}
+
+export interface PackageCardProps {
+  slideshowImages: SlideshowImage[];
+  location: string;
+  ratings: SlideshowImage[];
+  ratingValue: number;
+  reviewCount: number;
+  features: Feature[];
+  description: string;
+  price: string;
+}
+
+const PackageCardMohsin: React.FC<PackageCardProps> = ({
+  slideshowImages,
+  location,
+  ratings,
+  ratingValue,
+  reviewCount,
+  features,
+  description,
+  price,
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleNext = () => {
@@ -29,13 +55,18 @@ const PackageCardMohsin: React.FC = () => {
             backgroundImage: `url(${slideshowImages[currentSlide].src})`,
           }}
         >
-          
           <button className={styles.arrowLeft} onClick={handlePrev}>
-            <img src={OtherIcons[2].src} alt={OtherIcons[0].alt} />
-            </button>
-            <button className={styles.arrowRight} onClick={handleNext}>
-            <img src={OtherIcons[2].src} alt={OtherIcons[1].alt} />
-        </button>
+            <img
+              src={packageData.OtherIcons[0].src}
+              alt={packageData.OtherIcons[0].alt}
+            />
+          </button>
+          <button className={styles.arrowRight} onClick={handleNext}>
+            <img
+              src={packageData.OtherIcons[0].src}
+              alt={packageData.OtherIcons[0].alt}
+            />
+          </button>
           <div className={styles.slideIndicator}>
             {currentSlide + 1} / {slideshowImages.length}
           </div>
@@ -44,16 +75,7 @@ const PackageCardMohsin: React.FC = () => {
           <span>Popular</span>
         </button>
         <div className={styles.locationButton}>
-          <i
-            className={`${styles.icon} ${styles.mapMarker}`}
-            style={{
-              backgroundImage: `url(${OtherIcons[0].src})`, 
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
-          />
-          <span className={styles.locationText}>Wooden Hut, Gulmarg</span>
+          <span className={styles.locationText}>{location}</span>
         </div>
 
         <div className={styles.belowSlideShow}>
@@ -66,8 +88,8 @@ const PackageCardMohsin: React.FC = () => {
                 className={styles.ratingImage}
               />
             ))}
-            <span className={styles.ratingValue}>4.9</span>
-            <span className={styles.reviews}>(23 Reviews)</span>
+            <span className={styles.ratingValue}>{ratingValue}</span>
+            <span className={styles.reviews}>({reviewCount} Reviews)</span>
           </div>
           <div className={styles.features}>
             {features.map((feature, idx) => (
@@ -80,14 +102,11 @@ const PackageCardMohsin: React.FC = () => {
               </div>
             ))}
           </div>
-          <p className={styles.description}>
-            Gulmarg has attracted millions of tourists throughout its existence
-            with the scenic beauty of the Himalayan Mountains in the backdrop.
-          </p>
+          <p className={styles.description}>{description}</p>
         </div>
         <div className={styles.footer}>
           <button className={styles.viewDetailsButton}>View Details</button>
-          <span className={styles.price}>₹ 5999</span>
+          <span className={styles.price}>{price}</span>
         </div>
       </div>
     </div>
