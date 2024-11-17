@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const MultiLevelNavbar: React.FC = () => {
   return (
     <header className={`${styles.navbar} ${styles.stickyNavbar} `}>
-      <nav className="px-3.5 flex-center-between w-full max-w-8xl mx-auto" style={{ background: 'linear-gradient(to right, #859398, #283048)' }}>
+      <nav className="px-3.5 flex-center-between w-full max-w-8xl mx-auto" >
         <div className="flex-center gap-x-3 z-[999] relative"
         style={{ marginLeft: '25px' }}>
           <img src={Logo} alt="Logo" className="size-8" />

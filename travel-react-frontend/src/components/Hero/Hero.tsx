@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       
       <div className={styles.hero__content}>
         <div>
-          <h1>Discover Kashmir's Paradise</h1>
+          <h1>Your World Of Joy</h1>
           <p>
             Experience the breathtaking beauty of the Valley of Kashmir with our handcrafted travel experiences
           </p>

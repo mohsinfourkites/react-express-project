@@ -3,11 +3,10 @@ import Hotel from "../../../assets/icons/Figma/PackageCard/resort.png";
 import Man from "../../../assets/icons/Figma/PackageCard/man.png";
 import Bed from "../../../assets/icons/Figma/PackageCard/bed.png";
 import Bathroom from "../../../assets/icons/Figma/PackageCard/bathroom.png";
-import Slide1 from "../../../assets/images/Kashmir/kashmirjungle.jpg";
-import Slide2 from "../../../assets/images/Kashmir/meadows.jpg";
-import Slide3 from "../../../assets/images/Kashmir/shikara.jpg";
-import Slide4 from "../../../assets/images/Kashmir/snow.jpg";
 import LeftArrow from '../../../assets/icons/Figma/PackageCard/left-arrow.png';
+import Calendar from '../../../assets/icons/Figma/PackageCard/calendar.png';
+
+
 import Gulmarg1 from '../../../assets/images/Kashmir/Gulmarg/pexels-amjed-wani-1355393378-26110236.jpg';
 import Gulmarg2 from '../../../assets/images/Kashmir/Gulmarg/pexels-gautham-reghu-1029880-19189030.jpg';
 import Gulmarg3 from '../../../assets/images/Kashmir/Gulmarg/pexels-haziqfarooqi-20168347.jpg';
@@ -107,7 +106,8 @@ export const GulmargCard = {
   ratingValue: 4.6,
   reviewCount: 87,
   features: [
-    { src: Hotel, alt: "Hotel", label: "Hotel" },
+    // { src: Hotel, alt: "Hotel", label: "Hotel" },
+    { src: Calendar, alt: "Duration", label: "2 Days" },
     { src: Man, alt: "2 Persons", label: "2 Persons" },
     { src: Bed, alt: "1 Bed", label: "1 Room" },
     { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
@@ -142,7 +142,8 @@ export const PahalgamCard = {
   ratingValue: 4.7,
   reviewCount: 92,
   features: [
-    { src: Hotel, alt: "Resort", label: "Resort" },
+    // { src: Hotel, alt: "Resort", label: "Resort" },
+    { src: Calendar, alt: "Duration", label: "2 Days" },
     { src: Man, alt: "3 Persons", label: "3 Persons" },
     { src: Bed, alt: "3 Bed", label: "3 Rooms" },
     { src: Bathroom, alt: "2 Bath", label: "3 Baths" },
@@ -179,7 +180,8 @@ export const SonmargCard = {
     ratingValue: 4.4,
     reviewCount: 32,
     features: [
-      { src: Hotel, alt: "Hotel", label: "Hotel" },
+      // { src: Hotel, alt: "Hotel", label: "Hotel" },
+      { src: Calendar, alt: "Duration", label: "2 Days" },
       { src: Man, alt: "1 Persons", label: "1 Person" },
       { src: Bed, alt: "1 Bed", label: "1 Bed" },
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },

@@ -55,6 +55,7 @@ import CardWithTextLogo from "../../UIVerse/CardWithTextLogo/CardWithTextLogo";
 import AnimatedAboutMeCard from "../../UIVerse/AnimatedAboutMeCard/AnimatedAboutMeCard";
 import PackageCardMohsin from "../../MyFigma/PackageCardMohsin/PackageCardMohsin";
 import { GulmargCard, PahalgamCard, SonmargCard } from "../../MyFigma/PackageCardMohsin/ReusableCardMohsin";
+import AboutTourAndTextMohsin from "../../MyFigma/AboutTourAndText/AboutTourAndText";
 
 
 
@@ -254,7 +255,7 @@ const AnotherTabs: React.FC = () => {
         {/*Drang*/}
         <CTabPane visible={activeTab === 10} className={styles.tabPane}>
           <div className={styles.LadakhContainer1st}></div>
-          <StickyScrollRevealDemo />
+          <AboutTourAndTextMohsin />
         </CTabPane>
 
         {/* Tangmarg  */}
