@@ -11,6 +11,9 @@ import ImageSlider from '../../components/ImageSlider/ImageSlider';
 import MultiLevelNavbar from '../../components/MultiLevelNavbar/MultiLevelNavbar';
 import TopPlaces from '../TopPlaces/TopPlaces';
 import GalleryCard from '../../components/GalleryCard/GalleryCard';
+import HeroSection from '../../components/Hero/Hero';
+import PackageCardMohsin from '../../components/MyFigma/PackageCardMohsin/PackageCardMohsin';
+import { GulmargCard, PahalgamCard, SonmargCard } from '../../components/MyFigma/PackageCardMohsin/ReusableCardMohsin';
 
 interface Package {
   title: string;
@@ -80,46 +83,27 @@ const packages: Package[] = [
 const Home: React.FC = () => {
   return (
     <>
-      {/* Apply stickyNavbar class */}
-      
+     
+       <HeroSection />
 
-      <Hero />
-
-      {/* Packages Section */}
-      <section className={styles.container}>
-        <div className="max-w-7xl mx-auto">
-          <h2>Featured Packages</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <PackageCard id={''} maxPeople={0} description={''} key={index} {...pkg} />
-            ))}
-          </div>
+       <div className={styles.TopPlacesToVisitText}> 
+        <h1> Top Places To Visit</h1>
         </div>
-      </section>
 
-      {/* Image Slider Section */}
-      <ImageSlider images={IMAGES} />
-
-      {/* Top Places Section */}
-      {/* <TopPlaces /> */}
-
-    
-
-      {/* Gallery Section */}
-      {/* <section className={`${styles.container} ${styles.gallerySection}`}>
-        <div className="max-w-7xl mx-auto">
-          <h2>Travel Gallery</h2>
-          <Gallery />
-        </div>
-      </section> */}
+      {/* <div className={styles.packageCardContainer}>
+      <PackageCardMohsin {...GulmargCard} />
+          <PackageCardMohsin {...PahalgamCard} />
+          <PackageCardMohsin {...SonmargCard} />
+          </div> */}
+     
 
       {/* Contact Section */}
-      <section className={styles.container}>
+      {/* <section className={styles.container}>
         <div className="max-w-7xl mx-auto">
           <h2>Contact Us</h2>
           <ContactForm />
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

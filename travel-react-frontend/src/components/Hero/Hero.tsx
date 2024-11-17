@@ -1,31 +1,29 @@
-// Hero.tsx
-
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import styles from './Hero.module.scss'; // Import the SCSS module
+import styles from './Hero.module.scss';
 
-const Hero: React.FC = () => {
+// Import images from the assets folder
+import heroBackgroundImage from '../../assets/images/Kashmir/Gulmarg/pexels-imadclicks-15344124.jpg';
+import searchDestinationsImage from '../../assets/images/Kashmir/Search Destinations.png';
+
+const HeroSection: React.FC = () => {
   return (
-    <div className={styles.hero}>
-      <div className={styles.hero__background}></div>
-      
-      <div className={styles.hero__content}>
-        <div>
-          <h1>Your World Of Joy</h1>
-          <p>
-            Experience the breathtaking beauty of the Valley of Kashmir with our handcrafted travel experiences
-          </p>
-          <Link to="/packages">
-            <button>
-              View Packages
-              <ArrowRight className={styles.icon} />
-            </button>
-          </Link>
+    <section className={styles.heroSection}>
+      <div className={styles.heroBackground}
+      style={{ backgroundImage: `url(${heroBackgroundImage})` }}>
         </div>
-      </div>
-    </div>
-  );
-}
 
-export default Hero;
+        <div className={styles.heroText}>
+        <h1>Your world of joy</h1>
+        <p>Find what makes you happy anytime, anywhere</p>
+      </div>
+      <div
+        className={styles.searchDestinations}
+        style={{ backgroundImage: `url(${searchDestinationsImage})` }}
+      ></div>
+        
+      
+    </section>
+  );
+};
+
+export default HeroSection;

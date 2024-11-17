@@ -1,74 +1,75 @@
-// Hero.module.scss
+/* Hero Section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  // background: transparent;
+  // background: black;
 
-.hero {
-    position: relative;
-    height: 100vh;
-  
-    &__background {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1674108886859-3f968080f012?q=80&w=3431&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-      background-size: cover;
-      background-position: center;
-  
-      &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-      }
-    }
-  
-    &__content {
-      position: relative;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 0 1rem;
-  
-      h1 {
-        font-size: 3rem; // 5xl
-        font-weight: bold;
-        margin-bottom: 1.5rem; // mb-6
-  
-        @media (min-width: 768px) {
-          font-size: 4rem; // md:text-6xl
-        }
-      }
-  
-      p {
-        font-size: 1.25rem; // xl
-        margin-bottom: 2rem; // mb-8
-        max-width: 640px; // max-w-2xl
-        margin-left: auto;
-        margin-right: auto;
-      }
-  
-      button {
-        background-color: #3b82f6; // bg-blue-600
-        color: white;
-        padding: 0.75rem 2rem; // px-8 py-3
-        border-radius: 0.5rem; // rounded-lg
-        font-size: 1.125rem; // text-lg
-        font-weight: 600; // font-semibold
-        transition: background-color 0.2s;
-  
-        &:hover {
-          background-color: #2563eb; // hover:bg-blue-700
-        }
-  
-        display: inline-flex;
-        align-items: center;
-  
-        .icon {
-          margin-left: 0.5rem; // ml-2
-          height: 1.25rem; // h-5
-          width: 1.25rem; // w-5
-        }
-      }
-    }
+}
+
+/* Hero background */
+.heroBackground {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 20px rgb(230, 227, 226); /* Optional */
+  // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Your world of joy */
+.heroText {
+  position: absolute;
+  // width: 616px;
+  // height: 80px;
+  left: 611px;
+  top: 20px;
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 61px;
+  // line-height: 81px;
+  color: rgba(5, 0, 0, 0.76);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  h1 {
+    margin: 0;
   }
-  
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Find what makes you happy anytime, anywhere */
+.heroText p {
+  position: absolute;
+  width: 447px;
+  height: 27px;
+  left: 25px;
+  // top: 186px;
+
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Search Destinations */
+.searchDestinations {
+  position: absolute;
+  width: 1167px;
+  height: 91px;
+  left: 261px;
+  top: 620px;
+  // mix-blend-mode: normal;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
