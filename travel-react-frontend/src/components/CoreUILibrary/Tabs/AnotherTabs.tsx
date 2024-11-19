@@ -12,7 +12,7 @@ import { BentoGridThirdDemo } from "../../AceternityUI/BentoGrid/BentoGridThirdD
 import { InfiniteMovingCardsDemo } from "../../AceternityUI/InfiniteMovingCards/AInfiniteMovingCrads";
 import { LampDemo } from "../../AceternityUI/LampSectionHeader/ALampSectionHeader";
 import { MeteorsDemo } from "../../AceternityUI/MeteorCard/AMeteorCard";
-import { SignupFormDemo } from "../../AceternityUI/SignUpFrom/ASignUpFrom";
+
 import { StickyScrollRevealDemo } from "../../AceternityUI/AStickyScrollTextImage/AStickyScrollTextImage";
 
 import { FeaturesSectionDemo } from "../../AceternityUI/FeatureCard/FeatureCard";

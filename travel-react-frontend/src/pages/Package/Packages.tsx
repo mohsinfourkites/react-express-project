@@ -3,6 +3,8 @@ import styles from './Package.module.scss';
 import FilterPanel from '../../components/FilterPanel/FilterPanel';
 import { tourPackages } from '../../data/tour-packages-data';
 import { PackageCard } from '../../components/PackageCard/PackageCard';
+import PackageCardMohsin from '../../components/MyFigma/PackageCardMohsin/PackageCardMohsin';
+import { GulmargCard, PahalgamCard, SonmargCard } from '../../components/MyFigma/PackageCardMohsin/ReusableCardMohsin';
 
 type FilterType = {
   location: string;
@@ -79,11 +81,24 @@ const Packages: React.FC = () => {
                   Reset Filters
                 </button>
               </div>
-            ) : (
+            ) : 
+            (
               <div className={styles.grid}>
-                {filteredPackages.map((pkg) => (
+                <PackageCardMohsin {...GulmargCard} />
+                <PackageCardMohsin {...PahalgamCard} />
+                <PackageCardMohsin {...SonmargCard} />
+
+                <PackageCardMohsin {...GulmargCard} />
+                <PackageCardMohsin {...PahalgamCard} />
+                <PackageCardMohsin {...SonmargCard} />
+
+                <PackageCardMohsin {...GulmargCard} />
+                <PackageCardMohsin {...PahalgamCard} />
+                <PackageCardMohsin {...SonmargCard} />
+                
+                {/* {filteredPackages.map((pkg) => (
                   <PackageCard key={pkg.id} {...pkg} />
-                ))}
+                ))} */}
               </div>
             )}
           </div>

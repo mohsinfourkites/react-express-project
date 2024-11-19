@@ -12,7 +12,7 @@ import { BentoGridThirdDemo } from "../../AceternityUI/BentoGrid/BentoGridThirdD
 import { InfiniteMovingCardsDemo } from "../../AceternityUI/InfiniteMovingCards/AInfiniteMovingCrads";
 import { LampDemo } from "../../AceternityUI/LampSectionHeader/ALampSectionHeader";
 import { MeteorsDemo } from "../../AceternityUI/MeteorCard/AMeteorCard";
-import { SignupFormDemo } from "../../AceternityUI/SignUpFrom/ASignUpFrom";
+
 import { StickyScrollRevealDemo } from "../../AceternityUI/AStickyScrollTextImage/AStickyScrollTextImage";
 
 import { FeaturesSectionDemo } from "../../AceternityUI/FeatureCard/FeatureCard";
@@ -27,6 +27,7 @@ import { AnimatedCircularProgressBar } from "../../MagicUI/AnimatedCircularProgr
 import { AnimatedCircularProgressBarDemo } from "../../MagicUI/AnimatedCircularProgressBar/AnimatedCircularProgressBar";
 import UILayoutCard from "../../UILayoutCard/UILayoutCard";
 import ProductCardUI from "../../ProductCard/ProductCard";
+import { SignupForm } from "../../AceternityUI/SignUpFrom/ASignUpFrom";
 
 
 const TabsComponent: React.FC = () => {
@@ -144,7 +145,7 @@ const TabsComponent: React.FC = () => {
         {/* SinthanTop */}
         <CTabPane visible={activeTab === 9} className={styles.tabPane}>
           <div className={styles.LadakhContainer1st}></div>
-          <SignupFormDemo />
+          <SignupForm />
         </CTabPane>
 
         {/*Drang*/}
