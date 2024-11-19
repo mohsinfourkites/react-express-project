@@ -1,7 +1,5 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
-import  { StaticImageData } from 'next/image';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 import { Home } from 'lucide-react';
 

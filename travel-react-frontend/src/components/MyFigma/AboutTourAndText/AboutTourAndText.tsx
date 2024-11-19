@@ -22,15 +22,15 @@ const AboutTourAndTextMohsin: React.FC = () => {
         <div className={styles.textContent}>
           <h1 className={styles.mainHeading}>Let’s Go Together</h1>
           <h2 className={styles.subHeading}>
-            We Take You To Destinations Where
+            We Guide You To Destinations where 
             <br />
             Unforgettable Memories Are Made
           </h2>
 
           <p className={styles.description}>
-            There are many variations of passages of available but the majority
-            have suffered alteration in some form, by injected humor, randomised
-            words which don't look even slightly.
+          Discover breathtaking destinations that promise to create cherished 
+          moments you'll treasure forever. Let us guide you to places where every 
+          experience turns into a beautiful memory.
           </p>
         </div>
 
@@ -48,8 +48,7 @@ const AboutTourAndTextMohsin: React.FC = () => {
             <div className={styles.exclusiveTripText}>
             <h3 className={styles.exclusiveTripTitle}>Exclusive Trip</h3>
             <p className={styles.exclusiveTripDescription}>
-              There are many variations of passages of available but the
-              majority.
+            A unique journey crafted for unforgettable experiences.
             </p>
             </div>
         </div>
@@ -65,8 +64,7 @@ const AboutTourAndTextMohsin: React.FC = () => {
             <div className={styles.exclusiveTripText}>
             <h3 className={styles.exclusiveTripTitle}>Professional Guide</h3>
             <p className={styles.exclusiveTripDescription}>
-              There are many variations of passages of available but the
-              majority.
+            Expert guidance for a seamless and insightful trip.
             </p>
             </div>  
         </div>
