@@ -19,7 +19,7 @@ const AuthMain: React.FC = () => {
           <div className={styles.leftSide}>
             <SignupFigma toggleView={toggleView} />
 
-            <button className={styles.goToSignUptext} onClick={toggleView}>
+            <button className={styles.goToLogintext} onClick={toggleView}>
               Already Have An Account ? <br></br>
               Login
             </button>
@@ -47,11 +47,7 @@ const AuthMain: React.FC = () => {
         <div className={styles.mainScreenSignup}>
           <div className={styles.leftSide}>
             <LoginFigma toggleView={toggleView} />
-
-            {/* <button className={styles.goToSignUptext} onClick={toggleView}>
-              Don't have an account? Sign up
-            </button> */}
-            <button className={styles.goToLogintext} onClick={toggleView}>
+            <button className={styles.goToSignuptext} onClick={toggleView}>
               Don't Have An Account ? <br></br>
               Signup
             </button>
