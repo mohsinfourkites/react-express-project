@@ -3,6 +3,7 @@ import styles from "./LoginFigma.module.scss";
 import { loginWithGoogle, loginWithFacebook } from "../../../../services/apiService";
 import { authConstants } from "../authConstants";
 import { SignupForm } from "../../../AceternityUI/SignUpFrom/ASignUpFrom";
+import { LoginForm } from "../../../AceternityUI/LoginForm/LoginForm";
 
 
 interface LoginProps {
@@ -17,7 +18,7 @@ const LoginFigma: React.FC<LoginProps> = ({ toggleView }) => {
 
   return (
     
-     <SignupForm />
+     <LoginForm />
   );
 };
 

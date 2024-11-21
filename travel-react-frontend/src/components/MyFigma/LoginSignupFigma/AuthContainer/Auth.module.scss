@@ -1,5 +1,12 @@
 
-.MainScreen{
+.mainScreenLogin{
+  display: flex;
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+}
+
+.mainScreenSignup{
   display: flex;
   background-color: transparent;
   height: 100vh;
@@ -14,6 +21,16 @@
   align-items: center;
   // background: white;
   padding: 2rem;
+
+  .goToLogintext{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin:10px;
+    white-space: pre-wrap;
+    text-align: center;
+    width: 100%;
+  }
 
 
 }

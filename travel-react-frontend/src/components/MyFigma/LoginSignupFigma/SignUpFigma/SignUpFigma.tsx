@@ -1,35 +1,25 @@
 import React from "react";
-import styles from "./SignUpFigma.module.scss";
-
+import styles from "./LoginFigma.module.scss";
+import { loginWithGoogle, loginWithFacebook } from "../../../../services/apiService";
 import { authConstants } from "../authConstants";
+import { SignupForm } from "../../../AceternityUI/SignUpFrom/ASignUpFrom";
+import { LoginForm } from "../../../AceternityUI/LoginForm/LoginForm";
 
-interface SignupProps {
+
+interface LoginProps {
   toggleView: () => void;
 }
 
-const Signup: React.FC<SignupProps> = ({ toggleView }) => {
-  const handleSignup = async (e: React.FormEvent) => {
+const LoginFigma: React.FC<LoginProps> = ({ toggleView }) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Use `signupApi` for backend integration
+    // Use `loginApi` for backend integration
   };
 
   return (
-    <div className={styles.signupContainer}>
-      <h1>{authConstants.signupTitle}</h1>
-      <form onSubmit={handleSignup}>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button type="submit">Sign up</button>
-      </form>
-      <p>
-        Already have an account?{" "}
-        <span onClick={toggleView} className={styles.link}>
-          Login
-        </span>
-      </p>
-    </div>
+    
+     <SignupForm />
   );
 };
 
-export default Signup;
+export default LoginFigma;
