@@ -1,25 +1,20 @@
 import React from "react";
-import styles from "./LoginFigma.module.scss";
-import { loginWithGoogle, loginWithFacebook } from "../../../../services/apiService";
-import { authConstants } from "../authConstants";
-import { SignupForm } from "../../../AceternityUI/SignUpFrom/ASignUpFrom";
-import { LoginForm } from "../../../AceternityUI/LoginForm/LoginForm";
+// import styles from "./LoginFigma.module.scss";
+// import { loginWithGoogle, loginWithFacebook } from "../../../../services/apiService";
+// import { authConstants } from "../authConstants";
+// import { SignupForm } from "../../../AceternityUI/SignUpFrom/ASignUpFrom";
+// import { LoginForm } from "../../../AceternityUI/LoginForm/LoginForm";
+import { SignUp } from "@clerk/clerk-react";
 
 
 interface LoginProps {
   toggleView: () => void;
 }
 
-const LoginFigma: React.FC<LoginProps> = ({ toggleView }) => {
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Use `loginApi` for backend integration
-  };
-
+const SignUpFigma: React.FC<LoginProps> = () => {
   return (
-    
-     <SignupForm />
+     <SignUp />
   );
 };
 
-export default LoginFigma;
+export default SignUpFigma;

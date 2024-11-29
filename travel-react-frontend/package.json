@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.17.1",
+    "@clerk/themes": "^2.1.48",
+    "@clerk/types": "^4.35.0",
     "@coreui/react": "^5.4.1",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
@@ -57,6 +60,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-slick": "^0.23.13",

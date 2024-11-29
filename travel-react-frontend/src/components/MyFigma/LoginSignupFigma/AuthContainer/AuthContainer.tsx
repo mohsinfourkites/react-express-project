@@ -1,80 +1,108 @@
 import React, { useState } from "react";
+import { SignIn, SignUp, useUser } from '@clerk/clerk-react';
+import { Navigate } from "react-router-dom";
 import styles from "./Auth.module.scss";
-import LoginFigma from "../LoginFigma/LoginFigma";
-import SignupFigma from "../SignUpFigma/SignUpFigma";
 import { authConstants } from "../authConstants";
 
-const AuthMain: React.FC = () => {
-  const [isLogin, setIsLogin] = useState(false);
+type AuthMode = 'sign-in' | 'sign-up';
 
-  const toggleView = () => setIsLogin(!isLogin);
+const AuthContainer: React.FC = () => {
+  const [authMode, setAuthMode] = useState<AuthMode>('sign-in');
+  const { isSignedIn, isLoaded } = useUser();
+
+  // If authentication state is not yet loaded, show a loading state
+  if (!isLoaded) {
+    return <div className="flex justify-center items-center h-screen">Loading...</div>;
+  }
+
+  // If user is already signed in, redirect to profile
+  if (isSignedIn) {
+    return <Navigate to="/profile" replace />;
+  }
+
+  const toggleAuthMode = () => {
+    setAuthMode(authMode === 'sign-in' ? 'sign-up' : 'sign-in');
+  };
 
   return (
+    <div className={styles.authContainer}>
+      <div className={styles.authMainScreenLogin}>
+        <div className={styles.authLeftSide}>
+          <div className={styles.authFormContainer}>
+            {authMode === 'sign-in' ? (
+              <SignIn 
+                routing="path" 
+                path="/sign-in"
+                appearance={{
+                  elements: {
+                    rootBox: 'w-full',
+                    card: 'w-full',
+                    headerTitle: 'text-2xl font-bold',
+                    socialButtonsBlockButton: 'w-full',
+                    divider: 'my-4',
+                    formButtonPrimary: 'w-full bg-blue-500 hover:bg-blue-600'
+                  }
+                }}
+              />
+            ) : (
+              <SignUp 
+                routing="path" 
+                path="/sign-up"
+                appearance={{
+                  elements: {
+                    rootBox: 'w-full',
+                    card: 'w-full',
+                    headerTitle: 'text-2xl font-bold',
+                    socialButtonsBlockButton: 'w-full',
+                    divider: 'my-4',
+                    formButtonPrimary: 'w-full bg-blue-500 hover:bg-blue-600'
+                  }
+                }}
+              />
+            )}
 
-    <div className={styles.whatToShowLoginSignup}>
-      {isLogin ? (
-
-        //Signup Screen
-        <div className={styles.signupmainScreenLogin}>
-          <div className={styles.signupleftSide}>
-            <SignupFigma toggleView={toggleView} />
-
-            <button className={styles.signupgoToLogintext} onClick={toggleView}>
-              Already Have An Account ? <br></br>
-              Login
-            </button>
-          </div>
-          <div className={styles.signuprightSide}>
-            <div className={styles.signuprightContainer}>
-              <div className={styles.signuprightText}>
-                <div className={styles.signuptextheading}>Welcome To SignUp Page</div>
-                <div className={styles.signuptextsubheading}>
-                  <p>Travel with us and explore the world</p>
-                </div>
-              </div>
-              <div className={styles.signupmainImageRight}>
-                <img
-                  src={authConstants.mainImage}
-                  alt="MainImage"
-                  className={styles.signupmainImageRight}
-                />
-              </div>
+            <div className={styles.authSwitchText}>
+              {authMode === 'sign-in' 
+                ? "Don't Have An Account? " 
+                : "Already have an account? "}
+              <button 
+                onClick={toggleAuthMode} 
+                className={styles.switchLink}
+              >
+                {authMode === 'sign-in' ? 'Sign Up' : 'Sign In'}
+              </button>
             </div>
           </div>
         </div>
-      ) : (
 
-        //Login Scren
-        
-        <div className={styles.loginmainScreenSignup}>
-          <div className={styles.loginleftSide}>
-            <LoginFigma toggleView={toggleView} />
-            <button className={styles.logingoToSignuptext} onClick={toggleView}>
-              Don't Have An Account ? <br></br>
-              Signup
-            </button>
-          </div>
-          <div className={styles.loginrightSide}>
-            <div className={styles.loginrightContainer}>
-              <div className={styles.loginrightText}>
-                <div className={styles.logintextheading}>Welcome to Login Page</div>
-                <div className={styles.logintextsubheading}>
-                  <p>Travel with us and explore the world</p>
-                </div>
+        <div className={styles.authRightSide}>
+          <div className={styles.authRightContainer}>
+            <div className={styles.authRightText}>
+              <div className={styles.authTextHeading}>
+                {authMode === 'sign-in' 
+                  ? 'Welcome Back!' 
+                  : 'Join Our Community'}
               </div>
-              <div className={styles.loginmainImageRight}>
-                <img
-                  src={authConstants.mainImage}
-                  alt="MainImage"
-                  className={styles.loginmainImageRight}
-                />
+              <div className={styles.authTextSubheading}>
+                <p>
+                  {authMode === 'sign-in' 
+                    ? 'Sign in to continue your journey' 
+                    : 'Create an account to explore more'}
+                </p>
               </div>
+            </div>
+            <div className={styles.authMainImageRight}>
+              <img
+                src={authConstants.mainImage}
+                alt="MainImage"
+                className={styles.authMainImageRight}
+              />
             </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
 
-export default AuthMain;
+export default AuthContainer;

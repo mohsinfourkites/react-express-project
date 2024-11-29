@@ -4,21 +4,18 @@ import { loginWithGoogle, loginWithFacebook } from "../../../../services/apiServ
 import { authConstants } from "../authConstants";
 import { SignupForm } from "../../../AceternityUI/SignUpFrom/ASignUpFrom";
 import { LoginForm } from "../../../AceternityUI/LoginForm/LoginForm";
+import { SignIn } from "@clerk/clerk-react";
 
 
 interface LoginProps {
   toggleView: () => void;
 }
 
-const LoginFigma: React.FC<LoginProps> = ({ toggleView }) => {
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Use `loginApi` for backend integration
-  };
+const LoginFigma: React.FC<LoginProps> = () => {
 
   return (
     
-     <LoginForm />
+     <SignIn />
   );
 };
 
