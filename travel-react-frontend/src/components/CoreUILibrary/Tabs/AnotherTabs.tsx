@@ -59,6 +59,7 @@ import { GulmargCard, PahalgamCard, SonmargCard } from "../../MyFigma/PackageCar
 import AboutTourAndTextMohsin from "../../MyFigma/AboutTourAndText/AboutTourAndText";
 import LoadingSpinner from "../../UIVerse/LoadingSpinner/LoadingSpinner";
 import LoadingSpinnerCircle from "../../UIVerse/LoadingSpinner/LoadingSpinnerCircle";
+import WeatherCardOpenWeather from "../../Weather/WeatherCard";
 
 
 
@@ -135,7 +136,8 @@ const AnotherTabs: React.FC = () => {
         </CTabPane>
         <CTabPane visible={activeTab === 2} className={styles.tabPane}>
           <div className={styles.LadakhContainer1st}>
-          <ProgressiveCarousel />
+          {/* <ProgressiveCarousel /> */}
+          <WeatherCardOpenWeather/>
           </div>
         </CTabPane>
 
