@@ -28,6 +28,9 @@ import Pricing from './pages/Pricing';
 import HomePage from './pages/Home/Homepage';
 import UserProfilePage from './pages/Profile/UserProfilePage'; // Create this component
 import AuthContainer from './components/MyFigma/LoginSignupFigma/AuthContainer/AuthContainer';
+import LoginPageClerk from './pages/SignInSignUp/SignIn/SignInPageClerk';
+import SignInPageClerk from './pages/SignInSignUp/SignIn/SignInPageClerk';
+import SignUpPageClerk from './pages/SignInSignUp/SignUp/SignupPageClerk';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -72,9 +75,9 @@ const App: React.FC = () => {
             <Route path="/home" element={<HomePage />} />
             <Route path="/packages" element={<PackagesPage />} />
             
-            // Authentication Routes
-        <Route path="/sign-in" element={<AuthContainer />} />
-        <Route path="/sign-up" element={<AuthContainer />} />
+            {/* AUthenciated  Routes */}
+             <Route path="/sign-in" element={<SignInPageClerk />} />
+            <Route path="/sign-up" element={<SignUpPageClerk />} />
             
             {/* Protected Routes */}
             <Route 

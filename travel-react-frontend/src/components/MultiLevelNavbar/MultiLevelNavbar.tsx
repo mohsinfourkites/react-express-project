@@ -7,6 +7,7 @@ import DesktopMenu from "./DesktopMenu/DesktopMenu";
 import styles from './MultiLevelNavbar.module.scss';
 import { Menus } from "../../utils/multi-level-meu";
 import MobMenu from "./MobileMenu/Mobmenu";
+import AuthContainer from "../MyFigma/LoginSignupFigma/AuthContainer/AuthContainer";
 
 const MultiLevelNavbar: React.FC = () => {
   return (
@@ -32,17 +33,24 @@ const MultiLevelNavbar: React.FC = () => {
         <div className="flex-center gap-x-5">
           {/* Show Sign In/Up buttons when user is not logged in */}
           <SignedOut>
-            <SignInButton mode="modal">
+            {/* <SignInButton>   */}
+
+              <Link to="/sign-in">
               <button
                 aria-label="sign-in"
                 className="bg-white/5 z-[999] relative px-3 py-1.5 shadow rounded-xl flex-center mr-6"
                 style={{ marginRight: '25px' }}
+                onClick={() => AuthContainer}
               >
-                Log In
+                Sign In
               </button>
-            </SignInButton>
+            {/* </SignInButton> */}
+            </Link>
 
-            <SignUpButton mode="modal">
+            {/* <SignUpButton > */}
+
+            <Link to="/sign-up">
+
               <button
                 aria-label="sign-up"
                 className="bg-white/5 z-[999] relative px-3 py-1.5 shadow rounded-xl flex-center mr-6"
@@ -50,7 +58,8 @@ const MultiLevelNavbar: React.FC = () => {
               >
                 Sign Up
               </button>
-            </SignUpButton>
+              </Link>
+            {/* </SignUpButton> */}
           </SignedOut>
 
           {/* Show User Profile Dropdown when logged in */}
@@ -64,7 +73,6 @@ const MultiLevelNavbar: React.FC = () => {
                     userButtonPopoverCard: 'p-2 shadow-lg rounded-xl'
                   }
                 }}
-                afterSignOutUrl="/" 
               />
             </div>
           </SignedIn>

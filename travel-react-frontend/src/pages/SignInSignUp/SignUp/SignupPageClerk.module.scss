@@ -1,0 +1,202 @@
+
+.loginmainScreenLogin{
+  display: flex;
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+}
+
+.loginmainScreenSignup{
+  display: flex;
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+}
+
+.loginleftSide{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  .logingoToLogintext{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin:10px;
+    white-space: pre-wrap;
+    text-align: center;
+    width: 100%;
+  }
+
+  .logingoToSignuptext{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin:10px;
+    white-space: pre-wrap;
+    text-align: center;
+    width: 100%;
+  }
+
+
+}
+  
+.loginrightSide{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .loginrightContainer{
+    width: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .loginrightText {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    color: #fbfbfb;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  
+    .logintextheading {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      white-space: pre-wrap;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .logintextsubheading {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: #fffbfb;
+      white-space: pre-wrap;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .loginmainImageRight{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+}
+
+
+///////  SignUp ///////
+ 
+
+
+.signupmainScreenLogin{
+  display: flex;
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+}
+
+.signupmainScreenSignup{
+  display: flex;
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+}
+
+.signupleftSide{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // background: white;
+  padding: 2rem;
+
+  .signupgoToLogintext{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin:10px;
+    white-space: pre-wrap;
+    text-align: center;
+    width: 100%;
+  }
+
+  .signupgoToSignuptext{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin:10px;
+    white-space: pre-wrap;
+    text-align: center;
+    width: 100%;
+  }
+
+
+}
+  
+.signuprightSide{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .signuprightContainer{
+    width: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .signuprightText {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    color: #fbfbfb;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+  
+    .signuptextheading {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      white-space: pre-wrap;
+      text-align: center; 
+      width: 100%; 
+    }
+  
+    .signuptextsubheading {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: #fffbfb;
+      white-space: pre-wrap;
+      text-align: center; 
+      width: 100%; 
+    }
+  }
+
+  .signupmainImageRight{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+}

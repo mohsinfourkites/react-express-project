@@ -9,6 +9,7 @@ import NextUITable from "../../NextUI/Table/NextUITable";
 import NextUILoadingBar from "../../NextUI/LoadingBar/NextUILoadingBar";
 import NextUITextArea from "../../NextUI/TextArea/NextUITextArea";
 import { BentoGridThirdDemo } from "../../AceternityUI/BentoGrid/BentoGridThirdDemo";
+import { SyncLoader } from "react-spinners";
 import { InfiniteMovingCardsDemo } from "../../AceternityUI/InfiniteMovingCards/AInfiniteMovingCrads";
 import { LampDemo } from "../../AceternityUI/LampSectionHeader/ALampSectionHeader";
 import { MeteorsDemo } from "../../AceternityUI/MeteorCard/AMeteorCard";
@@ -56,6 +57,8 @@ import AnimatedAboutMeCard from "../../UIVerse/AnimatedAboutMeCard/AnimatedAbout
 import PackageCardMohsin from "../../MyFigma/PackageCardMohsin/PackageCardMohsin";
 import { GulmargCard, PahalgamCard, SonmargCard } from "../../MyFigma/PackageCardMohsin/ReusableCardMohsin";
 import AboutTourAndTextMohsin from "../../MyFigma/AboutTourAndText/AboutTourAndText";
+import LoadingSpinner from "../../UIVerse/LoadingSpinner/LoadingSpinner";
+import LoadingSpinnerCircle from "../../UIVerse/LoadingSpinner/LoadingSpinnerCircle";
 
 
 
@@ -105,9 +108,21 @@ const AnotherTabs: React.FC = () => {
       <CTabContent className={styles.tabContent}>
         {/* Gulmarg */}
         <CTabPane visible={activeTab === 0} className={styles.tabPane}>
-          <div className={styles.LadakhContainer1st}></div>
+          <div className={styles.LadakhContainer1st}>
           
           <TextRandomizer />
+          <LoadingSpinner />
+          <div className={styles.LadakhContainer1st}>
+          <LoadingSpinnerCircle />
+          </div>
+          </div>  
+
+          <SyncLoader />
+          <div className={styles.LadakhContainer1st}>
+          <AnimateBookPagesLoader />
+          </div>
+
+          
         </CTabPane>
 
         {/* Pahalgam */}

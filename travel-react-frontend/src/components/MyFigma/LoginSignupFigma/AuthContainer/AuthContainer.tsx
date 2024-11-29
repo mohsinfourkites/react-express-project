@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SignIn, SignUp, useUser } from '@clerk/clerk-react';
+import { SignedIn, SignIn, SignUp, useUser } from '@clerk/clerk-react';
 import { Navigate } from "react-router-dom";
 import styles from "./Auth.module.scss";
 import { authConstants } from "../authConstants";
@@ -24,84 +24,74 @@ const AuthContainer: React.FC = () => {
     setAuthMode(authMode === 'sign-in' ? 'sign-up' : 'sign-in');
   };
 
+  // function Hello() {
+  //   const { isSignedIn, user } = useUser();
+  //   if(!isSignedIn) {
+  //     return null;
+  //   }
+  //   return <div>Hello, {user.}</div>
+  // }
+
   return (
-    <div className={styles.authContainer}>
-      <div className={styles.authMainScreenLogin}>
-        <div className={styles.authLeftSide}>
-          <div className={styles.authFormContainer}>
-            {authMode === 'sign-in' ? (
-              <SignIn 
-                routing="path" 
-                path="/sign-in"
-                appearance={{
-                  elements: {
-                    rootBox: 'w-full',
-                    card: 'w-full',
-                    headerTitle: 'text-2xl font-bold',
-                    socialButtonsBlockButton: 'w-full',
-                    divider: 'my-4',
-                    formButtonPrimary: 'w-full bg-blue-500 hover:bg-blue-600'
-                  }
-                }}
-              />
-            ) : (
-              <SignUp 
-                routing="path" 
-                path="/sign-up"
-                appearance={{
-                  elements: {
-                    rootBox: 'w-full',
-                    card: 'w-full',
-                    headerTitle: 'text-2xl font-bold',
-                    socialButtonsBlockButton: 'w-full',
-                    divider: 'my-4',
-                    formButtonPrimary: 'w-full bg-blue-500 hover:bg-blue-600'
-                  }
-                }}
-              />
-            )}
+    <div className={styles.whatToShowLoginSignup}>
+   
+      <div className={styles.signupmainScreenLogin}>
+        <div className={styles.signupleftSide}>
+          <SignUp />
 
-            <div className={styles.authSwitchText}>
-              {authMode === 'sign-in' 
-                ? "Don't Have An Account? " 
-                : "Already have an account? "}
-              <button 
-                onClick={toggleAuthMode} 
-                className={styles.switchLink}
-              >
-                {authMode === 'sign-in' ? 'Sign Up' : 'Sign In'}
-              </button>
-            </div>
-          </div>
+          <button className={styles.signupgoToLogintext} onClick={toggleAuthMode}>
+            Already Have An Account ? <br></br>
+            Login
+          </button>
         </div>
-
-        <div className={styles.authRightSide}>
-          <div className={styles.authRightContainer}>
-            <div className={styles.authRightText}>
-              <div className={styles.authTextHeading}>
-                {authMode === 'sign-in' 
-                  ? 'Welcome Back!' 
-                  : 'Join Our Community'}
-              </div>
-              <div className={styles.authTextSubheading}>
-                <p>
-                  {authMode === 'sign-in' 
-                    ? 'Sign in to continue your journey' 
-                    : 'Create an account to explore more'}
-                </p>
+        <div className={styles.signuprightSide}>
+          <div className={styles.signuprightContainer}>
+            <div className={styles.signuprightText}>
+              <div className={styles.signuptextheading}>Welcome To SignUp Page</div>
+              <div className={styles.signuptextsubheading}>
+                <p>Travel with us and explore the world</p>
               </div>
             </div>
-            <div className={styles.authMainImageRight}>
+            <div className={styles.signupmainImageRight}>
               <img
                 src={authConstants.mainImage}
                 alt="MainImage"
-                className={styles.authMainImageRight}
+                className={styles.signupmainImageRight}
               />
             </div>
           </div>
         </div>
       </div>
-    </div>
+   
+
+
+      <div className={styles.loginmainScreenSignup}>
+        <div className={styles.loginleftSide}>
+          <SignIn />
+          <button className={styles.logingoToSignuptext} onClick={toggleAuthMode}>
+            Don't Have An Account ? <br></br>
+            Signup
+          </button>
+        </div>
+        <div className={styles.loginrightSide}>
+          <div className={styles.loginrightContainer}>
+            <div className={styles.loginrightText}>
+              <div className={styles.logintextheading}>Welcome to Login Page</div>
+              <div className={styles.logintextsubheading}>
+                <p>Travel with us and explore the world</p>
+              </div>
+            </div>
+            <div className={styles.loginmainImageRight}>
+              <img
+                src={authConstants.mainImage}
+                alt="MainImage"
+                className={styles.loginmainImageRight}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
   );
 };
 
