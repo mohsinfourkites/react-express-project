@@ -1,12 +1,21 @@
-import React, { Suspense } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import { SignUp, useUser } from "@clerk/clerk-react";
 import { Navigate } from "react-router-dom";
 import styles from "./SignupPageClerk.module.scss";
 import { authConstants } from "../../../components/MyFigma/LoginSignupFigma/authConstants";
 import LoadingSpinner from "../../../components/UIVerse/LoadingSpinner/LoadingSpinner";
+import AnimateBookPagesLoader from "../../../components/UIVerse/AnimateBookPages/AnimateBookPages";
 
 const SignUpPageClerk: React.FC = () => {
   const { isSignedIn, isLoaded } = useUser();
+  const [isSignUpLoaded, setIsSignUpLoaded] = useState(false);
+  const signUpRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (signUpRef.current) {
+      setIsSignUpLoaded(true);
+    }
+  }, [signUpRef.current]);
 
   if (!isLoaded) {
     return (
@@ -23,7 +32,9 @@ const SignUpPageClerk: React.FC = () => {
   return (
     <div className={styles.signupmainScreenLogin}>
       <div className={styles.signupleftSide}>
-        <SignUp />
+        <div ref={signUpRef}>
+          {isSignUpLoaded ? <SignUp /> : <div></div>}
+        </div>
       </div>
       <div className={styles.signuprightSide}>
         <div className={styles.signuprightContainer}>
