@@ -1,62 +1,57 @@
-import React, { useState } from "react";
+import React from "react";
 import { SignIn, useUser } from "@clerk/clerk-react";
 import { Navigate } from "react-router-dom";
 import styles from "./SignInPageClerk.module.scss";
 import { authConstants } from "../../../components/MyFigma/LoginSignupFigma/authConstants";
 import LoadingSpinner from "../../../components/UIVerse/LoadingSpinner/LoadingSpinner";
-import LoadingSpinnerCircle from "../../../components/UIVerse/LoadingSpinner/LoadingSpinnerCircle";
-import AnimateBookPagesLoader from "../../../components/UIVerse/AnimateBookPages/AnimateBookPages";
-
-
 
 const SignInPageClerk: React.FC = () => {
-  // const [authMode, setAuthMode] = useState<AuthMode>("sign-in");
   const { isSignedIn, isLoaded } = useUser();
 
-  // If authentication state is not yet loaded, show a loading state
   if (!isLoaded) {
     return (
       <div className="flex justify-center items-center h-screen">
-         <LoadingSpinner />
-         {/* <LoadingSpinnerCircle />
-         <AnimateBookPagesLoader /> */}
+        <LoadingSpinner />
       </div>
     );
   }
 
-  // If user is already signed in, redirect to profile
   if (isSignedIn) {
     return <Navigate to="/profile" replace />;
   }
 
   return (
-    // <div className={styles.whatToShowLoginSignup}>
-      <div className={styles.loginmainScreenSignup}>
-        <div className={styles.loginleftSide}>
-          <SignIn />
-        </div>
-        <div className={styles.loginrightSide}>
-          <div className={styles.loginrightContainer}>
-            <div className={styles.loginrightText}>
-              <div className={styles.logintextheading}>
-                Welcome to Login Page
-              </div>
-              <div className={styles.logintextsubheading}>
-                <p>Travel with us and explore the world</p>
-              </div>
+    <div className={styles.loginmainScreenSignup}>
+      <div className={styles.loginleftSide}>
+        <SignIn />
+      </div>
+      <div className={styles.loginrightSide}>
+        <div className={styles.loginrightContainer}>
+          <div className={styles.loginrightText}>
+            <div className={styles.logintextheading}>
+              Welcome to Login Page
             </div>
-            <div className={styles.loginmainImageRight}>
-              <img
-                src={authConstants.mainImage}
-                alt="MainImage"
-                className={styles.loginmainImageRight}
-              />
+            <div className={styles.logintextsubheading}>
+              <p>Travel with us and explore the world</p>
             </div>
+          </div>
+          <div className={styles.loginmainImageRight}>
+            <img
+              src={authConstants.mainImage}
+              alt="MainImage"
+              className={styles.loginmainImageRight}
+            />
           </div>
         </div>
       </div>
-    // </div>
+    </div>
   );
 };
 
-export default SignInPageClerk;
+const SignInPageClerkWrapper: React.FC = () => (
+  <React.Suspense fallback={<LoadingSpinner />}>
+    <SignInPageClerk />
+  </React.Suspense>
+);
+
+export default SignInPageClerkWrapper;

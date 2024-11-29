@@ -1,25 +1,21 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { SignUp, useUser } from "@clerk/clerk-react";
 import { Navigate } from "react-router-dom";
 import styles from "./SignupPageClerk.module.scss";
 import { authConstants } from "../../../components/MyFigma/LoginSignupFigma/authConstants";
 import LoadingSpinner from "../../../components/UIVerse/LoadingSpinner/LoadingSpinner";
-import AnimateBookPagesLoader from "../../../components/UIVerse/AnimateBookPages/AnimateBookPages";
 
 const SignUpPageClerk: React.FC = () => {
   const { isSignedIn, isLoaded } = useUser();
 
-  // If authentication state is not yet loaded, show a loading state
   if (!isLoaded) {
     return (
       <div className="flex justify-center items-center h-screen">
         <LoadingSpinner />
-        {/* <AnimateBookPagesLoader /> */}
       </div>
     );
   }
 
-  // If user is already signed in, redirect to profile
   if (isSignedIn) {
     return <Navigate to="/profile" replace />;
   }
@@ -52,4 +48,10 @@ const SignUpPageClerk: React.FC = () => {
   );
 };
 
-export default SignUpPageClerk;
+const SignUpPageClerkWrapper: React.FC = () => (
+  <Suspense fallback={<LoadingSpinner />}>
+    <SignUpPageClerk />
+  </Suspense>
+);
+
+export default SignUpPageClerkWrapper;
