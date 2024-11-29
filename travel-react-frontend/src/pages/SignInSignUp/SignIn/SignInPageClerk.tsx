@@ -7,19 +7,19 @@ import LoadingSpinner from "../../../components/UIVerse/LoadingSpinner/LoadingSp
 import LoadingSpinnerCircle from "../../../components/UIVerse/LoadingSpinner/LoadingSpinnerCircle";
 import AnimateBookPagesLoader from "../../../components/UIVerse/AnimateBookPages/AnimateBookPages";
 
-type AuthMode = "sign-in" | "sign-up";
+
 
 const SignInPageClerk: React.FC = () => {
-  const [authMode, setAuthMode] = useState<AuthMode>("sign-in");
+  // const [authMode, setAuthMode] = useState<AuthMode>("sign-in");
   const { isSignedIn, isLoaded } = useUser();
 
   // If authentication state is not yet loaded, show a loading state
   if (!isLoaded) {
     return (
       <div className="flex justify-center items-center h-screen">
-         {/* <LoadingSpinner />
-         <LoadingSpinnerCircle /> */}
-         <AnimateBookPagesLoader />
+         <LoadingSpinner />
+         {/* <LoadingSpinnerCircle />
+         <AnimateBookPagesLoader /> */}
       </div>
     );
   }
@@ -29,22 +29,11 @@ const SignInPageClerk: React.FC = () => {
     return <Navigate to="/profile" replace />;
   }
 
-  const toggleAuthMode = () => {
-    setAuthMode(authMode === "sign-in" ? "sign-up" : "sign-in");
-  };
-
   return (
-    <div className={styles.whatToShowLoginSignup}>
+    // <div className={styles.whatToShowLoginSignup}>
       <div className={styles.loginmainScreenSignup}>
         <div className={styles.loginleftSide}>
           <SignIn />
-          {/* <button
-            className={styles.logingoToSignuptext}
-            onClick={toggleAuthMode}
-          >
-            Don't Have An Account ? <br></br>
-            Signup
-          </button> */}
         </div>
         <div className={styles.loginrightSide}>
           <div className={styles.loginrightContainer}>
@@ -66,7 +55,7 @@ const SignInPageClerk: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

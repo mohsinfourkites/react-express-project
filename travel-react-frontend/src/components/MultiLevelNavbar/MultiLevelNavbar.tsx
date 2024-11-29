@@ -8,9 +8,20 @@ import styles from './MultiLevelNavbar.module.scss';
 import { Menus } from "../../utils/multi-level-meu";
 import MobMenu from "./MobileMenu/Mobmenu";
 import AuthContainer from "../MyFigma/LoginSignupFigma/AuthContainer/AuthContainer";
+import { useUser } from "@clerk/clerk-react";
+
+function UserName() {
+  const { isSignedIn, user } = useUser();
+  if(!isSignedIn) {
+    return null;
+  }
+  return <div className="gap-x-1 lg:flex-center hidden">Hello, {user.firstName} {user.lastName}</div>
+}
 
 const MultiLevelNavbar: React.FC = () => {
   return (
+
+    
     <header className={`${styles.navbar} ${styles.stickyNavbar}`}>
       <nav className="px-3.5 flex-center-between w-full max-w-8xl mx-auto">
         {/* Logo Section */}
@@ -64,12 +75,19 @@ const MultiLevelNavbar: React.FC = () => {
 
           {/* Show User Profile Dropdown when logged in */}
           <SignedIn>
+            
+          <div className="flex items-center space-x-4">
+            
+            <UserName />
+          
+
+          </div>
             <div className="flex items-center space-x-4">
               {/* Clerk User Button with Dropdown */}
               <UserButton 
                 appearance={{
                   elements: {
-                    userButtonAvatarBox: 'w-10 h-10',
+                    userButtonAvatarBox: 'w-11 h-11',
                     userButtonPopoverCard: 'p-2 shadow-lg rounded-xl'
                   }
                 }}
