@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { SignIn, useUser } from "@clerk/clerk-react";
 import { Navigate } from "react-router-dom";
 import styles from "./SignInPageClerk.module.scss";
 import { authConstants } from "../../../components/MyFigma/LoginSignupFigma/authConstants";
 import LoadingSpinner from "../../../components/UIVerse/LoadingSpinner/LoadingSpinner";
+import AnimateBookPagesLoader from "../../../components/UIVerse/AnimateBookPages/AnimateBookPages";
+
 
 const SignInPageClerk: React.FC = () => {
   const { isSignedIn, isLoaded } = useUser();
+  const [isSignInLoaded, setIsSignInLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsSignInLoaded(true);
+    }, 100); // Adjust the timeout as needed
+
+    return () => clearTimeout(timer);
+  }, []);
 
   if (!isLoaded) {
     return (
@@ -23,7 +34,7 @@ const SignInPageClerk: React.FC = () => {
   return (
     <div className={styles.loginmainScreenSignup}>
       <div className={styles.loginleftSide}>
-        <SignIn />
+        {isSignInLoaded ? <SignIn /> : <AnimateBookPagesLoader />}
       </div>
       <div className={styles.loginrightSide}>
         <div className={styles.loginrightContainer}>
