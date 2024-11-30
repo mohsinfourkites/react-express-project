@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styles from "./PackageCardMohsin.module.scss";
 import { GulmargCard } from "./ReusableCardMohsin";
+import Star from "../../../assets/icons/Figma/PackageCard/star.png";
+import HalfStar from "../../../assets/icons/ratinghalf.png";
+import EmptyStar from "../../../assets/icons/favorite.png";
 
 export interface SlideshowImage {
   src: string;
@@ -16,7 +19,6 @@ export interface Feature {
 export interface PackageCardProps {
   slideshowImages: SlideshowImage[];
   location: string;
-  ratings: SlideshowImage[];
   ratingValue: number;
   reviewCount: number;
   features: Feature[];
@@ -27,7 +29,6 @@ export interface PackageCardProps {
 const PackageCardMohsin: React.FC<PackageCardProps> = ({
   slideshowImages,
   location,
-  ratings,
   ratingValue,
   reviewCount,
   features,
@@ -44,6 +45,41 @@ const PackageCardMohsin: React.FC<PackageCardProps> = ({
     setCurrentSlide((prev) =>
       prev === 0 ? slideshowImages.length - 1 : prev - 1
     );
+  };
+
+  const renderStars = (rating: number) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(
+          <img
+            key={i}
+            src={Star}
+            alt="Star"
+            className={styles.ratingImage}
+          />
+        );
+      } else if (i - rating < 1) {
+        stars.push(
+          <img
+            key={i}
+            src={HalfStar}
+            alt="Half Star"
+            className={styles.ratingImage}
+          />
+        );
+      } else {
+        stars.push(
+          <img
+            key={i}
+            src={EmptyStar}
+            alt="Empty Star"
+            className={styles.ratingImage}
+          />
+        );
+      }
+    }
+    return stars;
   };
 
   return (
@@ -80,15 +116,8 @@ const PackageCardMohsin: React.FC<PackageCardProps> = ({
 
         <div className={styles.belowSlideShow}>
           <div className={styles.ratings}>
-            {ratings.map((rating, idx) => (
-              <img
-                key={idx}
-                src={rating.src}
-                alt={rating.alt}
-                className={styles.ratingImage}
-              />
-            ))}
-            <span className={styles.ratingValue}>{ratingValue}</span>
+            {renderStars(ratingValue)}
+            <span className={styles.ratingValue}>{ratingValue.toFixed(1)}</span>
             <span className={styles.reviews}>({reviewCount} Reviews)</span>
           </div>
           <div className={styles.features}>
