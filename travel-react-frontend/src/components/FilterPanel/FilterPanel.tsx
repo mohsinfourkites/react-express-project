@@ -7,6 +7,7 @@ type Filters = {
   priceRange: [number, number];
   duration: string;
   groupSize: number;
+  rating: number;
 };
 
 interface FilterPanelProps {
@@ -19,6 +20,7 @@ interface FilterPanelProps {
 const FilterPanel: React.FC<FilterPanelProps> = ({ filters, locations, onFilterChange, onReset }) => {
   const durations = ['2 Days', '3 Days', '4 Days', '5 Days', '6 Days', '7 Days', '8 Days', '8 Days', '9 Days', '10 Days'];
   const groupSizes = [2, 3, 4, 6, 8, 10];
+  const ratings = [1, 2, 3, 4, 5];
 
   return (
     <div className={styles.filterPanelContainer}>
@@ -94,6 +96,23 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ filters, locations, onFilterC
           {groupSizes.map((size) => (
             <option key={size} value={size}>
               Up to {size} people
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Ratings Filter */}
+      <div className={styles.filterGroup}>
+        <label className={styles.label}>Rating</label>
+        <select
+          value={filters.rating}
+          onChange={(e) => onFilterChange('rating', parseInt(e.target.value))}
+          className={styles.select}
+        >
+          <option value={0}>Any Rating</option>
+          {ratings.map((rating) => (
+            <option key={rating} value={rating}>
+              {rating} Stars & Up
             </option>
           ))}
         </select>

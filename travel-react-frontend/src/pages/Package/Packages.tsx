@@ -9,6 +9,7 @@ type Filters = {
   priceRange: [number, number];
   duration: string;
   groupSize: number;
+  rating: number;
 };
 
 const allPackages = [GulmargCard, PahalgamCard, SonmargCard, SrinagarCard, LehLadakhCard, GurezCard, BangusCard]; // Add other packages here
@@ -19,6 +20,7 @@ const Packages: React.FC = () => {
     priceRange: [1000, 50000],
     duration: '',
     groupSize: 0,
+    rating: 0,
   });
 
   const [filteredPackages, setFilteredPackages] = useState(allPackages);
@@ -40,8 +42,10 @@ const Packages: React.FC = () => {
         !filters.duration || pkg.features.some((feature) => feature.label.includes(filters.duration));
       const matchesGroupSize =
         !filters.groupSize || pkg.features.some((feature) => feature.label.includes(`${filters.groupSize} Persons`));
+      const matchesRating =
+        !filters.rating || pkg.ratingValue >= filters.rating;
 
-      return matchesLocation && matchesPrice && matchesDuration && matchesGroupSize;
+      return matchesLocation && matchesPrice && matchesDuration && matchesGroupSize && matchesRating;
     });
 
     setFilteredPackages(filtered);
@@ -53,6 +57,7 @@ const Packages: React.FC = () => {
       priceRange: [10000, 50000],
       duration: '',
       groupSize: 0,
+      rating: 0,
     });
     setFilteredPackages(allPackages);
   };

@@ -109,6 +109,7 @@ import Gurez1 from '../../../assets/images/Kashmir/Gurez/pexels-imadclicks-13068
 import Gurez2 from '../../../assets/images/Kashmir/Gurez/pexels-imadclicks-13103387.jpg';
 import Gurez3 from '../../../assets/images/Kashmir/Gurez/pexels-imadclicks-27539760.jpg';
 import Gurez4 from '../../../assets/images/Kashmir/Gurez/pexels-imadclicks-27539902.jpg';
+import { rating } from "@material-tailwind/react";
 
 
 
@@ -123,13 +124,14 @@ export const GulmargCard = {
   ],
   location: "Wooden Hut, Gulmarg",
   ratings: [
-    { src: Star, alt: "Star 1" },
-    { src: Star, alt: "Star 2" },
-    { src: Star, alt: "Star 3" },
-    { src: Star, alt: "Star 4" },
-    { src: Star, alt: "Star 5" },
+    { src: Star, alt: "Star 1", },
+    { src: Star, alt: "Star 2", },
+    { src: Star, alt: "Star 3", },
+    { src: Star, alt: "Star 4", },
+    { src: Star, alt: "Star 5", },
+    // {totalrating : 4.6}
   ],
-  ratingValue: 4.6,
+  ratingValue: 1.6,
   reviewCount: 87,
   features: [
     // { src: Hotel, alt: "Hotel", label: "Hotel" },
@@ -165,7 +167,7 @@ export const PahalgamCard = {
     { src: Star, alt: "Star 4" },
     { src: Star, alt: "Star 5" },
   ],
-  ratingValue: 4.7,
+  ratingValue: 2.7,
   reviewCount: 92,
   features: [
     // { src: Hotel, alt: "Resort", label: "Resort" },
@@ -203,7 +205,7 @@ export const SonmargCard = {
       { src: Star, alt: "Star 4" },
       { src: Star, alt: "Star 5" },
     ],
-    ratingValue: 4.4,
+    ratingValue: 3.4,
     reviewCount: 32,
     features: [
       // { src: Hotel, alt: "Hotel", label: "Hotel" },
@@ -276,7 +278,7 @@ export const SonmargCard = {
       { src: Star, alt: "Star 4" },
       { src: Star, alt: "Star 5" },
     ],
-    ratingValue: 4.4,
+    ratingValue: 4.8,
     reviewCount: 32,
     features: [
       // { src: Hotel, alt: "Hotel", label: "Hotel" },
@@ -313,7 +315,7 @@ export const SonmargCard = {
       { src: Star, alt: "Star 4" },
       { src: Star, alt: "Star 5" },
     ],
-    ratingValue: 4.4,
+    ratingValue: 5,
     reviewCount: 32,
     features: [
       // { src: Hotel, alt: "Hotel", label: "Hotel" },
@@ -350,7 +352,7 @@ export const SonmargCard = {
       { src: Star, alt: "Star 4" },
       { src: Star, alt: "Star 5" },
     ],
-    ratingValue: 4.4,
+    ratingValue: 2.2,
     reviewCount: 32,
     features: [
       // { src: Hotel, alt: "Hotel", label: "Hotel" },
