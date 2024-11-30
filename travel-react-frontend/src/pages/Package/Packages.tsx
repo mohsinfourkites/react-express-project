@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Package.module.scss';
 import FilterPanel from '../../components/FilterPanel/FilterPanel';
 import PackageCardMohsin from '../../components/MyFigma/PackageCardMohsin/PackageCardMohsin';
-import { GulmargCard, PahalgamCard, SonmargCard } from '../../components/MyFigma/PackageCardMohsin/ReusableCardMohsin';
+import { BangusCard, GulmargCard, GurezCard, LehLadakhCard, PahalgamCard, SonmargCard, SrinagarCard } from '../../components/MyFigma/PackageCardMohsin/ReusableCardMohsin';
 
 type Filters = {
   location: string;
@@ -11,7 +11,7 @@ type Filters = {
   groupSize: number;
 };
 
-const allPackages = [GulmargCard, PahalgamCard, SonmargCard]; // Add other packages here
+const allPackages = [GulmargCard, PahalgamCard, SonmargCard, SrinagarCard, LehLadakhCard, GurezCard, BangusCard]; // Add other packages here
 
 const Packages: React.FC = () => {
   const [filters, setFilters] = useState<Filters>({
@@ -68,7 +68,7 @@ const Packages: React.FC = () => {
       />
 
       {/* Package Cards */}
-      <div className={styles.grid}>
+      <div className={styles.cardsSection}>
         {filteredPackages.length > 0 ? (
           filteredPackages.map((pkg, idx) => <PackageCardMohsin key={idx} {...pkg} />)
         ) : (

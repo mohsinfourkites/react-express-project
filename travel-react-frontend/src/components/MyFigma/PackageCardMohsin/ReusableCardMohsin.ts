@@ -98,6 +98,18 @@ import Srinagar2 from '../../../assets/images/Kashmir/Srinagar/pexels-amjed-wani
 import Srinagar3 from '../../../assets/images/Kashmir/Srinagar/pexels-amjed-wani-1355393378-26110235 (1).jpg';
 import Srinagar4 from '../../../assets/images/Kashmir/Srinagar/pexels-anaam-farooq-765472679-19323186.jpg';
 
+import LehLadakh from '../../../assets/images/Kashmir/LehLadakh/pexels-8moments-1070386.jpg';
+import LehLadakh1 from '../../../assets/images/Kashmir/LehLadakh/pexels-8moments-2333611.jpg';
+import LehLadakh2 from '../../../assets/images/Kashmir/LehLadakh/pexels-8moments-735002.jpg';
+import LehLadakh3 from '../../../assets/images/Kashmir/LehLadakh/pexels-abhilash-mishra-190481-1539696.jpg';
+import LehLadakh4 from '../../../assets/images/Kashmir/LehLadakh/pexels-avinashpatel-3392154.jpg';
+
+import Gurez from '../../../assets/images/Kashmir/Gurez/pexels-aadil-mehraj-440728798-27379157.jpg';
+import Gurez1 from '../../../assets/images/Kashmir/Gurez/pexels-imadclicks-13068037.jpg';
+import Gurez2 from '../../../assets/images/Kashmir/Gurez/pexels-imadclicks-13103387.jpg';
+import Gurez3 from '../../../assets/images/Kashmir/Gurez/pexels-imadclicks-27539760.jpg';
+import Gurez4 from '../../../assets/images/Kashmir/Gurez/pexels-imadclicks-27539902.jpg';
+
 
 
 
@@ -201,7 +213,7 @@ export const SonmargCard = {
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],
     description:
-      "Sonmarg is renowned for its breathtaking landscapes, stunning natural beauty and  meadows.",
+      "Sonmarg is renowned for its breathtaking landscapes, stunning natural beauty, meadows and Mountain Ranges.",
     price: "₹ 4999",
     OtherIcons: [
         // { src: Location, alt: "Location" },
@@ -237,7 +249,7 @@ export const SonmargCard = {
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],
     description:
-      "Bangus is renowned for its breathtaking landscapes, stunning natural beauty and  meadows.",
+      "Bangus is renowned for its breathtaking landscapes, stunning natural beauty, meadows and Mountain Ranges.",
     price: "₹ 4999",
     OtherIcons: [
         // { src: Location, alt: "Location" },
@@ -274,7 +286,7 @@ export const SonmargCard = {
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],
     description:
-      "Srinagar is renowned for its breathtaking landscapes, stunning natural beauty and  meadows.",
+      "Srinagar is renowned for its breathtaking landscapes, stunning natural beauty, meadows and Mountain Ranges.",
     price: "₹ 4999",
     OtherIcons: [
         // { src: Location, alt: "Location" },
@@ -285,15 +297,15 @@ export const SonmargCard = {
   };
 
 
-  export const LadakhCard = {
+  export const LehLadakhCard = {
     slideshowImages: [
-      { src: Sonmarg1, alt: "Sonmarg" },
-      { src: Sonmarg2, alt: "Sonmarg" },
-      { src: Sonmarg3, alt: "Sonmarg" },
-      { src: Sonmarg4, alt: "Sonmarg" },
-      { src: Sonmarg, alt: "Sonmarg" },
+      { src: LehLadakh1, alt: "LehLadakh" },
+      { src: LehLadakh2, alt: "LehLadakh" },
+      { src: LehLadakh3, alt: "LehLadakh" },
+      { src: LehLadakh4, alt: "LehLadakh" },
+      { src: LehLadakh, alt: "LehLadakh" },
     ],
-    location: "Meadows, Sonmarg",
+    location: "Meadows, LehLadakh",
     ratings: [
       { src: Star, alt: "Star 1" },
       { src: Star, alt: "Star 2" },
@@ -311,7 +323,7 @@ export const SonmargCard = {
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],
     description:
-      "Sonmarg is renowned for its breathtaking landscapes, stunning natural beauty and  meadows.",
+      "LehLadakh is renowned for its breathtaking landscapes, stunning natural beauty, meadows and Mountain Ranges.",
     price: "₹ 4999",
     OtherIcons: [
         // { src: Location, alt: "Location" },
@@ -324,13 +336,13 @@ export const SonmargCard = {
 
   export const GurezCard = {
     slideshowImages: [
-      { src: Sonmarg1, alt: "Sonmarg" },
-      { src: Sonmarg2, alt: "Sonmarg" },
-      { src: Sonmarg3, alt: "Sonmarg" },
-      { src: Sonmarg4, alt: "Sonmarg" },
-      { src: Sonmarg, alt: "Sonmarg" },
+      { src: Gurez, alt: "Gurez" },
+      { src: Gurez1, alt: "Gurez" },
+      { src: Gurez2, alt: "Gurez" },
+      { src: Gurez3, alt: "Gurez" },
+      { src: Gurez4, alt: "Gurez" },
     ],
-    location: "Meadows, Sonmarg",
+    location: "Meadows, Gurez",
     ratings: [
       { src: Star, alt: "Star 1" },
       { src: Star, alt: "Star 2" },
@@ -348,8 +360,8 @@ export const SonmargCard = {
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],
     description:
-      "Sonmarg is renowned for its breathtaking landscapes, stunning natural beauty and  meadows.",
-    price: "₹ 4999",
+      "Gurez is renowned for its breathtaking landscapes, stunning natural beauty, meadows and Mountain Rangess Everywhere.",
+    price: "₹ 15999",
     OtherIcons: [
         // { src: Location, alt: "Location" },
         // { src: Map, alt: "Map" },
