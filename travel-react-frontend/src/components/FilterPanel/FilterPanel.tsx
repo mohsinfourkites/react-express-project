@@ -2,50 +2,21 @@ import React from 'react';
 import { X } from 'lucide-react';
 import styles from './FilterPanel.module.scss';
 
-// interface FilterPanelProps {
-//   filters: {
-//     location: string;
-//     priceRange: [number, number];
-//     duration: string;
-//     groupSize: number;
-//   };
-//   locations: string[];
-//   onFilterChange: (key: string, value: any) => void;
-//   onReset: () => void;
-// }
-
-
-
-interface FilterType {
+type Filters = {
   location: string;
   priceRange: [number, number];
   duration: string;
   groupSize: number;
-}
+};
 
 interface FilterPanelProps {
+  filters: Filters;
+  locations: string[];
+  onFilterChange: (key: keyof Filters, value: any) => void;
+  onReset: () => void;
+}
 
-    filters: {
-  
-      location: string;
-  
-      priceRange: [number, number];
-  
-      duration: string;
-  
-      groupSize: number;
-  
-    };
-  
-    locations: string[];
-  
-    onFilterChange: (key: keyof FilterType, value: any) => void;
-  
-    onReset: () => void;
-  
-  }
-
-export const FilterPanel: React.FC<FilterPanelProps> = ({ filters, locations, onFilterChange, onReset }) => {
+const FilterPanel: React.FC<FilterPanelProps> = ({ filters, locations, onFilterChange, onReset }) => {
   const durations = ['1-3 Days', '4-7 Days', '8+ Days'];
   const groupSizes = [2, 4, 6, 8, 10];
 

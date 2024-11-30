@@ -1,108 +1,79 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import styles from './Package.module.scss';
 import FilterPanel from '../../components/FilterPanel/FilterPanel';
-import { tourPackages } from '../../data/tour-packages-data';
-import { PackageCard } from '../../components/PackageCard/PackageCard';
 import PackageCardMohsin from '../../components/MyFigma/PackageCardMohsin/PackageCardMohsin';
 import { GulmargCard, PahalgamCard, SonmargCard } from '../../components/MyFigma/PackageCardMohsin/ReusableCardMohsin';
 
-type FilterType = {
+type Filters = {
   location: string;
   priceRange: [number, number];
   duration: string;
   groupSize: number;
 };
 
-const initialFilters: FilterType = {
-  location: '',
-  priceRange: [0, 50000],
-  duration: '',
-  groupSize: 0,
-};
+const allPackages = [GulmargCard, PahalgamCard, SonmargCard]; // Add other packages here
 
 const Packages: React.FC = () => {
-  const [filters, setFilters] = useState<FilterType>(initialFilters);
+  const [filters, setFilters] = useState<Filters>({
+    location: '',
+    priceRange: [1000, 10000],
+    duration: '',
+    groupSize: 0,
+  });
 
-  // Get unique locations from packages
-  const locations: string[] = useMemo(() => {
-    return Array.from(new Set(tourPackages.map((pkg: { location: string }) => pkg.location)));
-  }, []);
+  const [filteredPackages, setFilteredPackages] = useState(allPackages);
 
-  // Filter packages based on selected criteria
-  const filteredPackages = useMemo(() => {
-    return tourPackages.filter((pkg) => {
-      if (filters.location && pkg.location !== filters.location) return false;
-      if (pkg.price < filters.priceRange[0] || pkg.price > filters.priceRange[1]) return false;
-      if (filters.duration) {
-        const days = parseInt(pkg.duration);
-        if (filters.duration === '1-3 Days' && (days < 1 || days > 3)) return false;
-        if (filters.duration === '4-7 Days' && (days < 4 || days > 7)) return false;
-        if (filters.duration === '8+ Days' && days < 8) return false;
-      }
-      if (filters.groupSize > 0 && pkg.maxPeople < filters.groupSize) return false;
-      return true;
-    });
-  }, [filters]);
-
-  const handleFilterChange = (key: keyof FilterType, value: any) => {
-    setFilters((prev) => ({
-      ...prev,
-      [key]: value,
-    }));
+  const handleFilterChange = (key: keyof Filters, value: any) => {
+    const newFilters = { ...filters, [key]: value };
+    setFilters(newFilters);
+    applyFilters(newFilters);
   };
 
-  const handleResetFilters = () => {
-    setFilters(initialFilters);
+  const applyFilters = (filters: Filters) => {
+    const filtered = allPackages.filter((pkg) => {
+      const matchesLocation =
+        !filters.location || pkg.location.toLowerCase().includes(filters.location.toLowerCase());
+      const matchesPrice =
+        filters.priceRange[0] <= parseInt(pkg.price.replace(/[^\d]/g, '')) &&
+        parseInt(pkg.price.replace(/[^\d]/g, '')) <= filters.priceRange[1];
+      const matchesDuration =
+        !filters.duration || pkg.features.some((feature) => feature.label.includes(filters.duration));
+      const matchesGroupSize =
+        !filters.groupSize || pkg.features.some((feature) => feature.label.includes(`${filters.groupSize} Persons`));
+
+      return matchesLocation && matchesPrice && matchesDuration && matchesGroupSize;
+    });
+
+    setFilteredPackages(filtered);
+  };
+
+  const handleReset = () => {
+    setFilters({
+      location: '',
+      priceRange: [10000, 10000],
+      duration: '',
+      groupSize: 0,
+    });
+    setFilteredPackages(allPackages);
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.innerContainer}>
-        <h1 className={styles.title}>Kashmir Tour Packages</h1>
-        <p className={styles.description}>
-          Discover our carefully curated selection of Kashmir travel packages designed to showcase the best of Paradise on Earth.
-        </p>
+    <div className={styles.packagesPage}>
+      {/* Filter Panel */}
+      <FilterPanel
+        filters={filters}
+        locations={['Gulmarg', 'Pahalgam', 'Sonmarg', 'Bangus', 'Srinagar', 'Ladakh', 'Gurez']} // Customize as needed
+        onFilterChange={handleFilterChange}
+        onReset={handleReset}
+      />
 
-        <div className={styles.content}>
-          <div className={styles.filterPanel}>
-            <FilterPanel
-              filters={filters}
-              locations={locations}
-              onFilterChange={handleFilterChange}
-              onReset={handleResetFilters}
-            />
-          </div>
-
-          <div className={styles.packageGrid}>
-            {filteredPackages.length === 0 ? (
-              <div className={styles.noPackages}>
-                <p>No packages match your selected filters.</p>
-                <button onClick={handleResetFilters} className={styles.resetButton}>
-                  Reset Filters
-                </button>
-              </div>
-            ) : 
-            (
-              <div className={styles.grid}>
-                <PackageCardMohsin {...GulmargCard} />
-                <PackageCardMohsin {...PahalgamCard} />
-                <PackageCardMohsin {...SonmargCard} />
-
-                <PackageCardMohsin {...GulmargCard} />
-                <PackageCardMohsin {...PahalgamCard} />
-                <PackageCardMohsin {...SonmargCard} />
-
-                <PackageCardMohsin {...GulmargCard} />
-                <PackageCardMohsin {...PahalgamCard} />
-                <PackageCardMohsin {...SonmargCard} />
-                
-                {/* {filteredPackages.map((pkg) => (
-                  <PackageCard key={pkg.id} {...pkg} />
-                ))} */}
-              </div>
-            )}
-          </div>
-        </div>
+      {/* Package Cards */}
+      <div className={styles.grid}>
+        {filteredPackages.length > 0 ? (
+          filteredPackages.map((pkg, idx) => <PackageCardMohsin key={idx} {...pkg} />)
+        ) : (
+          <p>No packages match your filters.</p>
+        )}
       </div>
     </div>
   );

@@ -85,6 +85,20 @@ import Sonmarg23 from '../../../assets/images/Kashmir/Sonmarg/pexels-wanderwithh
 import Sonmarg24 from '../../../assets/images/Kashmir/Sonmarg/pexels-wanderwithhidayat-472723107-19078761.jpg';
 
 
+import Bangus from '../../../assets/images/Kashmir/Bangus/bangus.jpg';
+import Bangus1 from '../../../assets/images/Kashmir/Bangus/bangus2.jpg';
+import Bangus2 from '../../../assets/images/Kashmir/Bangus/bangus3.jpg';
+import Bangus3 from '../../../assets/images/Kashmir/Bangus/bangus4.jpg';
+import Bangus4 from '../../../assets/images/Kashmir/Bangus/bangus5.jpg';
+
+
+import Srinagar from '../../../assets/images/Kashmir/Srinagar/pexels-amjed-wani-1355393378-25786569.jpg';
+import Srinagar1 from '../../../assets/images/Kashmir/Srinagar/pexels-amjed-wani-1355393378-25786709.jpg';
+import Srinagar2 from '../../../assets/images/Kashmir/Srinagar/pexels-amjed-wani-1355393378-26110221.jpg';
+import Srinagar3 from '../../../assets/images/Kashmir/Srinagar/pexels-amjed-wani-1355393378-26110235 (1).jpg';
+import Srinagar4 from '../../../assets/images/Kashmir/Srinagar/pexels-anaam-farooq-765472679-19323186.jpg';
+
+
 
 
 export const GulmargCard = {
@@ -162,6 +176,153 @@ export const PahalgamCard = {
 
 
 export const SonmargCard = {
+    slideshowImages: [
+      { src: Sonmarg1, alt: "Sonmarg" },
+      { src: Sonmarg2, alt: "Sonmarg" },
+      { src: Sonmarg3, alt: "Sonmarg" },
+      { src: Sonmarg4, alt: "Sonmarg" },
+      { src: Sonmarg, alt: "Sonmarg" },
+    ],
+    location: "Meadows, Sonmarg",
+    ratings: [
+      { src: Star, alt: "Star 1" },
+      { src: Star, alt: "Star 2" },
+      { src: Star, alt: "Star 3" },
+      { src: Star, alt: "Star 4" },
+      { src: Star, alt: "Star 5" },
+    ],
+    ratingValue: 4.4,
+    reviewCount: 32,
+    features: [
+      // { src: Hotel, alt: "Hotel", label: "Hotel" },
+      { src: Calendar, alt: "Duration", label: "2 Days" },
+      { src: Man, alt: "1 Persons", label: "1 Person" },
+      { src: Bed, alt: "1 Bed", label: "1 Bed" },
+      { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
+    ],
+    description:
+      "Sonmarg is renowned for its breathtaking landscapes, stunning natural beauty and  meadows.",
+    price: "₹ 4999",
+    OtherIcons: [
+        // { src: Location, alt: "Location" },
+        // { src: Map, alt: "Map" },
+        { src: LeftArrow, alt: "Left Arrow" },
+        // { src: RightArrow, alt: "Right Arrow" },
+      ],
+  };
+
+  export const BangusCard = {
+    slideshowImages: [
+      { src: Bangus1, alt: "Bangus" },
+      { src: Bangus2, alt: "Bangus" },
+      { src: Bangus3, alt: "Bangus" },
+      { src: Bangus4, alt: "Bangus" },
+      { src: Bangus, alt: "Bangus" },
+    ],
+    location: "Meadows, Bangus",
+    ratings: [
+      { src: Star, alt: "Star 1" },
+      { src: Star, alt: "Star 2" },
+      { src: Star, alt: "Star 3" },
+      { src: Star, alt: "Star 4" },
+      { src: Star, alt: "Star 5" },
+    ],
+    ratingValue: 4.4,
+    reviewCount: 32,
+    features: [
+      // { src: Hotel, alt: "Hotel", label: "Hotel" },
+      { src: Calendar, alt: "Duration", label: "2 Days" },
+      { src: Man, alt: "1 Persons", label: "1 Person" },
+      { src: Bed, alt: "1 Bed", label: "1 Bed" },
+      { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
+    ],
+    description:
+      "Bangus is renowned for its breathtaking landscapes, stunning natural beauty and  meadows.",
+    price: "₹ 4999",
+    OtherIcons: [
+        // { src: Location, alt: "Location" },
+        // { src: Map, alt: "Map" },
+        { src: LeftArrow, alt: "Left Arrow" },
+        // { src: RightArrow, alt: "Right Arrow" },
+      ],
+  };
+
+
+  export const SrinagarCard = {
+    slideshowImages: [
+      { src: Srinagar1, alt: "Srinagar" },
+      { src: Srinagar2, alt: "Srinagar" },
+      { src: Srinagar3, alt: "Srinagar" },
+      { src: Srinagar4, alt: "Srinagar" },
+      { src: Srinagar, alt: "Srinagar" },
+    ],
+    location: "Meadows, Srinagar",
+    ratings: [
+      { src: Star, alt: "Star 1" },
+      { src: Star, alt: "Star 2" },
+      { src: Star, alt: "Star 3" },
+      { src: Star, alt: "Star 4" },
+      { src: Star, alt: "Star 5" },
+    ],
+    ratingValue: 4.4,
+    reviewCount: 32,
+    features: [
+      // { src: Hotel, alt: "Hotel", label: "Hotel" },
+      { src: Calendar, alt: "Duration", label: "2 Days" },
+      { src: Man, alt: "1 Persons", label: "1 Person" },
+      { src: Bed, alt: "1 Bed", label: "1 Bed" },
+      { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
+    ],
+    description:
+      "Srinagar is renowned for its breathtaking landscapes, stunning natural beauty and  meadows.",
+    price: "₹ 4999",
+    OtherIcons: [
+        // { src: Location, alt: "Location" },
+        // { src: Map, alt: "Map" },
+        { src: LeftArrow, alt: "Left Arrow" },
+        // { src: RightArrow, alt: "Right Arrow" },
+      ],
+  };
+
+
+  export const LadakhCard = {
+    slideshowImages: [
+      { src: Sonmarg1, alt: "Sonmarg" },
+      { src: Sonmarg2, alt: "Sonmarg" },
+      { src: Sonmarg3, alt: "Sonmarg" },
+      { src: Sonmarg4, alt: "Sonmarg" },
+      { src: Sonmarg, alt: "Sonmarg" },
+    ],
+    location: "Meadows, Sonmarg",
+    ratings: [
+      { src: Star, alt: "Star 1" },
+      { src: Star, alt: "Star 2" },
+      { src: Star, alt: "Star 3" },
+      { src: Star, alt: "Star 4" },
+      { src: Star, alt: "Star 5" },
+    ],
+    ratingValue: 4.4,
+    reviewCount: 32,
+    features: [
+      // { src: Hotel, alt: "Hotel", label: "Hotel" },
+      { src: Calendar, alt: "Duration", label: "2 Days" },
+      { src: Man, alt: "1 Persons", label: "1 Person" },
+      { src: Bed, alt: "1 Bed", label: "1 Bed" },
+      { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
+    ],
+    description:
+      "Sonmarg is renowned for its breathtaking landscapes, stunning natural beauty and  meadows.",
+    price: "₹ 4999",
+    OtherIcons: [
+        // { src: Location, alt: "Location" },
+        // { src: Map, alt: "Map" },
+        { src: LeftArrow, alt: "Left Arrow" },
+        // { src: RightArrow, alt: "Right Arrow" },
+      ],
+  };
+
+
+  export const GurezCard = {
     slideshowImages: [
       { src: Sonmarg1, alt: "Sonmarg" },
       { src: Sonmarg2, alt: "Sonmarg" },
