@@ -1,44 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// WeatherCard.tsx
+import React from 'react';
 import styles from './WeatherCard.module.scss';
-import { weatherIcons, defaultLocation } from './WeatherConstants';
+import { weatherIcons } from './WeatherConstants';
 import AnimateBookPagesLoader from '../UIVerse/AnimateBookPages/AnimateBookPages';
-
-interface WeatherData {
-  name: string;
-  main: {
-    temp: number;
-    humidity: number;
-  };
-  weather: { description: string; icon: string }[];
-}
+import useWeatherData from '../../api/WeatherAPIs/OpenWeather';
 
 const WeatherCard: React.FC = () => {
-  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchWeather = async () => {
-      try {
-        const apiKeyOpenWeather = import.meta.env.VITE_OPENWEATHER_API_KEY;
-        const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather`,
-          {
-            params: {
-              q: defaultLocation,
-              units: 'metric',
-              appid: apiKeyOpenWeather,
-            },
-          }
-        );
-        setWeatherData(response.data);
-      } catch (err: any) {
-        setError(err.response?.data?.message || err.message);
-      }
-    };
-
-    fetchWeather();
-  }, []);
+  const { weatherData, error } = useWeatherData();
 
   if (error) {
     return <div className={styles.error}>{error}</div>;

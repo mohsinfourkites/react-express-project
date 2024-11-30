@@ -10,14 +10,11 @@ import store from './redux/store';
 
 // Clerk Imports
 import { 
-  ClerkProvider, 
   SignedIn, 
   SignedOut, 
-  SignIn, 
-  SignUp 
 } from '@clerk/clerk-react';
 
-import { dark } from '@clerk/themes';
+
 
 // Page Imports
 import PackagesPage from './pages/Package/Packages';
@@ -26,9 +23,6 @@ import MultiLevelNavbar from './components/MultiLevelNavbar/MultiLevelNavbar';
 import TopPlaces from './pages/TopPlaces/TopPlaces';
 import Pricing from './pages/Pricing';
 import HomePage from './pages/Home/Homepage';
-import UserProfilePage from './pages/Profile/UserProfilePage'; // Create this component
-import AuthContainer from './components/MyFigma/LoginSignupFigma/AuthContainer/AuthContainer';
-import LoginPageClerk from './pages/SignInSignUp/SignIn/SignInPageClerk';
 import SignInPageClerk from './pages/SignInSignUp/SignIn/SignInPageClerk';
 import SignUpPageClerk from './pages/SignInSignUp/SignUp/SignupPageClerk';
 
@@ -45,27 +39,9 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 };
 
 const App: React.FC = () => {
-  // Ensure Clerk publishable key is set
-  // const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
   
-  // if (!publishableKey) {
-  //   throw new Error("Missing Publishable Key");
-  // }
-
   return (
-    // <ClerkProvider 
-    //   publishableKey={publishableKey}
-    //   appearance={{
-    //     baseTheme: dark, // Use imported theme
-    //     variables: {
-    //       colorPrimary: '#0070F3',
-    //     },
-    //     elements: {
-    //       formButtonPrimary: 'bg-blue-500 hover:bg-blue-600',
-    //       card: 'shadow-lg rounded-xl'
-    //     }
-    //   }}
-    // >
+   
       <Provider store={store}>
         <Router>
           <MultiLevelNavbar />
@@ -106,22 +82,13 @@ const App: React.FC = () => {
                 </ProtectedRoute>
               } 
             />
-            
-            {/* <Route 
-              path="/profile" 
-              element={
-                <ProtectedRoute>
-                  <UserProfilePage />
-                </ProtectedRoute>
-              } 
-            /> */}
-            
+              
             {/* 404 Route */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Router>
       </Provider>
-    // </ClerkProvider>
+    
   );
 };
 

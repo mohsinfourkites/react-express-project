@@ -2,40 +2,23 @@ import React, { useState } from "react";
 import styles from "./Tabs.module.scss";
 import { CNav, CNavItem, CNavLink, CTabContent, CTabPane } from "@coreui/react";
 import "@coreui/coreui/dist/css/coreui.min.css";
-
-import GalleryCard1 from "../../GalleryCard/GalleryCard";
-
-import NextUITable from "../../NextUI/Table/NextUITable";
-import NextUILoadingBar from "../../NextUI/LoadingBar/NextUILoadingBar";
-import NextUITextArea from "../../NextUI/TextArea/NextUITextArea";
-import { BentoGridThirdDemo } from "../../AceternityUI/BentoGrid/BentoGridThirdDemo";
 import { SyncLoader } from "react-spinners";
-import { InfiniteMovingCardsDemo } from "../../AceternityUI/InfiniteMovingCards/AInfiniteMovingCrads";
-import { LampDemo } from "../../AceternityUI/LampSectionHeader/ALampSectionHeader";
-import { MeteorsDemo } from "../../AceternityUI/MeteorCard/AMeteorCard";
 
-import { StickyScrollRevealDemo } from "../../AceternityUI/AStickyScrollTextImage/AStickyScrollTextImage";
+import { MeteorsDemo } from "../../AceternityUI/MeteorCard/AMeteorCard";
 
 import { FeaturesSectionDemo } from "../../AceternityUI/FeatureCard/FeatureCard";
 import { LayoutGridDemo } from "../../AceternityUI/LayoutGrid/LayoutGrid";
 
 import { WobbleCardDemo } from "../../AceternityUI/WobbleCard/WobbleCard";
 
-import { ProgressSliderPage } from "../../EldoraUI/ProgressSlider/progress-slider";
-import { OrbitingCirclesDemo } from "../../MagicUI/OrbitingCircles/OrbitingCircles";
-import { IconCloudDemo } from "../../MagicUI/InteractingIconCloud/InteractingIconCloud";
-import { AnimatedCircularProgressBar } from "../../MagicUI/AnimatedCircularProgressBar/CircleBar";
-import { AnimatedCircularProgressBarDemo } from "../../MagicUI/AnimatedCircularProgressBar/AnimatedCircularProgressBar";
-import UILayoutCard from "../../UILayoutCard/UILayoutCard";
-import ProductCardUI from "../../ProductCard/ProductCard";
 import TextRandomizer from "../../TextRandomizer/TextRandomizer";
 import ImageMouseTrailGrid from "../../ImageMouseTrailGrid/ImageMouseTrailGrid";
-import ProgressiveCarousel from "../../ProgressiveCarousel/ProgressiveCarousel";
+
 import { BookingCard } from "../../MaterialTailWind/Card";
 import PackageCard from "../../MyCards/Git/PackageCard";
-import { BackgroundBeamsDemo } from "../../AceternityUI/BackgroundBeams/ABackgroundBeams";
+
 import SaveToLaterBookmark from "../../UIVerse/SaveToLaterBookmark/SaveToLaterBookmark";
-import CardWithTextButton from "../../UIVerse/CardWithTextButton/CardWithTextButton";
+
 import HoverColourChangeCard from "../../UIVerse/HoverColourChangeCard/HoverColourChangeCard";
 import RankHoverCard from "../../UIVerse/RankHoverCard/RankHoverCard";
 import HoverBookMark from "../../UIVerse/HoverBookmark/HoverBookMark";
@@ -46,8 +29,7 @@ import CardHoverText from "../../UIVerse/CardHoverText/CardHoverText";
 import BeautifulCardWithButtons from "../../UIVerse/BeautifulCardWithButtons/BeautifulCardWithButtons";
 import SimpleColourHoverCard from "../../UIVerse/SimpleColourHoverCard/SimpleColourHoverCard";
 import RotateHoverCard from "../../UIVerse/RotateHoverCard/RotateHoverCard";
-import GlassmorphicCard from "../../UIVerse/GlassmorphicCard/GlassmorphicCard";
-import JarvisReactorEffect from "../../UIVerse/JarvisReactorEffect/JarvisReactorEffect";
+
 import WeatherCard from "../../UIVerse/WeatherCard/WeatherCard";
 import CardHoverTextSimple from "../../UIVerse/CardHoverTextSimple/CardHoverTextSimple";
 import AnimateBookPagesLoader from "../../UIVerse/AnimateBookPages/AnimateBookPages";
@@ -55,17 +37,15 @@ import StarRatingsAnimated from "../../UIVerse/StarRatingsAnimated/StarRatingsAn
 import CardWithTextLogo from "../../UIVerse/CardWithTextLogo/CardWithTextLogo";
 import AnimatedAboutMeCard from "../../UIVerse/AnimatedAboutMeCard/AnimatedAboutMeCard";
 import PackageCardMohsin from "../../MyFigma/PackageCardMohsin/PackageCardMohsin";
-import { GulmargCard, PahalgamCard, SonmargCard } from "../../MyFigma/PackageCardMohsin/ReusableCardMohsin";
+import {
+  GulmargCard,
+  PahalgamCard,
+  SonmargCard,
+} from "../../MyFigma/PackageCardMohsin/ReusableCardMohsin";
 import AboutTourAndTextMohsin from "../../MyFigma/AboutTourAndText/AboutTourAndText";
 import LoadingSpinner from "../../UIVerse/LoadingSpinner/LoadingSpinner";
 import LoadingSpinnerCircle from "../../UIVerse/LoadingSpinner/LoadingSpinnerCircle";
 import WeatherCardOpenWeather from "../../Weather/WeatherCard";
-
-
-
-
-
-
 
 const AnotherTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
@@ -110,20 +90,17 @@ const AnotherTabs: React.FC = () => {
         {/* Gulmarg */}
         <CTabPane visible={activeTab === 0} className={styles.tabPane}>
           <div className={styles.LadakhContainer1st}>
-          
-          <TextRandomizer />
-          <LoadingSpinner />
-          <div className={styles.LadakhContainer1st}>
-          <LoadingSpinnerCircle />
+            <TextRandomizer />
+            <LoadingSpinner />
+            <div className={styles.LadakhContainer1st}>
+              <LoadingSpinnerCircle />
+            </div>
           </div>
-          </div>  
 
           <SyncLoader />
           <div className={styles.LadakhContainer1st}>
-          <AnimateBookPagesLoader />
+            <AnimateBookPagesLoader />
           </div>
-
-          
         </CTabPane>
 
         {/* Pahalgam */}
@@ -136,23 +113,26 @@ const AnotherTabs: React.FC = () => {
         </CTabPane>
         <CTabPane visible={activeTab === 2} className={styles.tabPane}>
           <div className={styles.LadakhContainer1st}>
-          {/* <ProgressiveCarousel /> */}
-          <WeatherCardOpenWeather/>
+            {/* <ProgressiveCarousel /> */}
+            <WeatherCardOpenWeather />
+          </div>
+          <div className={styles.LadakhContainer1st}>
+            <BeautifulCardWithButtons />
           </div>
         </CTabPane>
 
         {/* Srinagar */}
         <CTabPane visible={activeTab === 3} className={styles.tabPane}>
           <div className={styles.Srinagar}>
-          {/* <NextUILoadingBar /> */}
-          <BookingCard />
+            {/* <NextUILoadingBar /> */}
+            <BookingCard />
           </div>
         </CTabPane>
 
         {/* Bangus */}
         <CTabPane visible={activeTab === 4} className={styles.tabPane}>
           <div className={styles.LadakhContainer1st}></div>
-          <PackageCard  />
+          <PackageCard />
         </CTabPane>
 
         {/* Ladakh */}
@@ -162,83 +142,70 @@ const AnotherTabs: React.FC = () => {
             <SaveToLaterBookmark />
           </div>
           <div className={styles.LadakhContainer1st}>
-          {/* <CardWithTextButton /> */}
-          <HoverColourChangeCard />
-          <div className={styles.LadakhContainer1st}></div>
-          <RankHoverCard />
+            {/* <CardWithTextButton /> */}
+            <HoverColourChangeCard />
+            <div className={styles.LadakhContainer1st}></div>
+            <RankHoverCard />
           </div>
           <div className={styles.LadakhContainer1st}></div>
           <HoverBookMark />
           <div className={styles.LadakhContainer1st}>
-          <HoverCardGreyBlue />
+            <HoverCardGreyBlue />
           </div>
 
           <div className={styles.LadakhContainer1st}>
-          <SearchBarHover />
+            <SearchBarHover />
           </div>
 
           <div className={styles.LadakhContainer1st}>
-          <HoverRotateButton />
+            <HoverRotateButton />
           </div>
 
           <div className={styles.LadakhContainer1st}>
-          <CardHoverText />
+            <CardHoverText />
           </div>
-
-         
-
         </CTabPane>
 
         {/* Kokernag */}
         <CTabPane visible={activeTab === 6} className={styles.tabPane}>
+          <div className={styles.LadakhContainer1st}>
+            <BeautifulCardWithButtons />
+          </div>
 
-        <div className={styles.LadakhContainer1st}>
-          <BeautifulCardWithButtons />
-        </div>
+          <div className={styles.LadakhContainer1st}>
+            <SimpleColourHoverCard />
+          </div>
 
-        <div className={styles.LadakhContainer1st}>
-          <SimpleColourHoverCard />
-        </div>
+          <div className={styles.LadakhContainer1st}>
+            <RotateHoverCard />
+          </div>
 
-        <div className={styles.LadakhContainer1st}>
-          <RotateHoverCard />
-        </div>
-
-        {/* <div className={styles.LadakhContainer1st}>
+          {/* <div className={styles.LadakhContainer1st}>
           <GlassmorphicCard />
         </div> */}
-
-        
-
         </CTabPane>
 
         {/* Verinag */}
         <CTabPane visible={activeTab === 7} className={styles.tabPane}>
+          <div className={styles.LadakhContainer1st}>
+            <WeatherCard />
+          </div>
 
+          <div className={styles.LadakhContainer1st}>
+            <CardHoverTextSimple />
+          </div>
 
-        <div className={styles.LadakhContainer1st}>
-          <WeatherCard />
-        </div>
+          <div className={styles.LadakhContainer1st}>
+            <AnimateBookPagesLoader />
+          </div>
 
-        <div className={styles.LadakhContainer1st}>
-          <CardHoverTextSimple />
-        </div>
-
-        <div className={styles.LadakhContainer1st}>
-          <AnimateBookPagesLoader />
-        </div>
-
-        <div className={styles.LadakhContainer1st}>
-          <StarRatingsAnimated />
-        </div>
-
-
-
+          <div className={styles.LadakhContainer1st}>
+            <StarRatingsAnimated />
+          </div>
         </CTabPane>
 
         {/* Anantanag  */}
         <CTabPane visible={activeTab === 8} className={styles.tabPane}>
-
           <div className={styles.LadakhContainer1st}>
             <MeteorsDemo />
           </div>
@@ -250,22 +217,14 @@ const AnotherTabs: React.FC = () => {
           <div className={styles.LadakhContainer1st}>
             <AnimatedAboutMeCard />
           </div>
-
-
         </CTabPane>
 
         {/* SinthanTop */}
         <CTabPane visible={activeTab === 9} className={styles.tabPane}>
-
-
           <div className={styles.SinthanTop}>
-
-          <PackageCardMohsin {...GulmargCard} />
-          <PackageCardMohsin {...PahalgamCard} />
-          <PackageCardMohsin {...SonmargCard} />
-          
-
-
+            <PackageCardMohsin {...GulmargCard} />
+            <PackageCardMohsin {...PahalgamCard} />
+            <PackageCardMohsin {...SonmargCard} />
           </div>
         </CTabPane>
 
