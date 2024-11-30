@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styles from "./PackageCardMohsin.module.scss";
 import { GulmargCard } from "./ReusableCardMohsin";
-import Star from "../../../assets/icons/Figma/PackageCard/star.png";
-import HalfStar from "../../../assets/icons/ratinghalf.png";
-import EmptyStar from "../../../assets/icons/favorite.png";
+import StarRatingComponent from "react-star-rating-component";
+import fullStar from "../../../assets/icons/Stars/fullstar.png";
+import halfStar from "../../../assets/icons/Stars/halfstar.png";
+import emptyStar from "../../../assets/icons/Stars/emptystar.png";
 
 export interface SlideshowImage {
   src: string;
@@ -47,40 +48,8 @@ const PackageCardMohsin: React.FC<PackageCardProps> = ({
     );
   };
 
-  const renderStars = (rating: number) => {
-    const stars = [];
-    for (let i = 1; i <= 5; i++) {
-      if (i <= rating) {
-        stars.push(
-          <img
-            key={i}
-            src={Star}
-            alt="Star"
-            className={styles.ratingImage}
-          />
-        );
-      } else if (i - rating < 1) {
-        stars.push(
-          <img
-            key={i}
-            src={HalfStar}
-            alt="Half Star"
-            className={styles.ratingImage}
-          />
-        );
-      } else {
-        stars.push(
-          <img
-            key={i}
-            src={EmptyStar}
-            alt="Empty Star"
-            className={styles.ratingImage}
-          />
-        );
-      }
-    }
-    return stars;
-  };
+  // Ensure ratingValue is within the range of 0 to 5
+  const validRatingValue = Math.min(Math.max(ratingValue, 0), 5);
 
   return (
     <div className={styles.card}>
@@ -116,7 +85,23 @@ const PackageCardMohsin: React.FC<PackageCardProps> = ({
 
         <div className={styles.belowSlideShow}>
           <div className={styles.ratings}>
-            {renderStars(ratingValue)}
+            <StarRatingComponent
+              name="rating"
+              starCount={5}
+              value={validRatingValue}
+              editing={false}
+              starColor="#ffd700"
+              emptyStarColor="#d3d3d3"
+              renderStarIcon={(nextValue, prevValue, name) => {
+                if (nextValue <= validRatingValue) {
+                  return <img src={fullStar} className={styles.ratingImage} alt="Full Star" />;
+                }
+                return <img src={emptyStar} className={styles.ratingImage} alt="Empty Star" />;
+              }}
+              renderStarIconHalf={(nextValue, prevValue, name) => (
+                <img src={halfStar} className={styles.ratingImage} alt="Half Star" />
+              )}
+            />
             <span className={styles.ratingValue}>{ratingValue.toFixed(1)}</span>
             <span className={styles.reviews}>({reviewCount} Reviews)</span>
           </div>

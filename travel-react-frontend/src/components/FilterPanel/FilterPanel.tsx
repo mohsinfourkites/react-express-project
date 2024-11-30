@@ -18,7 +18,7 @@ interface FilterPanelProps {
 }
 
 const FilterPanel: React.FC<FilterPanelProps> = ({ filters, locations, onFilterChange, onReset }) => {
-  const durations = ['2 Days', '3 Days', '4 Days', '5 Days', '6 Days', '7 Days', '8 Days', '8 Days', '9 Days', '10 Days'];
+  const durations = ['2 Days', '3 Days', '4 Days', '5 Days', '6 Days', '7 Days', '8 Days', '9 Days', '10 Days'];
   const groupSizes = [2, 3, 4, 6, 8, 10];
   const ratings = [1, 2, 3, 4, 5];
 
