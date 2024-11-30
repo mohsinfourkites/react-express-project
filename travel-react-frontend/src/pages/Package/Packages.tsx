@@ -16,7 +16,7 @@ const allPackages = [GulmargCard, PahalgamCard, SonmargCard, SrinagarCard, LehLa
 const Packages: React.FC = () => {
   const [filters, setFilters] = useState<Filters>({
     location: '',
-    priceRange: [1000, 10000],
+    priceRange: [1000, 50000],
     duration: '',
     groupSize: 0,
   });
@@ -50,7 +50,7 @@ const Packages: React.FC = () => {
   const handleReset = () => {
     setFilters({
       location: '',
-      priceRange: [10000, 10000],
+      priceRange: [10000, 50000],
       duration: '',
       groupSize: 0,
     });

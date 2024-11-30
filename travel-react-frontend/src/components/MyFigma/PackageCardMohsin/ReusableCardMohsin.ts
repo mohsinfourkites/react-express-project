@@ -169,7 +169,7 @@ export const PahalgamCard = {
   reviewCount: 92,
   features: [
     // { src: Hotel, alt: "Resort", label: "Resort" },
-    { src: Calendar, alt: "Duration", label: "2 Days" },
+    { src: Calendar, alt: "Duration", label: "3 Days" },
     { src: Man, alt: "3 Persons", label: "3 Persons" },
     { src: Bed, alt: "3 Bed", label: "3 Rooms" },
     { src: Bathroom, alt: "2 Bath", label: "3 Baths" },
@@ -207,14 +207,14 @@ export const SonmargCard = {
     reviewCount: 32,
     features: [
       // { src: Hotel, alt: "Hotel", label: "Hotel" },
-      { src: Calendar, alt: "Duration", label: "2 Days" },
-      { src: Man, alt: "1 Persons", label: "1 Person" },
+      { src: Calendar, alt: "Duration", label: "4 Days" },
+      { src: Man, alt: "4 Persons", label: "4 Persons" },
       { src: Bed, alt: "1 Bed", label: "1 Bed" },
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],
     description:
       "Sonmarg is renowned for its breathtaking landscapes, stunning natural beauty, meadows and Mountain Ranges.",
-    price: "₹ 4999",
+    price: "₹ 7999",
     OtherIcons: [
         // { src: Location, alt: "Location" },
         // { src: Map, alt: "Map" },
@@ -243,14 +243,14 @@ export const SonmargCard = {
     reviewCount: 32,
     features: [
       // { src: Hotel, alt: "Hotel", label: "Hotel" },
-      { src: Calendar, alt: "Duration", label: "2 Days" },
-      { src: Man, alt: "1 Persons", label: "1 Person" },
+      { src: Calendar, alt: "Duration", label: "5 Days" },
+      { src: Man, alt: "5 Persons", label: "5 Persons" },
       { src: Bed, alt: "1 Bed", label: "1 Bed" },
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],
     description:
       "Bangus is renowned for its breathtaking landscapes, stunning natural beauty, meadows and Mountain Ranges.",
-    price: "₹ 4999",
+    price: "₹ 8999",
     OtherIcons: [
         // { src: Location, alt: "Location" },
         // { src: Map, alt: "Map" },
@@ -280,14 +280,14 @@ export const SonmargCard = {
     reviewCount: 32,
     features: [
       // { src: Hotel, alt: "Hotel", label: "Hotel" },
-      { src: Calendar, alt: "Duration", label: "2 Days" },
-      { src: Man, alt: "1 Persons", label: "1 Person" },
+      { src: Calendar, alt: "Duration", label: "6 Days" },
+      { src: Man, alt: "6 Persons", label: "6 Persons" },
       { src: Bed, alt: "1 Bed", label: "1 Bed" },
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],
     description:
       "Srinagar is renowned for its breathtaking landscapes, stunning natural beauty, meadows and Mountain Ranges.",
-    price: "₹ 4999",
+    price: "₹ 9999",
     OtherIcons: [
         // { src: Location, alt: "Location" },
         // { src: Map, alt: "Map" },
@@ -317,14 +317,14 @@ export const SonmargCard = {
     reviewCount: 32,
     features: [
       // { src: Hotel, alt: "Hotel", label: "Hotel" },
-      { src: Calendar, alt: "Duration", label: "2 Days" },
-      { src: Man, alt: "1 Persons", label: "1 Person" },
+      { src: Calendar, alt: "Duration", label: "7 Days" },
+      { src: Man, alt: "7 Persons", label: "7 Persons" },
       { src: Bed, alt: "1 Bed", label: "1 Bed" },
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],
     description:
       "LehLadakh is renowned for its breathtaking landscapes, stunning natural beauty, meadows and Mountain Ranges.",
-    price: "₹ 4999",
+    price: "₹ 10999",
     OtherIcons: [
         // { src: Location, alt: "Location" },
         // { src: Map, alt: "Map" },
@@ -354,8 +354,8 @@ export const SonmargCard = {
     reviewCount: 32,
     features: [
       // { src: Hotel, alt: "Hotel", label: "Hotel" },
-      { src: Calendar, alt: "Duration", label: "2 Days" },
-      { src: Man, alt: "1 Persons", label: "1 Person" },
+      { src: Calendar, alt: "Duration", label: "8 Days" },
+      { src: Man, alt: "8 Persons", label: "8 Persons" },
       { src: Bed, alt: "1 Bed", label: "1 Bed" },
       { src: Bathroom, alt: "1 Bath", label: "1 Bath" },
     ],

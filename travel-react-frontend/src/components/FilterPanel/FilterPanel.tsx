@@ -17,8 +17,8 @@ interface FilterPanelProps {
 }
 
 const FilterPanel: React.FC<FilterPanelProps> = ({ filters, locations, onFilterChange, onReset }) => {
-  const durations = ['1-3 Days', '4-7 Days', '8+ Days'];
-  const groupSizes = [2, 4, 6, 8, 10];
+  const durations = ['2 Days', '3 Days', '4 Days', '5 Days', '6 Days', '7 Days', '8 Days', '8 Days', '9 Days', '10 Days'];
+  const groupSizes = [2, 3, 4, 6, 8, 10];
 
   return (
     <div className={styles.filterPanelContainer}>
@@ -55,9 +55,9 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ filters, locations, onFilterC
         <div className={styles.rangeWrapper}>
           <input
             type="range"
-            min="10000"
+            min="1000"
             max="50000"
-            step="1000"
+            step="100"
             value={filters.priceRange[1]}
             onChange={(e) => onFilterChange('priceRange', [filters.priceRange[0], parseInt(e.target.value)])}
             className={styles.rangeInput}
