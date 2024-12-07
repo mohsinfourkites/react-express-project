@@ -51,7 +51,7 @@ const SearchBarHover = () => {
 const StyledWrapper = styled.div`
   .grid {
     height: 800px;
-    width: 800px;
+    width: 400px;
     background-image: linear-gradient(to right, #0f0f10 1px, transparent 1px),
       linear-gradient(to bottom, #0f0f10 1px, transparent 1px);
     background-size: 1rem 1rem;

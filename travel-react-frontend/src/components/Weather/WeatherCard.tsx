@@ -1,9 +1,11 @@
-// WeatherCard.tsx
 import React from 'react';
 import styles from './WeatherCard.module.scss';
 import { weatherIcons } from './WeatherConstants';
 import AnimateBookPagesLoader from '../UIVerse/AnimateBookPages/AnimateBookPages';
 import useWeatherData from '../../api/WeatherAPIs/OpenWeather';
+import CalendarDateNow from '../DateAndClock/CalendarDateNow';
+import SearchBarHover from '../UIVerse/SearchBarHover/SearchBarHover';
+// Import the new component
 
 const WeatherCard: React.FC = () => {
   const { weatherData, error } = useWeatherData();
@@ -21,11 +23,20 @@ const WeatherCard: React.FC = () => {
 
   return (
     <div className={styles.weatherCard}>
-      <h2 className={styles.location}>{name}</h2>
-      <img className={styles.icon} src={src} alt={alt} />
-      <p className={styles.description}>{weather[0].description}</p>
-      <p className={styles.temperature}>{main.temp}°C</p>
-      <p className={styles.humidity}>Humidity: {main.humidity}%</p>
+      <div className={styles.weatherCardContent}> 
+        <div className={styles.weatherCardHeader}>
+          <CalendarDateNow />
+        </div>
+        <img className={styles.icon} src={src} alt={alt} />
+        <div className={styles.LocationSearchBar}>
+        <SearchBarHover />
+          </div>
+        <h2 className={styles.location}>{name}</h2>
+        
+        <p className={styles.description}>{weather[0].description}</p>
+        <p className={styles.temperature}>{main.temp}°C</p>
+        <p className={styles.humidity}>Humidity: {main.humidity}%</p>
+      </div>
     </div>
   );
 };

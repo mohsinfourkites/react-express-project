@@ -83,24 +83,25 @@ export const Menus: MenuItem[] = [
   },
   {
     name: "Support",
-    subMenu: [
-      {
-        name: "Help",
-        desc: "Center",
-        icon: CircleHelp,
-      },
-      {
-        name: "Community",
-        desc: "Project help",
-        icon: MessageCircle,
-      },
-      {
-        name: "Emergency",
-        desc: "Urgent issues",
-        icon: TriangleAlert,
-      },
-    ],
-    gridCols: 1,
+    redirection: "/support",
+    // subMenu: [
+    //   {
+    //     name: "Help",
+    //     desc: "Center",
+    //     icon: CircleHelp,
+    //   },
+    //   {
+    //     name: "Community",
+    //     desc: "Project help",
+    //     icon: MessageCircle,
+    //   },
+    //   {
+    //     name: "Emergency",
+    //     desc: "Urgent issues",
+    //     icon: TriangleAlert,
+    //   },
+    // ],
+    // gridCols: 1,
   },
   {
     name: "Contact",
