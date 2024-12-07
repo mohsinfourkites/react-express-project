@@ -12,6 +12,22 @@ import Snow from '../../assets/icons/Weather_Illustartions/weather.gif';
 import Mist from '../../assets/icons/Weather_Illustartions/mist.png';
 import Default from '../../assets/icons/Weather_Illustartions/meteorology.png';
 
+export const weatherIconsAccuWeather: { [key: string]: { src: string; alt: string } } = {
+  'Sunny': { src: Sunny, alt: 'Sunny' },
+  'ClearNight': { src: ClearNight, alt: 'Clear Night' },
+  'PartlyCloudyDay': { src: PartlyCloudyDay, alt: 'Partly Cloudy Day' },
+  'PartlyCloudyNight': { src: PartlyCloudyNight, alt: 'Partly Cloudy Night' },
+  'Cloudy': { src: Cloudy, alt: 'Cloudy' },
+  'Overcast': { src: Overcast, alt: 'Overcast' },
+  'Showers': { src: Showers, alt: 'Showers' },
+  'Rain': { src: Rain, alt: 'Rain' },
+  'RainNight': { src: RainNight, alt: 'Rain Night' },
+  'Thunderstorm': { src: Thunderstorm, alt: 'Thunderstorm' },
+  'Snow': { src: Snow, alt: 'Snow' },
+  'Mist': { src: Mist, alt: 'Mist' },
+  default: { src: Default, alt: 'Default Weather' },
+};
+
 export const weatherIcons: { [key: string]: { src: string; alt: string } } = {
   '01d': { src: Sunny, alt: 'Sunny' },
   '01n': { src: ClearNight, alt: 'Clear Night' },

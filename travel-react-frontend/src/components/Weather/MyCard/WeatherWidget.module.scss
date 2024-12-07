@@ -1,17 +1,29 @@
+
+.weatherPage{
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    // margin-top: 100px;
+    // margin-bottom: 100px;
+}
 .weatherwidget {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 7px;
-  margin: 60px;
+      flex-direction: column;
+      align-items: center;
+  padding: 25px;
+//   margin: 60px;
+  margin-bottom: 200px;
   margin-left: 400px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   width: 300px;
   background-color: #f9f9f9;
   border-radius: 8px;
-  height: 1000vh;
+  box-shadow: 0 4px 8px rgb(239, 230, 230);
+//   height: 1000vh;
   color: black;
-  max-height: min-content;
+  max-height:600px;
 
   .searchInput {
     width: 91%;
@@ -45,6 +57,11 @@
   .searchInput {
     padding-left: 30px; // Adjust padding to make space for the icon
     // existing styles
+  }
+
+  .weatherIcon {
+    width: 100px; // Adjust size as needed
+    height: auto;
   }
 
   .searchBtn {

@@ -2,19 +2,28 @@ import React, { useState } from 'react';
 import useWeatherData from '../../../api/WeatherAPIs/AccuWeather';
 import style from './WeatherWidget.module.scss';
 import { FaSearch } from 'react-icons/fa'; // Import the search icon
+import WeatherResponseManipulation from './WeatherResponseManipulation'; // Import the new component
+import { weatherIconsAccuWeather } from '../WeatherConstants';
+
 
 const WeatherWidgetAccU: React.FC = () => {
   const [searchInput, setSearchInput] = useState<string>(''); // For the input field
   const [location, setLocation] = useState<string>(''); // Actual location to search
   const { weatherData, forecastData, error, loading } = useWeatherData(location);
+  console.log("WeatherrrData", weatherData);
 
   const handleSearch = () => {
     setLocation(searchInput); // Trigger the hook to fetch data for the new location
   };
 
+  const getWeatherIcon = (weatherText: string) => {
+    return weatherIconsAccuWeather[weatherText] || weatherIconsAccuWeather.default;
+  };
+
   return (
+ <div className={style.weatherPage}>
     <div className={style.weatherwidget}>
-      <div className={style.SearchBar}> 
+      <div className={style.SearchBar}>
         {/* <SearchBarModal /> */}
         <div className={style.inputContainer}>
           <FaSearch className={style.searchIcon} />
@@ -37,8 +46,13 @@ const WeatherWidgetAccU: React.FC = () => {
         <p>{error}</p>
       ) : weatherData ? (
         <div className={style.weatherCard}>
-          <h3>{weatherData.WeatherText}</h3>
-          <h3>{weatherData.LocalObservationDateTime}</h3>
+          <h3><WeatherResponseManipulation dateTime={weatherData.LocalObservationDateTime} /></h3>
+          <h1>{weatherData.WeatherText}</h1>
+          <img
+            src={getWeatherIcon(weatherData.WeatherText).src}
+            alt={getWeatherIcon(weatherData.WeatherText).alt}
+            className={style.weatherIcon}
+          />
           <div className={style.temperature}>
             {weatherData.Temperature.Metric.Value}°C
           </div>
@@ -60,6 +74,7 @@ const WeatherWidgetAccU: React.FC = () => {
       ) : (
         <p>No data available</p>
       )}
+    </div>
     </div>
   );
 };
