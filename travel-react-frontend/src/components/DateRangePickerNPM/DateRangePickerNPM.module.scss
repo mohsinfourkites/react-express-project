@@ -1,0 +1,43 @@
+.rangeCalendarWrapper {
+    /* Hides the sidebar area with the predefined ranges (Today, Weekend) */
+    .rdrDefinedRangesWrapper {
+      display: none !important;
+    }
+  
+    /* Ensures the calendar content is centered */
+    .rdrDateRangePickerWrapper {
+      display: flex;
+      justify-content: center; /* Center the calendar horizontally */
+      width: 100%; /* Full width */
+    }
+  
+    /* Removes extra margin/spacing from the calendar */
+    .rdrCalendarWrapper {
+      margin-left: 0 !important; /* Remove left margin */
+      margin-right: 0 !important; /* Remove right margin */
+    }
+  
+    /* Optional: Removing the padding around the entire date range picker */
+    .rdrCalendar {
+      padding: 0 !important;
+    }
+  
+    /* To remove any extra spaces inside the header area */
+    .rdrCalendarHeader {
+      display: none !important;
+    }
+  
+    /* Removes the week labels (Mon, Tue, etc.) */
+    .rdrWeekDay {
+      display: none !important;
+    }
+  
+    /* Hide the calendar header background */
+    .rdrMonthAndYearWrapper {
+      display: none !important;
+    }
+  }
+  
+.rdrDefinedRangesWrapper {
+    display: none !important;
+  }

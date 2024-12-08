@@ -22,6 +22,7 @@ const config: Config = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/react/**/*.js", 
     "./node_modules/@nextui-org/theme/dist/components/(table|checkbox|spacer).js",
   ],
   darkMode: "class",
