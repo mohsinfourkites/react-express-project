@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Box, Button } from '@mui/material';
+import styles from './DateRangePicker.module.scss'; // Import the module SCSS file
 
 type DateRange = [Date | null, Date | null];
 
@@ -11,11 +12,9 @@ const DateRangePickerComponent: React.FC = () => {
   const handleDateChange = (value: Date | [Date, Date] | null) => {
     if (value === null) return;
 
-    // Handle range of dates (if value is an array of 2 dates)
     if (Array.isArray(value)) {
       setDateRange(value);
     } else if (value instanceof Date) {
-      // Handle single date selection, and determine if it's start or end date
       const [startDate, endDate] = dateRange;
 
       if (!startDate || (startDate && value < startDate)) {
@@ -28,11 +27,13 @@ const DateRangePickerComponent: React.FC = () => {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 4 }}>
-      <Calendar
-        selectRange
-        value={dateRange}
-        onChange={handleDateChange as (value: any) => void} // Type-casting to 'any' to bypass type mismatch
-      />
+      <div className={styles['calendar-container']}>
+        <Calendar
+          selectRange
+          value={dateRange}
+          onChange={handleDateChange as (value: any) => void}
+        />
+      </div>
       <Button
         variant="contained"
         color="primary"
