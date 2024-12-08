@@ -26,6 +26,7 @@ import HomePage from './pages/Home/Homepage';
 import SignInPageClerk from './pages/SignInSignUp/SignIn/SignInPageClerk';
 import SignUpPageClerk from './pages/SignInSignUp/SignUp/SignupPageClerk';
 import WeatherWidgetAccU from './components/Weather/MyCard/WeatherWidget';
+import AboutGulmarg from './pages/InfoPages/Gulmarg/Gulmarg';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -51,7 +52,7 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/packages" element={<PackagesPage />} />
-            <Route path="/support" element={<WeatherWidgetAccU />} />
+            <Route path="/support" element={<AboutGulmarg />} />
             
             {/* AUthenciated  Routes */}
              <Route path="/sign-in" element={<SignInPageClerk />} />

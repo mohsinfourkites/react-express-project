@@ -1,10 +1,8 @@
-"use client";
-
 import { LayoutGrid } from "./Layout-grid";
 
 export function LayoutGridDemo() {
   return (
-    <div className="h-screen py-20 w-full">
+    <div className="h-screen py-1 w-full">
       <LayoutGrid cards={cards} />
     </div>
   );
