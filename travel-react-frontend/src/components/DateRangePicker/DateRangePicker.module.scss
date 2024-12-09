@@ -1,11 +1,11 @@
 .container {
-//   background-color: #121212; /* Dark background for the calendar */
+  //   background-color: #121212; /* Dark background for the calendar */
   padding: 20px;
-//   border-radius: 12px;
+  //   border-radius: 12px;
   max-width: 500px;
   margin: 0 auto;
   color: black; /* White text for readability */
-  
+
   .react-calendar {
     // background-color: transparent;
     border-radius: 20px !important;
@@ -36,26 +36,26 @@
 }
 
 .selectedDate {
-  background-color: #4D8DC9 !important; /* Light blue circle for start and end dates */
+  background-color: #4d8dc9 !important; /* Light blue circle for start and end dates */
   color: #fff !important;
   border-radius: 60px;
   z-index: 2;
 }
 
 .rangeDate {
-  background-color: #CCE3FD; /* Continuous blue bar for in-between dates */
+  background-color: #cce3fd; /* Continuous blue bar for in-between dates */
   background-size: 20%;
   color: black !important;
   border-radius: 20px; /* Rsemove border radius for the continuous effect */
   position: relative;
   z-index: 1;
   gap: 10px;
-//   padding: 0px;
-//   margin: 20px;
+  //   padding: 0px;
+  //   margin: 20px;
 
   &:before,
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 10%;
     height: 100%;
@@ -73,62 +73,50 @@
     right: 0;
     border-radius: 0 10px 10px 0; /* Round right edge */
   }
-
-  
 }
 
 .selectedDatesBox {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: black ; /* Light blue text for the selected dates display */
-    // border : 2px solid #4D8DC9;
-    padding: 10px;
-    margin-top: -1px;
-    font-size:15px;
-    // margin-top: 20px ;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    // border-bottom: 1px solid black;
-    // border-left: 0.01px solid black;
-    // border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: black; /* Light blue text for the selected dates display */
+  // border : 2px solid #4D8DC9;
+  padding: 10px;
+  margin-top: -1px;
+  font-size: 15px;
+  // margin-top: 20px ;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  // border-bottom: 1px solid black;
+  // border-left: 0.01px solid black;
+  // border-right: 1px solid black;
 
-    
-
-    .selectedDatesText{
-        // border: 3px solid #3F3F46;
-        border-radius: 10px;
-        padding: 3px;
-    }
-
-    .selectedDatesFromToBox{
-        display: flex;
-        flex-direction: row;
-        margin: 1px;
-        padding: 1px;
-        gap: 75px;
-
-        .selectedDatesFrom{
-            margin: 1px;
-            padding: 5px;
-            border: 3px solid #A1A1AA;
-            border-radius: 10px;
-        }
-    
-        .selectedDatesTo{
-            margin: 1px;
-            padding: 5px;
-            border: 3px solid #A1A1AA;
-            border-radius: 10px;
-           
-        }
-    }
-
-   
+  .selectedDatesText {
+    // border: 3px solid #3F3F46;
+    border-radius: 10px;
+    padding: 3px;
   }
 
+  .selectedDatesFromToBox {
+    display: flex;
+    flex-direction: row;
+    margin: 1px;
+    padding: 1px;
+    gap: 75px;
 
+    .selectedDatesFrom {
+      margin: 1px;
+      padding: 5px;
+      border: 3px solid #a1a1aa;
+      border-radius: 10px;
+    }
 
-
-
+    .selectedDatesTo {
+      margin: 1px;
+      padding: 5px;
+      border: 3px solid #a1a1aa;
+      border-radius: 10px;
+    }
+  }
+}

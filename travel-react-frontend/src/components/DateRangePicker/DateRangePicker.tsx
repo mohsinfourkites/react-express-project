@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
-import { Box, Typography } from '@mui/material';
-import styles from './DateRangePicker.module.scss';
+import React, { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import { Box, Typography } from "@mui/material";
+import styles from "./DateRangePicker.module.scss";
 
 type DateRange = [Date | null, Date | null];
 
@@ -17,15 +17,20 @@ const DateRangePickerComponent: React.FC = () => {
   };
 
   const tileDisabled = ({ date }: { date: Date }) => {
-    return date < new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+    return (
+      date < new Date(currentDate.getFullYear(), currentDate.getMonth(), 1)
+    );
   };
 
   const tileClassName = ({ date, view }: { date: Date; view: string }) => {
-    if (view === 'month') {
+    if (view === "month") {
       const [startDate, endDate] = dateRange;
 
       if (startDate && endDate) {
-        if (date.getTime() === startDate.getTime() || date.getTime() === endDate.getTime()) {
+        if (
+          date.getTime() === startDate.getTime() ||
+          date.getTime() === endDate.getTime()
+        ) {
           return styles.selectedDate; // Circle for "From" and "To"
         }
         if (date > startDate && date < endDate) {
@@ -33,7 +38,7 @@ const DateRangePickerComponent: React.FC = () => {
         }
       }
     }
-    return '';
+    return "";
   };
 
   return (
@@ -47,20 +52,17 @@ const DateRangePickerComponent: React.FC = () => {
       />
 
       {dateRange[0] && dateRange[1] && (
-        <div className ={styles.selectedDatesBox}>
-            <div className={styles.selectedDatesText}>
-                Selected Dates
-            </div>
-            <div className={styles.selectedDatesFromToBox}>
+        <div className={styles.selectedDatesBox}>
+          <div className={styles.selectedDatesText}>Selected Dates</div>
+          <div className={styles.selectedDatesFromToBox}>
             <div className={styles.selectedDatesFrom}>
-            From {dateRange[0].toLocaleDateString()}
+              From {dateRange[0].toLocaleDateString()}
             </div>
             <div className={styles.selectedDatesTo}>
-             To {dateRange[1].toLocaleDateString()}
-             </div>
-             </div>
-
-        </div>  
+              To {dateRange[1].toLocaleDateString()}
+            </div>
+          </div>
+        </div>
       )}
     </Box>
   );
