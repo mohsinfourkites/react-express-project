@@ -103,7 +103,7 @@
     flex-direction: row;
     margin: 1px;
     padding: 1px;
-    gap: 75px;
+    gap: 55px;
 
     .selectedDatesFrom {
       margin: 1px;
@@ -120,3 +120,13 @@
     }
   }
 }
+
+.resetButton {
+    margin-top: 10px;
+    background-color: #35638C; // Example color, adjust as needed
+    color: white;
+    &:hover {
+      background-color: #4D8DC9; // Example hover color, adjust as needed
+      color: white;
+    }
+  }
