@@ -1,4 +1,4 @@
-// src/redux/slices/dateRangeSlice.ts
+// dateRangeSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface DateRangeState {
@@ -15,12 +15,14 @@ const dateRangeSlice = createSlice({
   name: 'dateRange',
   initialState,
   reducers: {
-    setDateRange: (state, action: PayloadAction<{ startDate: string; endDate: string }>) => {
-      state.startDate = action.payload.startDate;
-      state.endDate = action.payload.endDate;
+    setStartDate(state, action: PayloadAction<string | null>) {
+      state.startDate = action.payload;
+    },
+    setEndDate(state, action: PayloadAction<string | null>) {
+      state.endDate = action.payload;
     },
   },
 });
 
-export const { setDateRange } = dateRangeSlice.actions;
+export const { setStartDate, setEndDate } = dateRangeSlice.actions;
 export default dateRangeSlice.reducer;

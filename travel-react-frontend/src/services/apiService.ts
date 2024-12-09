@@ -21,3 +21,13 @@ export const loginWithGoogle = () => {
 export const loginWithFacebook = () => {
   window.location.href = `${API_BASE_URL}/auth/facebook`;
 };
+
+// New function to send date range to the API
+export const sendDateRangeApi = async (startDate: string | null, endDate: string | null) => {
+  const payload = {
+    startDate,
+    endDate,
+  };
+  const response = await axios.post(`${API_BASE_URL}/save-date-range`, payload);
+  return response.data;
+};
