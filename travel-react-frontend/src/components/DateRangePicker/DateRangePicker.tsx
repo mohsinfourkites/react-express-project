@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import styles from "./DateRangePicker.module.scss";
 
 type DateRange = [Date | null, Date | null];
 
 const DateRangePickerComponent: React.FC = () => {
   const [dateRange, setDateRange] = useState<DateRange>([null, null]);
+  const [activeStartDate, setActiveStartDate] = useState<Date>(new Date());
   const currentDate = new Date();
 
   const handleDateChange = (value: Date | [Date, Date] | null) => {
@@ -18,6 +19,7 @@ const DateRangePickerComponent: React.FC = () => {
 
   const handleReset = () => {
     setDateRange([null, null]);
+    setActiveStartDate(new Date()); // Ensure a Date object is passed
   };
 
   const tileDisabled = ({ date }: { date: Date }) => {
@@ -53,6 +55,8 @@ const DateRangePickerComponent: React.FC = () => {
         onChange={handleDateChange as (value: any) => void}
         tileDisabled={tileDisabled}
         tileClassName={tileClassName}
+        activeStartDate={activeStartDate}
+        onActiveStartDateChange={({ activeStartDate }) => setActiveStartDate(activeStartDate || new Date())}
       />
 
       <div className={styles.selectedDatesBox}>
@@ -62,7 +66,7 @@ const DateRangePickerComponent: React.FC = () => {
             From: {dateRange[0] ? dateRange[0].toLocaleDateString() : "Choose"}
           </div>
           <div className={styles.selectedDatesTo}>
-            To: {dateRange[1] ? dateRange[1].toLocaleDateString() : "Choose "}
+            To: {dateRange[1] ? dateRange[1].toLocaleDateString() : "Choose"}
           </div>
         </div>
         <Button onClick={handleReset} className={styles.resetButton}>
