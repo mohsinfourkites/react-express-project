@@ -1,69 +1,78 @@
-.calendar-container {
-    
-    display: flex;
+.container {
+//   background-color: #121212; /* Dark background for the calendar */
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  color: black; /* White text for readability */
   
-    .react-calendar {
-      width: 100%;
-      border: none;
-  
-      .react-calendar__tile {
-        font-size: 1rem;
-        padding: 10px;
-        background: #f5f5f5;
-        color: #333;
-        border-radius: 6px;
-  
-        &:hover {
-          background-color: #dce4ff;
-          color: #000;
-        }
-      }
-  
-      .react-calendar__tile--now {
-        background: #ffeeba;
-        color: #856404;
-        font-weight: bold;
-      }
-  
-      .react-calendar__tile--active {
-        background: #5c6bc0;
-        color: white;
-      }
-  
-      .react-calendar__tile--range {
-        background: #c5cae9;
-        color: #000;
-      }
-  
-      .react-calendar__navigation {
-        display: flex;
-        justify-content: space-between;
-        background-color: #5c6bc0;
-        color: white;
-        border-radius: 6px;
-        padding: 8px;
-  
-        button {
-          font-size: 1rem;
-          background: none;
-          color: white;
-          border: none;
-          cursor: pointer;
-  
-          &:hover {
-            background: rgba(255, 255, 255, 0.2);
-          }
-        }
-      }
-  
-      .react-calendar__month-view__weekdays {
-        font-weight: bold;
-        text-align: center;
-        background: #5c6bc0;
-        color: white;
-        padding: 10px;
-        border-radius: 6px 6px 0 0;
+  .react-calendar {
+    background-color: transparent;
+    border: none;
+
+    .react-calendar__tile {
+      background: transparent;
+      color: #fff;
+      font-size: 1rem;
+      position: relative;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: #424242; /* Light blue hover effect */
+        color: #fff;
       }
     }
+
+    .react-calendar__tile--now {
+      background-color: #424242;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .react-calendar__tile--active {
+      background-color: transparent;
+    }
   }
-  
+}
+
+.selectedDate {
+  background-color: #424242 !important; /* Light blue circle for start and end dates */
+  color: #fff !important;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.rangeDate {
+  background-color: #91c2bd !important; /* Continuous blue bar for in-between dates */
+  color: #fff !important;
+  border-radius: 0; /* Rsemove border radius for the continuous effect */
+  position: relative;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    // background-color: #424242; /* Same color as the rangeDate */
+    z-index: 0;
+  }
+
+  &:before {
+    left: 0;
+    border-radius: 10px 0 0 10px; /* Round left edge */
+  }
+
+  &:after {
+    right: 0;
+    border-radius: 0 10px 10px 0; /* Round right edge */
+  }
+}
+
+.selectedDates {
+  margin-top: 20px;
+  text-align: center;
+  color: #90caf9; /* Light blue text for the selected dates display */
+}
