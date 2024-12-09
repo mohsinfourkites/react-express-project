@@ -47,9 +47,20 @@ const DateRangePickerComponent: React.FC = () => {
       />
 
       {dateRange[0] && dateRange[1] && (
-        <Typography variant="h6" className={styles.selectedDates}>
-          Selected Dates: From {dateRange[0].toLocaleDateString()} To {dateRange[1].toLocaleDateString()}
-        </Typography>
+        <div className ={styles.selectedDatesBox}>
+            <div className={styles.selectedDatesText}>
+                Selected Dates
+            </div>
+            <div className={styles.selectedDatesFromToBox}>
+            <div className={styles.selectedDatesFrom}>
+            From {dateRange[0].toLocaleDateString()}
+            </div>
+            <div className={styles.selectedDatesTo}>
+             To {dateRange[1].toLocaleDateString()}
+             </div>
+             </div>
+
+        </div>  
       )}
     </Box>
   );
