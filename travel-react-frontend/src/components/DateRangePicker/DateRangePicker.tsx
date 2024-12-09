@@ -81,10 +81,10 @@ const DateRangePickerComponent: React.FC = () => {
         <div className={styles.selectedDatesText}>Selected Dates</div>
         <div className={styles.selectedDatesFromToBox}>
           <div className={styles.selectedDatesFrom}>
-            From: {dateRange[0] ? dateRange[0].toLocaleDateString() : "Please Select Check In"}
+            From: {dateRange[0] ? dateRange[0].toLocaleDateString() : ""}
           </div>
           <div className={styles.selectedDatesTo}>
-            To: {dateRange[1] ? dateRange[1].toLocaleDateString() : "Please Select Check Out"}
+            To: {dateRange[1] ? dateRange[1].toLocaleDateString() : ""}
           </div>
         </div>
         <Button onClick={handleReset} className={styles.resetButton}>

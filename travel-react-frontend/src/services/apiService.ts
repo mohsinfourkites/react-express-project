@@ -28,6 +28,7 @@ export const sendDateRangeApi = async (startDate: string | null, endDate: string
     startDate,
     endDate,
   };
+  console.log("Payload:", payload);
   const response = await axios.post(`${API_BASE_URL}/save-date-range`, payload);
   return response.data;
 };
