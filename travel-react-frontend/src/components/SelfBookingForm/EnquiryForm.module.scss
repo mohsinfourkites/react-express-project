@@ -1,0 +1,109 @@
+.enquiryForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    @media (min-width: 768px){
+        width: 50%;
+    }
+    @media (min-width: 1024px){
+        width: 40%;
+    }
+    @media (min-width: 1200px){
+        width: 30%;
+    }
+
+
+    .nameContainer{
+        display: flex;
+        flex-direction: row;
+        padding: 2px;
+        margin: 2px;
+        width: 100%;
+
+        .nameContainerInput{
+            display: flex;
+            margin-right:20px ;
+            padding-right: 20px;
+            width: 50%;
+        }
+
+        .nameContainerText{
+            display: flex;
+            // margin-left:20px ;
+            width: 50%;
+        }
+    }
+
+    .EmailCotainer{
+        display: flex;
+        flex-direction: row;
+        padding: 2px;
+        margin: 2px;
+        width: 100%;
+
+        .EmailCotainerInput{
+            display: flex;
+            margin-right:20px ;
+            padding-right: 20px;
+            width: 50%;
+        }
+
+        .EmailCotainerText{
+            display: flex;
+            // margin-left:20px ;
+            width: 50%;
+        }
+    }
+
+
+    .MessageConatiner{
+        display: flex;
+        flex-direction: row;
+        padding: 2px;
+        margin: 2px;
+        width: 100%;
+
+        .MessageConatinerInput{
+            display: flex;
+            margin-right:20px ;
+            padding-right: 20px;
+            width: 50%;
+        }
+
+        .MessageConatinerText{
+            display: flex;
+            // margin-left:20px ;
+            width: 50%;
+        }
+    }
+
+    
+}
+
+.SubmitButton{
+    display: flex;
+justify-content: center;
+margin-top: 20px;
+padding: 10px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 50%;
+font-size: 20px;
+margin-left: 25%;
+margin-right: 25%;
+margin-bottom: 20px;
+
+&:hover {
+    background-color: #45a049;
+}
+}

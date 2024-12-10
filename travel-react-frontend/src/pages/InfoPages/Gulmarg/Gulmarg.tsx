@@ -35,10 +35,10 @@ const AboutGulmarg: React.FC = () => {
 
         <div className ={styles.rightSide}>
             <div className={styles.rightSideHeading}>
-                <div className={styles.selectionText}>
+                {/* <div className={styles.selectionText}>
                     Please Select Dates To Book Your Package
 
-                </div>
+                </div> */}
                 {/* <h1>Book Now</h1> */}
                 {/* <DateRangePickerComponent /> */}
                 <SelfBookingForm />
