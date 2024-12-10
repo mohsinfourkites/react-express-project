@@ -86,37 +86,43 @@ export const BookingForm: React.FC<BookingFormProps> = ({
             <div className={styles.extraServicesDescription}>
             Add extra services on your reservation
             </div>
-      <div className={styles.healthContaier}>
-        <label htmlFor="health-insurance">
+      <div className={styles.healthContainer}>
+      
         <div className={styles.healthContaierInput}>
           <input
             type="checkbox"
             id="health-insurance"
             checked={healthInsurance}
             onChange={onHealthInsuranceChange}
+            className={styles.healthContaierInputBox}
           />
+          <div className={styles.healthContaierText}>
+          <label htmlFor="health-insurance">Health Insurance</label>
           </div>
-          Health Insurance
-        </label>
+          
+          </div>
+          
+        {/* </label> */}
         </div>
       </div>
       {/* <div className={styles.line}></div> */}
       <div>
       <div className={styles.medicalContaier}>
-        <label htmlFor="medical-insurance">
           <input
             type="checkbox"
             id="medical-insurance"
             checked={medicalInsurance}
             onChange={onMedicalInsuranceChange}
+            className={styles.healthContaierInputBox}
           />
+          <label htmlFor="medical-insurance">
           Medical Insurance
         </label>
         </div>
       </div>
       {/* <div className={styles.line}></div> */}
-      <div className={styles.adultsAgeContaier}>
-      <button type="submit">Submit Booking</button>
+      <div className={styles.SubmitButton}>
+      <button type="submit">Book Now</button>
       </div>
     </form>
 

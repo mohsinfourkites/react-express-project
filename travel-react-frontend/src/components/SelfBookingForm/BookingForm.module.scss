@@ -47,15 +47,25 @@
     margin: 2px;
   }
 
-  .healthContaier{
-    padding: 2px;
-    margin: 2px;
+  .healthContainer{
     display: flex;
     flex-direction: row;
+    padding: 2px;
+    margin: 2px;
 
     .healthContaierInput{
         display: flex;
-        margin-left:20px ;
+        margin-right:20px ;
+        padding-right: 20px;
+    }
+
+    .healthContaierText{
+        display: flex;
+        // margin-left:20px ;
+    }
+
+    .healthContaierInputBox{
+        margin-right: 20px;
     }
   }
 
@@ -69,3 +79,28 @@
     margin: 2px;
   }
 
+  .healthContaierInputBox{
+    margin-right: 20px;
+}
+
+
+.SubmitButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 20px;
+
+    &:hover {
+        background-color: #45a049;
+    }
+}
