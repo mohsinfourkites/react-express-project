@@ -31,6 +31,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({ onSubmit }) => {
         <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
       </div>
+      <div className={styles.line}></div>
       <div className={styles.EmailCotainer}>
         <div className={styles.EmailCotainerInput}>
         <label htmlFor="email">Email:</label>
@@ -39,6 +40,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({ onSubmit }) => {
         <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
       </div>
+      <div className={styles.line}></div>
       <div className={styles.MessageConatiner}>
         <div className={styles.MessageConatinerInput}>
         <label htmlFor="message">Message:</label>
@@ -51,7 +53,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({ onSubmit }) => {
       <div className={styles.SubmitButton}>
       <button type="submit">Book Now</button>
       </div>
-      
+
     </form>
     </div>
   );

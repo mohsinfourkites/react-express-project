@@ -28,7 +28,7 @@ const AboutGulmarg: React.FC = () => {
     <div className = {styles.pageDivider}>
         <div className ={styles.leftSide}>
             <div className={styles.leftSideHeading}>
-                <h1>Why Visit Gulmarg?</h1>
+                <h1>Let's Test Me</h1>
                 
             </div>
             </div>
