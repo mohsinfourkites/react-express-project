@@ -3,11 +3,69 @@
     justify-content: space-between;
     margin-bottom: 1rem;
     // border: 2px solid grey;
-    margin: 10px;
-    padding: 10px;
+    padding: 2px;
+    margin: 2px;
 }
 
 .line{
     border-bottom: 1px solid #e0e0e0;
     margin: 10px 1px 10px 1px;
   }
+
+  .adultsAgeContaier{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 10px;
+   
+
+    .adultsAgeInput{
+        display: flex;
+        margin-left:20px ;
+    }
+  }
+
+  .ChildrenAgeContaier{
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    margin: 2px;
+
+    .childrenAgeInput{
+        display: flex;
+        margin-left:20px ;
+    }
+  }
+
+  .extraServices{
+    padding: 2px;
+    margin: 2px;
+  }
+
+  .extraServicesDescription{
+    padding: 2px;
+    margin: 2px;
+  }
+
+  .healthContaier{
+    padding: 2px;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+
+    .healthContaierInput{
+        display: flex;
+        margin-left:20px ;
+    }
+  }
+
+  .medicalContaier{
+    padding: 2px;
+    margin: 2px;
+  }
+
+  .adultsAgeContaier{
+    padding: 2px;
+    margin: 2px;
+  }
+
