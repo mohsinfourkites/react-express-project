@@ -1,0 +1,37 @@
+// SelfBookingForm.module.scss
+.container {
+    @apply bg-white shadow-md rounded-md p-6;
+    color: black
+  }
+  
+  .tabs {
+    @apply flex border-b border-gray-200 mb-4;
+  }
+  
+  .tab {
+    @apply px-4 py-2 text-gray-500 hover:text-gray-700 transition-colors duration-300 cursor-pointer;
+  
+    &.active {
+      @apply text-blue-500 border-b-2 border-blue-500 font-medium;
+    }
+  }
+  
+  .formContainer {
+    @apply mt-4;
+  }
+  
+  .error {
+    @apply text-red-500 mt-2;
+  }
+
+  .formTitle{
+    font-size: 18px;
+    margin: 10px 1px 10px 1px;
+  }
+
+  .line{
+    border-bottom: 1px solid #e0e0e0;
+    margin: 10px 1px 10px 1px;
+  }
+
+

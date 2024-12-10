@@ -1,13 +1,9 @@
 import React from 'react'
 import styles from "./Gulmarg.module.scss"
-import { LayoutGridDemo } from '../../../components/AceternityUI/LayoutGrid/LayoutGrid';
-import BookingCardOwn from '../../../components/BookingCard/BookingCard';
-import TextAnimatedSlider from '../../../components/EldoraUI/TextAnimatedSlider/TextAnimatedSlider';
-import DateRangeCalender from '../../../components/NextUI/DateRangeCalender/DateRangeCalender';
-import DateRangePickerNextUI from '../../../components/NextUI/DateRangeCalender/DateRangePicker';
-import DateRangePickerNPM from '../../../components/DateRangePickerNPM/DateRangePickerNPM';
-import RangeCalendar from '../../../components/DateRangePickerNPM/DateRangePickerNPM';
 import DateRangePickerComponent from '../../../components/DateRangePicker/DateRangePicker';
+import { LayoutGridDemo } from '../../../components/AceternityUI/LayoutGrid/LayoutGrid';
+import TextAnimatedSlider from '../../../components/EldoraUI/TextAnimatedSlider/TextAnimatedSlider';
+import SelfBookingForm from '../../../components/SelfBookingForm/SelfBookingForm';
 
 
 // import { GradualSpacingText } from '../../../components/EldoraUI/TextAnimatedSlider/TextanimatedSlider';
@@ -18,7 +14,7 @@ const AboutGulmarg: React.FC = () => {
     
     <div className={styles.wholePage}>
         {/* <RangeCalendar /> */}
-        <DateRangePickerComponent />
+       
         {/* <DateRangeCalender />
         <DateRangePickerNextUI /> */}
        
@@ -33,14 +29,20 @@ const AboutGulmarg: React.FC = () => {
         <div className ={styles.leftSide}>
             <div className={styles.leftSideHeading}>
                 <h1>Why Visit Gulmarg?</h1>
-                {/* <DateRangeCalender /> */}
+                
             </div>
             </div>
 
         <div className ={styles.rightSide}>
             <div className={styles.rightSideHeading}>
-                <h1>Book Now</h1>
-                {/* <BookingCardOwn /> */}
+                <div className={styles.selectionText}>
+                    Please Select Dates To Book Your Package
+
+                </div>
+                {/* <h1>Book Now</h1> */}
+                {/* <DateRangePickerComponent /> */}
+                <SelfBookingForm />
+                
                
                 </div>
             </div>
